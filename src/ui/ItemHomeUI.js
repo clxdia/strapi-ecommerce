@@ -9,10 +9,12 @@ const ItemHomeUI = ({ item }) => {
     <div className=" font-work font-[300] flex-col">
       <div className="md:w-[250px] md:h-[350px] w-[180px] h-[250px] bg-white items-center self-center flex hover:shadow-xl hover:transition hover:ease-in-out hover:scale-105 relative">
         <Link href="/view-all/[id]" as={`/view-all/${item.id}`}>
-          <img
+          <Image
             src={item.attributes.img.data.attributes.url}
             alt="/"
             className="object-cover md:w-[250px] md:h-[350px] w-[180px] h-[250px] relative"
+            width="250"
+            height="350"
           />
           {item.attributes.isNew && (
             <div className="absolute top-0 right-0 bg-headline/10 p-2">

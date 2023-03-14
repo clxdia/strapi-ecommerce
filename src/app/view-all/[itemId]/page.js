@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import CartButton from "../../../ui/CartButton";
 import FavoriteButton from "../../../ui/FavoriteButton";
@@ -20,9 +21,11 @@ async function ItemPage({ params: { itemId } }) {
     <main className="md:w-[80%] w-[90%] mt-[2rem] md:mt-[5rem] m-auto font-work">
       <section className="md:flex gap-10">
         <div className=" items-center self-center flex relative">
-          <img
+          <Image
             src={item.attributes.img.data.attributes.url}
             className="w-[100%] md:w-[1500px] md:h-[1000px] object-cover"
+            width="1500"
+            height="1000"
           />
           <FavoriteButton className="w-[100px] h-auto" />
         </div>
