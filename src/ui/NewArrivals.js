@@ -1,6 +1,4 @@
-import axios from "axios";
 import useFetch from "component/hooks/useFetch";
-import getProducts from "component/hooks/useFetch";
 import React, { useEffect, useState } from "react";
 
 import ItemHomeUI from "./ItemHomeUI";

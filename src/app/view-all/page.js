@@ -1,8 +1,11 @@
-import useFetch from "component/hooks/useFetch";
+"use client";
+
 import React from "react";
+
+import useFetch from "component/hooks/useFetch";
 import ItemUI from "../../ui/ItemUI";
 
-async function page() {
+export default function page() {
   const { data, loading, error } = useFetch(
     process.env.NEXT_PUBLIC_API_URL + "?populate=*"
   );
@@ -22,5 +25,3 @@ async function page() {
     </div>
   );
 }
-
-export default page;
