@@ -6,19 +6,19 @@ import React from "react";
 const shoppingLink = [];
 
 shoppingLink.push([
-  <div className="font-[300] hover:text-redish" id="1">
+  <div className="font-[300] hover:text-redish" key="1">
     <Link href="/abbigliamento">Abbigliamento</Link>
   </div>,
-  <div className="mt-2 font-[300] hover:text-redish" id="2">
+  <div className="mt-2 font-[300] hover:text-redish" key="2">
     <Link href="/uomo">Uomo</Link>
   </div>,
-  <div className="mt-2 font-[300] hover:text-redish" id="3">
+  <div className="mt-2 font-[300] hover:text-redish" key="3">
     <Link href="/donna">Donna</Link>
   </div>,
-  <div className="mt-2 font-[300] hover:text-redish" id="4">
+  <div className="mt-2 font-[300] hover:text-redish" key="4">
     <Link href="/accessori">Accessori</Link>
   </div>,
-  <div className="mt-2 font-[300] hover:text-redish" id="5">
+  <div className="mt-2 font-[300] hover:text-redish" key="5">
     <Link href="/elettronica">Elettronica</Link>
   </div>,
 ]);
