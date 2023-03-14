@@ -1,10 +1,10 @@
 "use client";
 
-import useFetch from "component/hooks/useFetch";
 import Link from "next/link";
 import React from "react";
 import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 import ItemUI from "../../ui/ItemUI";
+import useFetch from "../../hooks/useFetch";
 
 export default function Uomo() {
   const { data, loading, error } = useFetch(

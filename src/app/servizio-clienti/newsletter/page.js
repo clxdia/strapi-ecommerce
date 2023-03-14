@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import newsletterPic from "../../../images/newsletter.jpg";
+import newsletterPic from "../../images/service-clients.png";
 
 const Newsletter = () => {
   return (

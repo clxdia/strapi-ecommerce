@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
+import useFetch from "../../hooks/useFetch";
 
-import useFetch from "component/hooks/useFetch";
 import ItemUI from "../../ui/ItemUI";
 
 export default function ViewAll() {

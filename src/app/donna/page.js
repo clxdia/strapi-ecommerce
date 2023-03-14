@@ -1,6 +1,6 @@
 "use client";
 
-import useFetch from "component/hooks/useFetch";
+import useFetch from "../../hooks/useFetch";
 import Link from "next/link";
 import React from "react";
 import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";

@@ -1,5 +1,5 @@
-import useFetch from "component/hooks/useFetch";
 import React, { useEffect, useState } from "react";
+import useFetch from "../hooks/useFetch";
 
 import ItemHomeUI from "./ItemHomeUI";
 

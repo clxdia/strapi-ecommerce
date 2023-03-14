@@ -1,6 +1,5 @@
 "use client";
 
-import List from "../ui/List";
 import "../styles/globals.css";
 
 // import DealOfTheDay from "../ui/DealOfTheDay";
@@ -17,7 +16,7 @@ export default function Home() {
       <main>
         <SwiperComponent />
         <SwiperMB />
-        {/* <List /> */}
+
         <NewArrivals />
         {/* <section>
         <DealOfTheDay />
