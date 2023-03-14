@@ -4,35 +4,27 @@ import Link from "next/link";
 import React from "react";
 
 const shoppingLink = [];
+
 shoppingLink.push([
-  <div className="font-[300] hover:text-redish">
-    <Link href="/abbigliamento" id="1">
-      Abbigliamento
-    </Link>
+  <div className="font-[300] hover:text-redish" id="1">
+    <Link href="/abbigliamento">Abbigliamento</Link>
   </div>,
-  <div className="mt-2 font-[300] hover:text-redish ">
-    <Link href="/uomo" id="2">
-      Uomo
-    </Link>
+  <div className="mt-2 font-[300] hover:text-redish" id="2">
+    <Link href="/uomo">Uomo</Link>
   </div>,
-  <div className="mt-2 font-[300] hover:text-redish ">
-    <Link href="/donna" id="3">
-      Donna
-    </Link>
+  <div className="mt-2 font-[300] hover:text-redish" id="3">
+    <Link href="/donna">Donna</Link>
   </div>,
-  <div className="mt-2 font-[300] hover:text-redish ">
-    <Link href="/accessori" id="4">
-      Accessori
-    </Link>
+  <div className="mt-2 font-[300] hover:text-redish" id="4">
+    <Link href="/accessori">Accessori</Link>
   </div>,
-  <div className="mt-2 font-[300] hover:text-redish ">
-    <Link href="/elettronica" id="5">
-      Elettronica
-    </Link>
+  <div className="mt-2 font-[300] hover:text-redish" id="5">
+    <Link href="/elettronica">Elettronica</Link>
   </div>,
 ]);
 
 const magazineLink = [];
+
 magazineLink.push([
   <div className="mt-2">
     <Link href="/servizio-clienti/magazine">Ultime News</Link>
@@ -40,6 +32,7 @@ magazineLink.push([
 ]);
 
 const newsletterLink = [];
+
 newsletterLink.push([
   <div className="mt-2">
     <Link href="/servizio-clienti/newsletter">Newsletter</Link>
@@ -54,7 +47,7 @@ const accordionData = [
       {
         id: "1A",
         title: "Shopping",
-        children: [{ id: "1A", title: shoppingLink }],
+        children: [{ id: [1, 2, 3, 4], title: shoppingLink }],
       },
       {
         id: "1B",
