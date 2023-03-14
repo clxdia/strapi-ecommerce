@@ -47,7 +47,7 @@ const accordionData = [
       {
         id: "1A",
         title: "Shopping",
-        children: [{ id: [1, 2, 3, 4], title: shoppingLink }],
+        children: [{ id: "1A", title: shoppingLink }],
       },
       {
         id: "1B",
