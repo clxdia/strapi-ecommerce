@@ -26,6 +26,7 @@ async function ItemPage({ params: { itemId } }) {
             className="w-[100%] md:w-[1500px] md:h-[1000px] object-cover"
             width="1500"
             height="1000"
+            alt={item.attributes.title}
           />
           <FavoriteButton className="w-[100px] h-auto" />
         </div>

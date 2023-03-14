@@ -6,19 +6,29 @@ import React from "react";
 const shoppingLink = [];
 shoppingLink.push([
   <div className="font-[300] hover:text-redish">
-    <Link href="/abbigliamento">Abbigliamento</Link>
+    <Link href="/abbigliamento" id="1">
+      Abbigliamento
+    </Link>
   </div>,
   <div className="mt-2 font-[300] hover:text-redish ">
-    <Link href="/uomo">Uomo</Link>
+    <Link href="/uomo" id="2">
+      Uomo
+    </Link>
   </div>,
   <div className="mt-2 font-[300] hover:text-redish ">
-    <Link href="/donna">Donna</Link>
+    <Link href="/donna" id="3">
+      Donna
+    </Link>
   </div>,
   <div className="mt-2 font-[300] hover:text-redish ">
-    <Link href="/accessori">Accessori</Link>
+    <Link href="/accessori" id="4">
+      Accessori
+    </Link>
   </div>,
   <div className="mt-2 font-[300] hover:text-redish ">
-    <Link href="/elettronica">Elettronica</Link>
+    <Link href="/elettronica" id="5">
+      Elettronica
+    </Link>
   </div>,
 ]);
 
@@ -44,17 +54,17 @@ const accordionData = [
       {
         id: "1A",
         title: "Shopping",
-        children: [{ id: "", title: shoppingLink }],
+        children: [{ id: "1A", title: shoppingLink }],
       },
       {
         id: "1B",
         title: "Magazine",
-        children: [{ id: "", title: magazineLink }],
+        children: [{ id: "1B", title: magazineLink }],
       },
       {
         id: "1C",
         title: "Contatti",
-        children: [{ id: "", title: newsletterLink }],
+        children: [{ id: "1C", title: newsletterLink }],
       },
     ],
   },

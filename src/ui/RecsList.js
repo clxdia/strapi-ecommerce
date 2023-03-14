@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import FavoriteButton from "./FavoriteButton";
@@ -11,10 +12,12 @@ const Recommendations = ({ item }) => {
           as={`./view-all/${item.id}`}
           className="w-[100%]"
         >
-          <img
+          <Image
             src={item.image}
             alt="/"
-            className="h-[20rem] p-5 w-full object-scale-down md:h-[20rem] md:w-full "
+            className="h-[20rem] p-5 w-full object-scale-down md:h-[20rem] md:w-full"
+            width="100"
+            height="100"
           />
         </Link>
         <FavoriteButton />

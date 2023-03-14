@@ -19,14 +19,14 @@ const ServizioClienti = () => {
           <BiMapAlt className="text-redish" />
         </div>
 
-        <p className="uppercase mb-3">dov'è il mio ordine?</p>
+        <p className="uppercase mb-3">Dov&#39;è il mio ordine?</p>
         <p className="text-[0.7rem] text-center font-[300] text-button mb-5">
-          Inserisci il numero d'ordine presente nella email di conferma che hai
-          ricevuto
+          Inserisci il numero d&#39;ordine presente nella email di conferma che
+          hai ricevuto
         </p>
         <form className="flex-col flex text-left font-[300]">
           <label for="ordine" className="font-[500] mb-2">
-            Numero d'ordine <span className="text-redish">*</span>
+            Numero d&#39;ordine <span className="text-redish">*</span>
           </label>
 
           <input

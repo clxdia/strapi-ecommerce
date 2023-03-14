@@ -30,7 +30,9 @@ async function Articles() {
         <article className="w-[20rem]">
           <Image src={article2} alt="/" />
           <p className="bg-white p-3 font-[300] text-[15px]">INSIDER</p>
-          <p className="bg-white p-3 font-[500]">Paris' Fashion Week 2023</p>
+          <p className="bg-white p-3 font-[500]">
+            Paris&#39; Fashion Week 2023
+          </p>
           <Link href="/servizio-clienti/magazine/2">
             <p className="bg-white p-3 font-[300] text-[15px] flex items-center justify-center">
               Read more

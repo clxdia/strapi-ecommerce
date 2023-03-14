@@ -19,7 +19,7 @@ const MagazineHome = () => {
       <section className="w-[90%] m-auto md:w-[100%]">
         <div>
           {magazines.map((magazine) => (
-            <Magazine magazine={magazine} />
+            <Magazine magazine={magazine} key={magazine.id} />
           ))}
         </div>
       </section>
