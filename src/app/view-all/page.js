@@ -5,7 +5,7 @@ import React from "react";
 import useFetch from "component/hooks/useFetch";
 import ItemUI from "../../ui/ItemUI";
 
-export default function page() {
+export default function ViewAll() {
   const { data, loading, error } = useFetch(
     process.env.NEXT_PUBLIC_API_URL + "?populate=*"
   );
