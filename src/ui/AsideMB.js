@@ -26,7 +26,7 @@ shoppingLink.push([
 const magazineLink = [];
 
 magazineLink.push([
-  <div className="mt-2">
+  <div className="mt-2" key="6">
     <Link href="/servizio-clienti/magazine">Ultime News</Link>
   </div>,
 ]);
@@ -34,7 +34,7 @@ magazineLink.push([
 const newsletterLink = [];
 
 newsletterLink.push([
-  <div className="mt-2">
+  <div className="mt-2" key="7">
     <Link href="/servizio-clienti/newsletter">Newsletter</Link>
   </div>,
 ]);
