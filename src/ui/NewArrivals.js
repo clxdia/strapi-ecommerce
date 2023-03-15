@@ -5,7 +5,7 @@ import ItemHomeUI from "./ItemHomeUI";
 
 export default function NewArrivals() {
   const { data, loading, error } = useFetch(
-    process.env.NEXT_PUBLIC_API_URL + "?populate=*"
+    process.env.NEXT_PUBLIC_API_URL + "?populate=*&filters[type][$eq]=featured"
   );
   return (
     <section className="lg:w-[70%] w-[90%] max-w-[1800px] md:w-[90%] m-auto">

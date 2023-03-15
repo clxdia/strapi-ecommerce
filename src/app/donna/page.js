@@ -8,7 +8,8 @@ import ItemUI from "../../ui/ItemUI";
 
 export default function Donna() {
   const { data, loading, error } = useFetch(
-    process.env.NEXT_PUBLIC_API_URL + "?populate=*"
+    process.env.NEXT_PUBLIC_API_URL +
+      "?populate=*&filters[categories][title][$eq]=Donna"
   );
   return (
     <main>

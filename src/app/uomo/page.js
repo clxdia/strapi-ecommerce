@@ -8,7 +8,8 @@ import useFetch from "../../hooks/useFetch";
 
 export default function Uomo() {
   const { data, loading, error } = useFetch(
-    process.env.NEXT_PUBLIC_API_URL + "?populate=*"
+    process.env.NEXT_PUBLIC_API_URL +
+      "?populate=*&filters[categories][title][$eq]=Uomo"
   );
 
   return (

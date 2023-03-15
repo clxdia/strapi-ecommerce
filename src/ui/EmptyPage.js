@@ -7,7 +7,7 @@ const EmptyPage = () => {
     <div>
       <div className="m-auto max-w-[350px] h-auto  text-center mt-20 mb-20">
         <SlHandbag className="m-auto p-5" size={100} />
-        <p className="font-work mb-3">Non c&#39è nulla qui!</p>
+        <p className="font-work mb-3">Non c&#39;è nulla qui!</p>
         <p>Trovi qui le info sui tuoi aggiornamenti, resi o rimborsi.</p>
         <button
           className="mt-5 flex bg-button text-buttontext p-3 w-[200px
