@@ -6,27 +6,10 @@ import Link from "next/link";
 import useFetch from "../hooks/useFetch";
 import FavoriteButton from "./FavoriteButton";
 
-let rec0 = Math.floor(Math.random() * 10 + 1);
-let rec1 = Math.floor(Math.random() * 10 + 1);
-let rec2 = Math.floor(Math.random() * 10 + 1);
-let rec3 = Math.floor(Math.random() * 10 + 1);
-let rec4 = Math.floor(Math.random() * 10 + 1);
-
-console.log(rec0, rec1, rec2, rec3, rec4);
-
 export default function Recommendations() {
   const { data, loading, error } = useFetch(
     process.env.NEXT_PUBLIC_SHORT_API_URL +
-      "?populate=*&filters[id][$in][0]=" +
-      rec0 +
-      "&filters[id][$in][1]=" +
-      rec1 +
-      "&filters[id][$in][2]=" +
-      rec2 +
-      "&filters[id][$in][3]=" +
-      rec3 +
-      "&filters[id][$in][4]=" +
-      rec4
+      "?populate=*&filters[id][$in][0]=6&filters[id][$in][1]=8&filters[id][$in][2]=2&filters[id][$in][3]=4&filters[id][$in][4]=7"
   );
   return (
     <>
