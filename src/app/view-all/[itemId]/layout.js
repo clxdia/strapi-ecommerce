@@ -1,3 +1,3 @@
 export default function RootLayout({ children }) {
-  return <div>{children}</div>;
+  return <main>{children}</main>;
 }

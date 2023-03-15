@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import CartButton from "../../../ui/CartButton";
 import FavoriteButton from "../../../ui/FavoriteButton";
+import Recommendations from "../../../ui/RecsList";
 
 const fetchItem = async (itemId) => {
   const res = await fetch(
@@ -48,6 +49,7 @@ async function ItemPage({ params: { itemId } }) {
           </div>
         </aside>
       </section>
+      <Recommendations />
     </main>
   );
 }
