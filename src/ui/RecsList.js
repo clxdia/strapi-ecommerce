@@ -12,9 +12,7 @@ console.log(rec1);
 export default function Recommendations() {
   const { data, loading, error } = useFetch(
     process.env.NEXT_PUBLIC_SHORT_API_URL +
-      "?populate=*&filters[id][$in][0]=" +
-      rec1 +
-      "&filters[id][$in][1]=6&filters[id][$in][2]=8&filters[id][$in][3]=5&filters[id][$in][4]=10"
+      "?populate=*&filters[id][$in][0]=5&filters[id][$in][1]=6&filters[id][$in][2]=8&filters[id][$in][3]=5&filters[id][$in][4]=10"
   );
   return (
     <>
