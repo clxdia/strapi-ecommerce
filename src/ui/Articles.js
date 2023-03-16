@@ -3,9 +3,9 @@ import Link from "next/link";
 import React from "react";
 import { BsArrowRightShort } from "react-icons/bs";
 
-import article1 from "../images/article1.png";
-import article2 from "../images/article2.png";
-import article3 from "../images/article3.png";
+import article1 from "../images/article1.jpg";
+import article2 from "../images/article2.jpg";
+import article3 from "../images/article3.jpg";
 
 async function Articles() {
   return (
