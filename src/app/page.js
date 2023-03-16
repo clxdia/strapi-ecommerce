@@ -16,11 +16,8 @@ export default function Home() {
       <main>
         <SwiperComponent />
         <SwiperMB />
-
         <NewArrivals />
-
         {/* <DealOfTheDay /> */}
-
         <Categories />
         {/* <Banner /> */}
         <Articles />
