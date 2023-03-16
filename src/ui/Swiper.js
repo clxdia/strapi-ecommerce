@@ -40,13 +40,13 @@ const SwiperComponent = () => {
           className={SwiperStyles.swiper}
         >
           <SwiperSlide className={SwiperStyles.swiper_slide}>
-            <Image src={pic1} alt="/" width="1000" height="1000"></Image>
+            <Image src={pic1} alt="/" width="auto" height="600"></Image>
           </SwiperSlide>
           <SwiperSlide className={SwiperStyles.swiper_slide}>
-            <Image src={pic2} alt="/" width="1000" height="1000"></Image>
+            <Image src={pic2} alt="/" width="auto" height="600"></Image>
           </SwiperSlide>
           <SwiperSlide className={SwiperStyles.swiper_slide}>
-            <Image src={pic3} alt="/" width="1000" height="1000"></Image>
+            <Image src={pic3} alt="/" width="auto" height="600"></Image>
           </SwiperSlide>
         </Swiper>
       </div>
