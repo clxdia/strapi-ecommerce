@@ -3,7 +3,7 @@ import React from "react";
 import magazines from "../../../../magazines";
 import Magazine from "../../../ui/Magazine";
 
-const MagazineHome = () => {
+export default function MagazineHome() {
   return (
     <main>
       <section className="w-[100%] max-w-[1800px] m-auto bg-secondary p-4 mb-6">
@@ -25,6 +25,4 @@ const MagazineHome = () => {
       </section>
     </main>
   );
-};
-
-export default MagazineHome;
+}
