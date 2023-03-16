@@ -8,8 +8,7 @@ import SwiperComponent from "../ui/Swiper";
 import NewArrivals from "../ui/NewArrivals";
 import Categories from "../ui/Categories";
 // import Banner from "../ui/Banner";
-// import Categories from "../ui/Categories";
-// import Articles from "../ui/Articles";
+import Articles from "../ui/Articles";
 
 export default function Home() {
   return (
