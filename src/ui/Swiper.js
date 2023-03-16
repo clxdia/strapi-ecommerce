@@ -46,7 +46,7 @@ const SwiperComponent = () => {
             <Image src={pic2} alt="/" width="auto" height="600"></Image>
           </SwiperSlide>
           <SwiperSlide className={SwiperStyles.swiper_slide}>
-            <Image src={pic3} alt="/" width="auto" height="600"></Image>
+            <Image src={pic3} alt="/" width="auto" height="650"></Image>
           </SwiperSlide>
         </Swiper>
       </div>
