@@ -2,8 +2,8 @@ import Image from "next/image";
 import "../styles/globals.css";
 import Footer from "../ui/Footer";
 import HeaderComponent from "../ui/HeaderComponent";
-import bannerMB from "../images/mobile/banner.png";
-import banner from "../images/desktop/banner.png";
+import bannerMB from "../images/banner.png";
+import banner from "../images/banner.png";
 
 export const metadata = {
   title: "Create Next App",
