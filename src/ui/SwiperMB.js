@@ -12,6 +12,8 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import "swiper/css";
 
+import slide1 from "../images/slide1MB.png";
+
 import SwiperStyles from "../styles/Swiper.module.css";
 
 // import required modules
@@ -35,28 +37,10 @@ const SwiperComponentMobile = () => {
           className={SwiperStyles.swiper}
         >
           <SwiperSlide className={SwiperStyles.swiper_slide}>
-            <Image
-              src="https://picsum.photos/3419/1195"
-              alt="/"
-              width="1000"
-              height="1000"
-            ></Image>
+            <Image src={slide1} alt="/" width="auto" height="700"></Image>
           </SwiperSlide>
           <SwiperSlide className={SwiperStyles.swiper_slide}>
-            <Image
-              src="https://picsum.photos/3419/1195"
-              alt="/"
-              width="1000"
-              height="1000"
-            ></Image>
-          </SwiperSlide>
-          <SwiperSlide className={SwiperStyles.swiper_slide}>
-            <Image
-              src="https://picsum.photos/3419/1195"
-              alt="/"
-              width="1000"
-              height="1000"
-            ></Image>
+            <Image src={slide1} alt="/" width="auto" height="700"></Image>
           </SwiperSlide>
         </Swiper>
       </div>
