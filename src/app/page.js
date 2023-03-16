@@ -24,8 +24,8 @@ export default function Home() {
         <DealOfTheDay />
       </section> */}
         <Categories />
-        {/* <Banner />
-        <Articles />  */}
+        {/* <Banner /> */}
+        <Articles />
       </main>
     </div>
   );

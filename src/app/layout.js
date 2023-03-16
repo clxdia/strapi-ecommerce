@@ -2,6 +2,8 @@ import Image from "next/image";
 import "../styles/globals.css";
 import Footer from "../ui/Footer";
 import HeaderComponent from "../ui/HeaderComponent";
+import bannerMB from "../images/mobile/banner.png";
+import banner from "../images/desktop/banner.png";
 
 export const metadata = {
   title: "Create Next App",
@@ -15,12 +17,8 @@ export default function RootLayout({ children }) {
       <body>
         <HeaderComponent />
         <div className="md:pt-[10rem] pt-[5rem] ">{children}</div>
-        <Image
-          src="https://picsum.photos/3419/1195"
-          alt="/"
-          width="1000"
-          height="1000"
-        ></Image>
+        <Image src={bannerMB} alt="/" className=" md:hidden mt-10" />
+        <Image src={banner} alt="/" className=" md:block hidden mt-10" />
         <Footer />
       </body>
     </html>
