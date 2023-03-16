@@ -19,9 +19,8 @@ export default function Home() {
 
         <NewArrivals />
 
-        {/* <section>
-        <DealOfTheDay />
-      </section> */}
+        {/* <DealOfTheDay /> */}
+
         <Categories />
         {/* <Banner /> */}
         <Articles />
