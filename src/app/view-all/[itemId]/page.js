@@ -12,8 +12,6 @@ const fetchItem = async (itemId) => {
     }
   );
   const item = await res.json();
-  console.log("HELLLO");
-  console.log(item);
   return item.data;
 };
 

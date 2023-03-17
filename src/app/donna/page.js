@@ -17,8 +17,6 @@ export default async function Donna() {
       "?populate=*&filters[categories][title][$eq]=Donna"
   );
 
-  console.log("hello");
-  console.log(items);
   return (
     <main>
       <h1 className="text-[2rem] text-black font-work font-[500] text-center p-10">
