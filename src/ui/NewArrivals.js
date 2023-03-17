@@ -1,4 +1,4 @@
-import ItemHomeUI from "../ui/ItemHomeUI";
+import ItemHomeUI from "./ItemHomeUI";
 
 async function fetchData(url) {
   const res = await fetch(url);
