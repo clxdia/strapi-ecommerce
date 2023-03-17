@@ -10,11 +10,12 @@ async function fetchData(url) {
   return res.json();
 }
 
-async function Abbigliamento() {
+export default async function Abbigliamento() {
   const items = await fetchData(
     process.env.NEXT_PUBLIC_SHORT_API_URL +
-      "?populate=*&filters[categories][title][$eq]=Accessori"
+      "?populate=*&filters[categories][title][$in][0]=Uomo&filters[categories][title][$in][1]=Donna"
   );
+
   return (
     <main>
       <h1 className="text-[2rem] text-black font-work font-[500] text-center p-10">
@@ -39,5 +40,3 @@ async function Abbigliamento() {
     </main>
   );
 }
-
-export default Abbigliamento;

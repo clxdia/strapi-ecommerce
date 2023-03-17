@@ -14,7 +14,7 @@ async function fetchData(url) {
 export default async function Accessori() {
   const items = await fetchData(
     process.env.NEXT_PUBLIC_SHORT_API_URL +
-      "?populate=*&filters[categories][title][$eq]=Donna"
+      "?populate=*&filters[categories][title][$eq]=Accessori"
   );
 
   return (

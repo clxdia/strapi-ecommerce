@@ -14,7 +14,7 @@ async function fetchData(url) {
 export default async function Donna() {
   const items = await fetchData(
     process.env.NEXT_PUBLIC_API_URL +
-      "?populate=*&filters[categories][title][$eq]=Uomo"
+      "?populate=*&filters[categories][title][$eq]=Donna"
   );
 
   console.log("hello");
