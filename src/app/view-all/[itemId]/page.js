@@ -6,12 +6,14 @@ import Recommendations from "../../../ui/RecsList";
 
 const fetchItem = async (itemId) => {
   const res = await fetch(
-    process.env.NEXT_PUBLIC_API_URL + `${itemId}` + "?populate=*",
+    process.env.NEXT_PUBLIC_API + `${itemId}` + "?populate=*",
     {
       next: { revalidate: 60 },
     }
   );
   const item = await res.json();
+  console.log("HELLLO");
+  console.log(item);
   return item.data;
 };
 

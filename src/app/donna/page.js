@@ -1,16 +1,24 @@
-"use client";
-
-import useFetch from "../../hooks/useFetch";
 import Link from "next/link";
 import React from "react";
 import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 import ItemUI from "../../ui/ItemUI";
 
-export default function Donna() {
-  const { data, loading, error } = useFetch(
+async function fetchData(url) {
+  const res = await fetch(url);
+  if (!res.ok) {
+    throw new Error("failed");
+  }
+  return res.json();
+}
+
+export default async function Donna() {
+  const items = await fetchData(
     process.env.NEXT_PUBLIC_API_URL +
-      "?populate=*&filters[categories][title][$eq]=Donna"
+      "?populate=*&filters[categories][title][$eq]=Uomo"
   );
+
+  console.log("hello");
+  console.log(items);
   return (
     <main>
       <h1 className="text-[2rem] text-black font-work font-[500] text-center p-10">
@@ -18,7 +26,7 @@ export default function Donna() {
       </h1>
       <div className="md:w-[80%] w-[90%] m-auto ">
         <div className="flex flex-wrap gap-3 justify-center">
-          {data.map((item) => (
+          {items.data.map((item) => (
             <ItemUI item={item} key={item.id} />
           ))}
         </div>

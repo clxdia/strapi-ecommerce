@@ -1,13 +1,18 @@
-"use client";
-
 import Link from "next/link";
 import React from "react";
 import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 import ItemUI from "../../ui/ItemUI";
-import useFetch from "../../hooks/useFetch";
 
-export default function Uomo() {
-  const { data, loading, error } = useFetch(
+async function fetchData(url) {
+  const res = await fetch(url);
+  if (!res.ok) {
+    throw new Error("failed");
+  }
+  return res.json();
+}
+
+export default async function Uomo() {
+  const items = await fetchData(
     process.env.NEXT_PUBLIC_API_URL +
       "?populate=*&filters[categories][title][$eq]=Uomo"
   );
@@ -19,7 +24,7 @@ export default function Uomo() {
       </h1>
       <div className="md:w-[80%] w-[90%] m-auto ">
         <div className="flex flex-wrap gap-3 justify-center">
-          {data.map((item) => (
+          {items.data.map((item) => (
             <ItemUI item={item} key={item.id} />
           ))}
         </div>

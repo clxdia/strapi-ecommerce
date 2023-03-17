@@ -1,12 +1,16 @@
-"use client";
-
 import React from "react";
-import useFetch from "../../hooks/useFetch";
-
 import ItemUI from "../../ui/ItemUI";
 
-export default function ViewAll() {
-  const { data, loading, error } = useFetch(
+async function fetchData(url) {
+  const res = await fetch(url);
+  if (!res.ok) {
+    throw new Error("failed");
+  }
+  return res.json();
+}
+
+export default async function ViewAll() {
+  const items = await fetchData(
     process.env.NEXT_PUBLIC_API_URL + "?populate=*"
   );
   return (
@@ -16,10 +20,9 @@ export default function ViewAll() {
       </h1>
       <div className="md:w-[80%] w-[90%] m-auto ">
         <div className="flex flex-wrap gap-3 justify-center">
-          {data &&
-            data.map((item) => {
-              return <ItemUI item={item} key={item.id} />;
-            })}
+          {items.data.map((item) => {
+            return <ItemUI item={item} key={item.id} />;
+          })}
         </div>
       </div>
     </div>

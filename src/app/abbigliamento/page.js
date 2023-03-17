@@ -1,15 +1,19 @@
-"use client";
-
-import useFetch from "../../hooks/useFetch";
 import Link from "next/link";
-import React from "react";
 import { BsArrowRightShort } from "react-icons/bs";
 import ItemUI from "../../ui/ItemUI";
 
-export default function Abbigliamento() {
-  const { data, loading, error } = useFetch(
-    process.env.NEXT_PUBLIC_API_URL +
-      "?populate=*&filters[categories][title][$eq]=Abbigliamento"
+async function fetchData(url) {
+  const res = await fetch(url);
+  if (!res.ok) {
+    throw new Error("failed");
+  }
+  return res.json();
+}
+
+async function Abbigliamento() {
+  const items = await fetchData(
+    process.env.NEXT_PUBLIC_SHORT_API_URL +
+      "?populate=*&filters[categories][title][$eq]=Accessori"
   );
   return (
     <main>
@@ -18,7 +22,7 @@ export default function Abbigliamento() {
       </h1>
       <div className="md:w-[80%] w-[90%] m-auto ">
         <div className="flex flex-wrap gap-3 justify-center">
-          {data.map((item) => (
+          {items.data.map((item) => (
             <ItemUI item={item} key={item.id} />
           ))}
         </div>
@@ -35,3 +39,5 @@ export default function Abbigliamento() {
     </main>
   );
 }
+
+export default Abbigliamento;

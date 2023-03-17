@@ -5,6 +5,8 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
     "./ui/**/*.{js,ts,jsx,tsx}",
+    // flowbite
+    "./node_modules/flowbite-react/**/*.js",
 
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -35,5 +37,5 @@ module.exports = {
       black: "#000000",
     },
   },
-  plugins: [],
+  plugins: [require("flowbite/plugin")],
 };
