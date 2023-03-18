@@ -9,13 +9,13 @@ import article3 from "../images/article3.jpg";
 
 export default function Articles() {
   return (
-    <section className="w-[100%] m-auto bg-secondary mt-[10rem] font-work text-center ">
+    <section className="w-[100%] m-auto bg-[#edd593] mt-[10rem] font-work text-center ">
       <h1 className="text-center mb-10 text-black font-work font-[500] underline decoration-button decoration-4 underline-offset-8 z-30 pt-10  md:text-[2rem] text-[1.5rem]">
         Magazine
       </h1>
 
       <div className="lg:w-[70%] w-[90%] max-w-[1800px] m-auto flex flex-wrap  justify-center gap-7 pb-20">
-        <article className="w-[20rem] cursor-pointer">
+        <article className="w-[20rem] cursor-pointer shadow-md">
           <Link href="/servizio-clienti/magazine/1">
             <Image
               src={article1}
@@ -31,7 +31,7 @@ export default function Articles() {
           </Link>
         </article>
 
-        <article className="w-[20rem] cursor-pointer">
+        <article className="w-[20rem] cursor-pointer shadow-md">
           <Link href="/servizio-clienti/magazine/2">
             <Image
               src={article2}
@@ -49,7 +49,7 @@ export default function Articles() {
           </Link>
         </article>
 
-        <article className="w-[20rem] cursor-pointer">
+        <article className="w-[20rem] cursor-pointer shadow-md">
           <Link href="/servizio-clienti/magazine/3">
             <Image
               src={article3}

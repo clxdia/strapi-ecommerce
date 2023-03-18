@@ -2,7 +2,7 @@ import React from "react";
 
 import "../styles/globals.css";
 
-// import DealOfTheDay from "../ui/DealOfTheDay";
+import DealOfTheDay from "../ui/DealOfTheDay";
 import SwiperMB from "../ui/SwiperMB";
 import SwiperComponent from "../ui/Swiper";
 import NewArrivals from "../ui/NewArrivals";
@@ -17,7 +17,7 @@ export default function Home() {
         <SwiperComponent />
         <SwiperMB />
         <NewArrivals />
-        {/* <DealOfTheDay /> */}
+        <DealOfTheDay />
         <Categories />
         {/* <Banner /> */}
         <Articles />

@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
       <head />
       <body>
         <HeaderComponent />
-        <div className="md:pt-[10rem] pt-[5rem] ">{children}</div>
+        <div className="md:pt-[7rem] pt-[5rem] ">{children}</div>
         <Image src={bannerMB} alt="/" className=" md:hidden mt-10" />
         <Image src={banner} alt="/" className=" md:block hidden mt-10" />
         <Footer />

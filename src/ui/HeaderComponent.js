@@ -32,7 +32,7 @@ const HeaderComponent = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="bg-background fixed w-[100%] z-[99]">
+    <header className="bg-white fixed w-[100%] z-[99]">
       <div className="flex w-[95%] max-w-[1800px] m-auto h-[5rem] justify-between items-center relative">
         <Nav1 />
         <div className="text-[2.5rem] font-[600] absolute m-auto left-0 right-0 w-auto z-[1] ">
@@ -155,9 +155,9 @@ const HeaderComponent = () => {
           </ul>
         </nav>
       </div>
-      <div className="max-w-[95%] m-auto md:flex justify-center relative mt-7 mb-5 hidden">
+      <div className="max-w-[95%] m-auto md:flex justify-center relative mt-4 mb-4 hidden">
         <div className="flex justify-center font-work font-[300]">
-          <div className="flex justify-center gap-6 lg:gap-10 text-[0.9rem] lg:text-[1rem]">
+          <div className="flex justify-center gap-6 lg:gap-10 text-[0.8rem] lg:text-[15px]">
             <Link href="/abbigliamento">Abbigliamento</Link>
             <Link href="/uomo">Uomo</Link>
             <Link href="/donna">Donna</Link>
