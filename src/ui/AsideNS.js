@@ -18,9 +18,6 @@ const AsideNS = () => {
         <Link href="../accessori" className="mt-1 font-[300]">
           Accessori
         </Link>
-        <Link href="../elettronica" className="mt-1 font-[300]">
-          Elettronica
-        </Link>
       </div>
       <div className="mt-5">
         <h3 className="text-[1.5rem] font-[400]">Magazine</h3>

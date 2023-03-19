@@ -20,8 +20,8 @@ export default async function DealOfTheDay() {
       <h1 className="text-center mb-6 text-black font-work font-[500] mt-10 md:text-[2rem] text-[1.5rem]">
         Offerta del giorno
       </h1>
-      <div className="flex justify-between gap-3 bg-background">
-        <div className="w-[90%] flex flex-col justify-between p-10">
+      <div className="md:flex md:flex-row flex flex-col justify-between gap-3 bg-background">
+        <div className="w-[100%] flex flex-col justify-between p-10">
           <p className="md:text-[2rem] text-[1rem] font-work">
             {item.data[0].attributes.title}
           </p>
@@ -33,19 +33,20 @@ export default async function DealOfTheDay() {
               <s>37.99</s>
             </p>
           </div>
-          <p className="w-[90%] text-[17px] mt-5">
+          <p className=" w-[100%] text-[15px] mt-5">
             {item.data[0].attributes.desc}
           </p>
           <div className="w-[50%] m-auto">
             <CartButton />
           </div>
         </div>
-        <div className="w-[600px] h-[470px] relative">
+        <div className="w-[100%] h-[100vw] md:h-[40vw] relative">
           <Image
             src={item.data[0].attributes.img.data.attributes.url}
             width="600"
-            height="500"
-            className="absolute"
+            height="600"
+            className="absolute w-[100%] h-[100%]"
+            alt={item.data[0].attributes.title}
           ></Image>
           <div className="right-6 top-5 w-[100px] h-[100px] absolute z-10">
             <div className="relative h-full">
@@ -54,6 +55,7 @@ export default async function DealOfTheDay() {
                 width="500"
                 height="500"
                 className="absolute"
+                alt="/"
               ></Image>
               <div className="relative text-center flex flex-col w-[50%] m-auto justify-center h-full rotate-6">
                 <p className="z-12 w-full text-center my-auto font-bold leading-tight">

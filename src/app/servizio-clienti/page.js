@@ -14,7 +14,7 @@ const ServizioClienti = () => {
       </h1>
       <h2 className="mb-1">Come posso aiutarti oggi?</h2>
       <h3 className="mb-3 text-[0.8rem] ">ACCEDI A QUESTI LINK</h3>
-      <div className="bg-white p-10 max-w-[400px] w-[90%] h-auto flex-col items-center text-center m-auto">
+      <div className="bg-background p-10 max-w-[400px] w-[90%] h-auto flex-col items-center text-center m-auto">
         <div className="m-auto justify-center flex text-center mb-5 ">
           <BiMapAlt className="text-redish" />
         </div>
