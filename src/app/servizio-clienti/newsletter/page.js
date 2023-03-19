@@ -14,7 +14,7 @@ const Newsletter = () => {
         {success ? (
           <div className="flex items-center justify-center mt-[10rem] mb-[10rem] gap-3">
             <h1 className="text-[2rem] font-[500] text-center">
-              Grazie per l'iscrizione
+              Grazie per l&#39;iscrizione
             </h1>
             <div className="bg-green-200 w-[50px] flex flex-col justify-center align-middle h-[50px] rounded-full relative">
               <MdOutlineDone
