@@ -54,7 +54,7 @@ const HeaderComponent = () => {
               <p>
                 <HiOutlineShoppingBag
                   size={30}
-                  onClick={() => setOpen(!open)}
+                  onMouseEnter={() => setOpen(!open)}
                 />
               </p>
               <Link href="/my-account">
@@ -144,7 +144,11 @@ const HeaderComponent = () => {
             </li>
             <li>
               <p className={navStyles.li}>
-                <HiOutlineShoppingBag onClick={() => setOpen(!open)} />
+                <HiOutlineShoppingBag
+                  onClick={() => setOpen(true)}
+                  // onMouseEnter={() => setOpen(true)}
+                  // onMouseLeave={() => setOpen(false)}
+                />
               </p>
             </li>
             <li>

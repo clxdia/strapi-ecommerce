@@ -43,8 +43,8 @@ async function ItemPage({ params: { itemId } }) {
             <p className="mt-5 text-paragraph text-[0.8rem] font-[300]">
               {item.attributes.desc}
             </p>
-            <div className="sticky bottom-0 bg-background pb-2 pt-1">
-              <CartButton />
+            <div className="sticky bottom-0 mb-2 mt-1 ">
+              <CartButton item={item} />
             </div>
           </div>
         </aside>

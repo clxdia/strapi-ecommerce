@@ -4,6 +4,7 @@ import Footer from "../ui/Footer";
 import HeaderComponent from "../ui/HeaderComponent";
 import bannerMB from "../images/banner.png";
 import banner from "../images/banner2.png";
+import { Providers } from "./provider";
 
 export const metadata = {
   title: "E-Commerce",
@@ -15,11 +16,13 @@ export default function RootLayout({ children }) {
     <html>
       <head />
       <body>
-        <HeaderComponent />
-        <div className="md:pt-[7rem] pt-[5rem] ">{children}</div>
-        <Image src={bannerMB} alt="/" className=" md:hidden mt-10" />
-        <Image src={banner} alt="/" className=" md:block hidden mt-10" />
-        <Footer />
+        <Providers>
+          <HeaderComponent />
+          <div className="md:pt-[7rem] pt-[5rem] ">{children}</div>
+          <Image src={bannerMB} alt="/" className=" md:hidden mt-10" />
+          <Image src={banner} alt="/" className=" md:block hidden mt-10" />
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
