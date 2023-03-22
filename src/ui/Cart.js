@@ -20,7 +20,7 @@ const Cart = () => {
     <div className="rounded-lg absolute right-[35px] md:top-[80px] z-[99] bg-white p-[20px] border-[1px] border-footer top-[60px] w-[400px]">
       <h1 className="font-bold">Il mio carrello</h1>
       {products?.map((item) => (
-        <div>
+        <div key={item.id}>
           <div className="flex gap-4 mt-5 ">
             <Image src={item.img} alt={item.title} width="100" height="100" />
             <div className="w-[100%] relative">
@@ -39,14 +39,22 @@ const Cart = () => {
       ))}
       <hr className="mt-5 mb-5"></hr>
       <div className="text-[14px] flex justify-between">
-        <p>Totale Ordine</p>
+        <p>Ordine</p>
         <p>€67.99</p>
       </div>
       <div className="mt-2 text-[14px] flex justify-between">
         <p>Spedizione</p>
         <p>€5.99</p>
       </div>
-      <hr className="mt-5 mb-5"></hr>
+      <hr className="mt-5 mb-3"></hr>
+      <div className="mt-1 text-[14px] mb-5 flex justify-between">
+        <p className="text-[16px]">
+          <b>Totale</b>
+        </p>
+        <p className="text-[16px]">
+          <b>€78.99</b>
+        </p>
+      </div>
       <button className="w-full bg-button text-white p-4 font-semibold">
         Acquista Ora
       </button>
