@@ -1,8 +1,8 @@
 import Image from "next/image";
 import React from "react";
 import CartButton from "../../../ui/CartButton";
-import FavoriteButton from "../../../ui/FavoriteButton";
 import Recommendations from "../../../ui/RecsList";
+import FaveButton from "../../../ui/FaveButton";
 
 const fetchItem = async (itemId) => {
   const res = await fetch(
@@ -15,7 +15,7 @@ const fetchItem = async (itemId) => {
   return item.data;
 };
 
-async function ItemPage({ params: { itemId } }) {
+async function ItemPage({ params: { itemId }, fill, setFill }) {
   const item = await fetchItem(itemId);
 
   return (
@@ -29,7 +29,6 @@ async function ItemPage({ params: { itemId } }) {
             height="1000"
             alt={item.attributes.title}
           />
-          <FavoriteButton className="w-[100px] h-auto" />
         </div>
         <aside className="w-[100%] pt-3 pb-3">
           <div className="h-auto  md:sticky md:top-5">
@@ -43,8 +42,9 @@ async function ItemPage({ params: { itemId } }) {
             <p className="mt-5 text-paragraph text-[0.8rem] font-[300]">
               {item.attributes.desc}
             </p>
-            <div className="sticky bottom-0 mb-2 mt-1 ">
+            <div className="sticky bottom-0 gap-4 flex ">
               <CartButton item={item} />
+              <FaveButton setFill={setFill} fill={fill} item={item} />
             </div>
           </div>
         </aside>

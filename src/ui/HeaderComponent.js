@@ -1,25 +1,36 @@
 "use client";
 
 import Link from "next/link";
-import React from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import { useState } from "react";
-import Nav1 from "./Nav1";
-import Nav2 from "./Nav2";
 import Cart from "./Cart";
-import navStyles from "../styles/Nav.module.css";
 
-import {
-  HiOutlineMenuAlt3,
-  HiOutlineShoppingBag,
-  HiOutlineUser,
-} from "react-icons/hi";
-import { CgClose } from "react-icons/cg";
+import { HiOutlineShoppingBag, HiOutlineUser } from "react-icons/hi";
 
-import { BsArrowRightShort } from "react-icons/bs";
 import { IoMdHeartEmpty } from "react-icons/io";
+import { CartContext } from "../app/CartContext";
 
 const HeaderComponent = () => {
   const [nav, setNav] = useState(false);
+
+  const { cartOpen } = useContext(CartContext);
+  const [open, setOpen] = useState(false);
+  const componentRef = useRef();
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        componentRef.current &&
+        !componentRef.current.contains(event.target)
+      ) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [componentRef]);
 
   const handleNav = () => {
     setNav(!nav);
@@ -29,147 +40,86 @@ const HeaderComponent = () => {
     setNav(false);
   };
 
-  const [open, setOpen] = useState(false);
-
   return (
-    <header className="bg-white fixed w-[100%] z-[99]">
-      <div className="flex w-[95%] max-w-[1800px] m-auto h-[5rem] justify-between items-center relative">
-        <Nav1 />
-        <div className="text-[2.5rem] font-[600] absolute m-auto left-0 right-0 w-auto z-[1] ">
-          <Link href="/" className="text-center md:block hidden">
-            <span className="text-redish font-[200]">e-</span>
-            commerce.
-          </Link>
-          <div className="md:hidden h-[2rem] flex items-center justify-between">
-            <Link href="/" className="text-left sm:hidden">
-              <span className="text-redish font-[200]">e-</span>
-              c.
-            </Link>
-
-            <Link href="/" className="text-left md:hidden sm:block hidden ">
-              <span className="text-redish font-[200]">e-</span>
-              commerce.
-            </Link>
-            <div className="flex gap-4">
-              <p>
-                <HiOutlineShoppingBag
-                  size={30}
-                  onMouseEnter={() => setOpen(!open)}
-                />
-              </p>
-              <Link href="/my-account">
-                <HiOutlineUser size={30} />
-              </Link>
-
-              <div onClick={handleNav} className="md:hidden block z-[100]">
-                {nav ? <CgClose size={30} /> : <HiOutlineMenuAlt3 size={30} />}
-              </div>
-              <div
-                className={
-                  nav
-                    ? "md:hidden fixed top-0 bg-background left-0 right-0 flex w-full h-screen align-items text-center ease-in duration-300"
-                    : "md:hidden fixed top-0 left-[-100%] right-0  flex  w-full h-screen  text-center ease-in duration-300"
-                }
+    <header className="bg-white md:block fixed w-[100%] z-[99] h-[9rem] hidden">
+      <div className="md:flex w-[100%] max-w-[1800px] m-auto h-[9rem] justify-between items-center relative">
+        <nav className="w-[100%] flex flex-col h-[9rem] ">
+          <ul className="flex justify-between w-[95%] m-auto items-center text-[13px]">
+            <li className="flex gap-3">
+              <Link
+                className="decoration-black no-underline hover:underline decoration-solid decoration-1 underline-offset-4"
+                href="/"
               >
-                <nav className="p-2 w-[100%]">
-                  <div className="flex">
-                    <h1>
-                      <span className="text-redish font-[200]">e-</span>
-                      commerce.
-                    </h1>
-                  </div>
-                  <ul className="p-5 text-left text-[1.5rem] font-[400] ">
-                    <li className="flex justify-between items-center py-5 hover:text-redish hover:ease-out hover:transition pointer">
-                      <Link href="/" onClick={handleLinkClick}>
-                        Home
-                      </Link>
-                      <BsArrowRightShort size={25} />
-                    </li>
-                    <li className="flex justify-between items-center py-5 hover:text-redish hover:ease-out hover:transition pointer">
-                      <Link href="/view-all" onClick={handleLinkClick}>
-                        Vedi Tutto
-                      </Link>
-                      <BsArrowRightShort size={25} />
-                    </li>
-                    <li className="flex justify-between items-center py-5 hover:text-redish hover:ease-out hover:transition pointer">
-                      <Link href="/servizio-clienti" onClick={handleLinkClick}>
-                        Servizio Clienti
-                      </Link>
-                      <BsArrowRightShort size={25} />
-                    </li>
-                    <li className="flex-col flex  py-5  pointer">
-                      <p onClick={handleLinkClick} href="/">
-                        Categorie
-                      </p>
-                      <ul className="ml-5 text-[1.2rem] mt-3">
-                        <li className="hover:text-redish py-3 hover:ease-out hover:transition flex justify-between items-center">
-                          <Link href="/abbigliamento" onClick={handleLinkClick}>
-                            Abbigliamento
-                          </Link>
-                          <BsArrowRightShort size={25} />
-                        </li>
-                        <li className="hover:text-redish py-3 hover:ease-out hover:transition flex justify-between items-center">
-                          <Link href="/uomo" onClick={handleLinkClick}>
-                            Uomo
-                          </Link>
-                          <BsArrowRightShort size={25} />
-                        </li>
-                        <li className="hover:text-redish py-3 hover:ease-out hover:transition flex justify-between items-center">
-                          <Link href="/donna" onClick={handleLinkClick}>
-                            Donna
-                          </Link>
-                          <BsArrowRightShort size={25} />
-                        </li>
-                        <li className="hover:text-redish py-3 hover:ease-out hover:transition flex justify-between items-center">
-                          <Link href="/accessori" onClick={handleLinkClick}>
-                            Accessori
-                          </Link>
-                          <BsArrowRightShort size={25} />
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <nav className={navStyles.nav}>
-          <ul>
-            <li>
-              <Link href="/my-account/preferiti" className={navStyles.li}>
+                Home
+              </Link>
+              <Link
+                className="decoration-black no-underline hover:underline decoration-solid decoration-1 underline-offset-4"
+                href="view-all"
+              >
+                Vedi tutto
+              </Link>
+              <Link
+                className="decoration-black no-underline hover:underline decoration-solid decoration-1 underline-offset-4"
+                href="servizio-clienti"
+              >
+                Servizio Clienti
+              </Link>
+            </li>
+            <li className="mr-28 text-[2.5rem] font-[600]">
+              <Link href="/" className="text-center md:block">
+                <span className="text-redish font-[200]">e-</span>
+                commerce.
+              </Link>
+            </li>
+            <li className="flex gap-3 text-[16px]">
+              <Link
+                className="decoration-black no-underline hover:underline decoration-solid decoration-1 underline-offset-4"
+                href="/my-account/preferiti"
+              >
                 <IoMdHeartEmpty />
               </Link>
+              <div className="decoration-black no-underline hover:underline decoration-solid decoration-1 underline-offset-4">
+                <HiOutlineShoppingBag onMouseEnter={() => setOpen(!open)} />
+              </div>
+              <Link
+                className="decoration-black no-underline hover:underline decoration-solid decoration-1 underline-offset-4"
+                href="/my-account"
+              >
+                <HiOutlineUser className="decoration-black no-underline hover:underline decoration-solid decoration-1 underline-offset-4" />
+              </Link>
             </li>
-            <li>
-              <p className={navStyles.li}>
-                <HiOutlineShoppingBag
-                  onClick={() => setOpen(true)}
-                  // onMouseEnter={() => setOpen(true)}
-                  // onMouseLeave={() => setOpen(false)}
-                />
-              </p>
-            </li>
-            <li>
-              <Link href="/my-account" className={navStyles.li}>
-                <HiOutlineUser />
+          </ul>
+          <ul className="flex justify-center font-work font-[300] mt-5 mb-3">
+            <li className="flex gap-10">
+              <Link
+                className="decoration-black no-underline hover:underline decoration-solid decoration-1 underline-offset-4"
+                href="/abbigliamento"
+              >
+                Abbigliamento
+              </Link>
+              <Link
+                className="decoration-black no-underline hover:underline decoration-solid decoration-1 underline-offset-4"
+                href="/uomo"
+              >
+                Uomo
+              </Link>
+              <Link
+                className="decoration-black no-underline hover:underline decoration-solid decoration-1 underline-offset-4"
+                href="/donna"
+              >
+                Donna
+              </Link>
+              <Link
+                className="decoration-black no-underline hover:underline decoration-solid decoration-1 underline-offset-4"
+                href="/accessori"
+              >
+                Accessori
               </Link>
             </li>
           </ul>
         </nav>
       </div>
-      <div className="max-w-[95%] m-auto md:flex justify-center relative mt-4 mb-4 hidden">
-        <div className="flex justify-center font-work font-[300]">
-          <div className="flex justify-center gap-6 lg:gap-10 text-[0.8rem] lg:text-[15px]">
-            <Link href="/abbigliamento">Abbigliamento</Link>
-            <Link href="/uomo">Uomo</Link>
-            <Link href="/donna">Donna</Link>
-            <Link href="/accessori">Accessori</Link>
-          </div>
-        </div>
-      </div>
-      {open && <Cart />}
+      {cartOpen && <Cart ref={componentRef} onClick={() => setOpen(!open)} />}
     </header>
   );
 };

@@ -18,10 +18,6 @@ export default async function NewArrivals() {
       <h1 className="text-center mb-6 text-black font-work font-[500] mt-10 md:text-[2rem] text-[1.5rem]">
         Nuovi arrivi
       </h1>
-      {/* <p className="mb-7 text-gray-500 text-[14px]">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
-      </p> */}
       <div className="flex flex-wrap justify-center gap-3 md:justify-center md:gap-10">
         {items.data.map((item) => {
           return <ItemHomeUI item={item} key={item.id} />;
