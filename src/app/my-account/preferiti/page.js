@@ -23,7 +23,7 @@ const Preferiti = () => {
     );
   }
   return (
-    <main className="md:w-[98%] w-[100%] flex justify-between">
+    <main className="md:w-[98%] w-[100%] flex justify-between" key={item.id}>
       <div className="w-[100%]">
         <h1 className="text-[2rem] font-work mb-5">I miei Preferiti</h1>
         <div className="flex gap-5 flex-wrap">
