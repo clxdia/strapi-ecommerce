@@ -23,12 +23,15 @@ const Preferiti = () => {
     );
   }
   return (
-    <main className="md:w-[98%] w-[100%] flex justify-between" key={item.id}>
+    <main className="md:w-[98%] w-[100%] flex justify-between">
       <div className="w-[100%]">
         <h1 className="text-[2rem] font-work mb-5">I miei Preferiti</h1>
         <div className="flex gap-5 flex-wrap">
           {products?.map((item) => (
-            <div className="font-work font-[300] flex-col mb-10 cursor-pointer relative">
+            <div
+              key={item.id}
+              className="font-work font-[300] flex-col mb-10 cursor-pointer relative"
+            >
               <Link href="/view-all/[id]" as={`/view-all/${item.id}`}>
                 <div className="md:w-[250px] md:h-[350px] w-[180px] h-[250px] bg-white items-center self-center flex hover:shadow-xl hover:transition-all transition-all ease-in-out hover:ease-in-out  relative">
                   <Image
