@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useContext } from "react";
+import React from "react";
 import { Navigation, Pagination, Autoplay } from "swiper";
 import Image from "next/image";
 
@@ -18,14 +18,12 @@ import "swiper/css/autoplay";
 import "swiper/css";
 
 import SwiperStyles from "../styles/Swiper.module.css";
-import { CartContext } from "../app/CartContext";
 
 // import required modules
 
 const SwiperComponent = () => {
-  const { toggleCart } = useContext(CartContext);
   return (
-    <div className={SwiperStyles.html} onClick={toggleCart}>
+    <div className={SwiperStyles.html}>
       <div className={SwiperStyles.body}>
         <Swiper
           spaceBetween={30}

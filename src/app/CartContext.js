@@ -9,8 +9,10 @@ export const CartProvider = ({ children }) => {
 
   const toggleCart = () => {
     setCartOpen(!cartOpen);
+    setTimeout(() => {
+      setCartOpen(cartOpen);
+    }, 3000);
   };
-
   return (
     <CartContext.Provider value={{ cartOpen, toggleCart }}>
       {children}
