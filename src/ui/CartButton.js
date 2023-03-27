@@ -26,7 +26,7 @@ const CartButton = ({ item }) => {
   };
   return (
     <button
-      className="mt-5 flex bg-button text-buttontext p-3 w-[100%] gap-3 justify-center items-center border-[2px] border-button hover:ease-in hover:border-[2px] hover:border-button hover:bg-buttontext hover:text-button"
+      className="mt-3 mb-4 flex bg-button text-buttontext p-3 w-[100%] gap-3 justify-center items-center border-[2px] border-button hover:ease-in hover:border-[2px] hover:border-button hover:bg-buttontext hover:text-button"
       onClick={handleClick}
     >
       <HiOutlineShoppingBag />

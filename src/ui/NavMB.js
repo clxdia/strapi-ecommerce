@@ -1,9 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import React from "react";
+import React, { useContext } from "react";
 import { useState } from "react";
-
 import {
   HiOutlineMenuAlt3,
   HiOutlineShoppingBag,
@@ -12,6 +11,8 @@ import {
 import { CgClose } from "react-icons/cg";
 
 import { BsArrowRightShort } from "react-icons/bs";
+import { CartContext } from "../app/CartContext";
+import Cart from "./Cart";
 
 const NavMB = () => {
   const [nav, setNav] = useState(false);
@@ -24,11 +25,10 @@ const NavMB = () => {
     setNav(false);
   };
 
+  const { cartOpen } = useContext(CartContext);
   const [open, setOpen] = useState(false);
 
-  const toggleCart = () => {
-    setOpen(!open);
-  };
+  const { toggleCart } = useContext(CartContext);
 
   return (
     <header className="md:hidden bg-white w-[100%] fixed z-[99] text-[2.5rem] font-[600] h-[5rem]">
@@ -46,17 +46,14 @@ const NavMB = () => {
               </h1>
             </Link>
           </li>
-
           <li className="flex gap-3">
             <Link href="/my-account">
               <HiOutlineUser size={30} />
             </Link>
-            <Link href="/">
-              <HiOutlineShoppingBag
-                size={30}
-                onMouseEnter={() => setOpen(!open)}
-              />
+            <Link href="/my-account/carrello">
+              <HiOutlineShoppingBag size={30} />
             </Link>
+
             <div onClick={handleNav} className="block z-[100]">
               {nav ? <CgClose size={30} /> : <HiOutlineMenuAlt3 size={30} />}
             </div>

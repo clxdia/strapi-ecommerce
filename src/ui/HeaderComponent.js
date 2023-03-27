@@ -14,23 +14,7 @@ const HeaderComponent = () => {
   const [nav, setNav] = useState(false);
 
   const { cartOpen } = useContext(CartContext);
-  const [open, setOpen] = useState(false);
-  const componentRef = useRef();
-
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (
-        componentRef.current &&
-        !componentRef.current.contains(event.target)
-      ) {
-        setOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [componentRef]);
+  const { toggleCart } = useContext(CartContext);
 
   const handleNav = () => {
     setNav(!nav);
@@ -79,7 +63,7 @@ const HeaderComponent = () => {
                 <IoMdHeartEmpty />
               </Link>
               <div className="decoration-black no-underline hover:underline decoration-solid decoration-1 underline-offset-4">
-                <HiOutlineShoppingBag onMouseEnter={() => setOpen(!open)} />
+                <HiOutlineShoppingBag onClick={toggleCart} />
               </div>
               <Link
                 className="decoration-black no-underline hover:underline decoration-solid decoration-1 underline-offset-4"
@@ -119,7 +103,7 @@ const HeaderComponent = () => {
           </ul>
         </nav>
       </div>
-      {cartOpen && <Cart ref={componentRef} onClick={() => setOpen(!open)} />}
+      {cartOpen && <Cart onClick={() => setOpen(!open)} />}
     </header>
   );
 };

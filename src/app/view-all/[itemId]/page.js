@@ -42,7 +42,7 @@ export default async function ItemPage({ params: { itemId } }, setFill, fill) {
             <p className="mt-5 text-paragraph text-[0.8rem] font-[300]">
               {item.attributes.desc}
             </p>
-            <div className="sticky bottom-0 gap-4 flex ">
+            <div className="sticky bottom-0 gap-4 flex bg-white items-center ">
               <CartButton item={item} />
               <FaveButton setFill={setFill} fill={fill} item={item} />
             </div>

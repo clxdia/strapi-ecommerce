@@ -15,10 +15,10 @@ export default async function ViewAll() {
   );
   return (
     <div>
-      <h1 className="text-[2rem] text-black font-work font-[500] text-center p-10">
+      <h1 className="md:text-[2rem] text-[1.5rem] text-black font-work font-[500] text-center p-10">
         Prodotti del momento
       </h1>
-      <div className="md:w-[80%] w-[90%] m-auto ">
+      <div className="md:w-[80%] w-[90%] m-auto">
         <div className="flex flex-wrap gap-3 justify-center">
           {items.data.map((item) => {
             return <ItemUI item={item} key={item.id} />;

@@ -17,16 +17,16 @@ const FaveButton = ({ item }) => {
   if (fill) {
     return (
       <div
-        className="bg-white p-4 mt-4 flex items-center rounded-[100%] shadow-lg"
+        className="bg-white w-[35px] h-[35px] md:w-[40px] md:h-[40px] p-2 flex items-center rounded-full shadow-lg"
         onClick={() => toggleHeart(!fill)}
       >
-        <BsHeartFill fill="red" size={20} />
+        <BsHeartFill fill="red" className="w-[20px] md:w-[30px] mt-[2px]" />
       </div>
     );
   }
   return (
     <div
-      className="bg-white p-4 mt-4 flex items-center rounded-[100%] shadow-lg"
+      className="bg-white w-[35px] h-[35px] md:w-[40px] md:h-[40px] p-2 flex items-center rounded-full shadow-lg"
       onClick={() =>
         dispatch(
           addToFaves({
@@ -40,7 +40,7 @@ const FaveButton = ({ item }) => {
         ) && toggleHeart(fill)
       }
     >
-      <BsHeart stroke="red" size={20} />
+      <BsHeart stroke="red" className="w-[20px] md:w-[60px] mt-[2px]" />
     </div>
   );
 };
