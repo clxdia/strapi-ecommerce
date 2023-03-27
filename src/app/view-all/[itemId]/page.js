@@ -15,7 +15,7 @@ const fetchItem = async (itemId) => {
   return item.data;
 };
 
-async function ItemPage({ setFill, fill, params: { itemId } }) {
+export default async function ItemPage({ params: { itemId } }, setFill, fill) {
   const item = await fetchItem(itemId);
 
   return (
@@ -53,5 +53,3 @@ async function ItemPage({ setFill, fill, params: { itemId } }) {
     </main>
   );
 }
-
-export default ItemPage;
