@@ -15,7 +15,7 @@ const fetchItem = async (itemId) => {
   return item.data;
 };
 
-async function ItemPage({ params: { itemId }, fill, setFill }) {
+async function ItemPage({ setFill, fill, params: { itemId } }) {
   const item = await fetchItem(itemId);
 
   return (
