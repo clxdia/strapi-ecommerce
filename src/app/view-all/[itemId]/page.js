@@ -31,7 +31,7 @@ export default async function ItemPage({ params: { itemId } }, setFill, fill) {
           />
         </div>
         <aside className="w-[100%] pt-3 pb-3">
-          <div className="h-auto  md:sticky md:top-5">
+          <div className="h-auto md:sticky md:top-[9rem]">
             <h1 className="md:text-[2rem] text-[1rem] font-black">
               {item.attributes.title}
             </h1>
