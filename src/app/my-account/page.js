@@ -5,7 +5,7 @@ import EmptyPage from "../../ui/EmptyPage";
 
 const MyAccount = () => {
   return (
-    <main className="w-[95%] m-auto">
+    <main className="w-full m-auto">
       <h1 className="text-[2rem] font-work">Il mio account</h1>
       <h2 className="mt-2">
         Dal tuo account puoi gestire i tuoi ordini, resi e dati di contatto.

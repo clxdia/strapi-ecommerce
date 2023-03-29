@@ -71,6 +71,7 @@ const Newsletter = () => {
             <form className="font-[300] mt-3">
               <input type="checkbox" id="bbm" name="bbm"></input>
               <label for="bbm">
+                {" "}
                 Voglio anche gli aggiornamenti per bambini
               </label>
             </form>
