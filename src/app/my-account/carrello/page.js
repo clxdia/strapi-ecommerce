@@ -18,7 +18,9 @@ const Carrello = () => {
     return (
       <main className="md:w-[98%] w-[100%] flex justify-between">
         <div className="w-[100%]">
-          <h1 className="text-[2rem] font-work">Il mio carrello</h1>
+          <h1 className="md:text-[2rem] text-center md:text-left font-work text-[20px]">
+            Il mio carrello
+          </h1>
           <div className="m-auto max-w-[350px] h-auto  text-center mt-20 mb-20">
             <SlHandbag className="m-auto p-5" size={100} />
             <p className="font-work mb-3">Il tuo carrello è vuoto!</p>

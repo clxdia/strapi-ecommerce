@@ -7,7 +7,7 @@ const ItemUI = ({ item, fill, toggleFill }) => {
     <div className="font-work font-[300] flex-col mb-5 cursor-pointer">
       <div className="relative">
         <Link href="/view-all/[id]" as={`/view-all/${item.id}`}>
-          <div className="bg-white items-center self-center flex hover:shadow-xl hover:transition hover:ease-in-out hover:scale-105">
+          <div className="bg-white items-center self-center flex hover:shadow-xl hover:transition hover:ease-in-out md:hover:scale-105">
             <Image
               src={item.attributes.img.data.attributes.url}
               alt="/"

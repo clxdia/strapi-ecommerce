@@ -16,7 +16,9 @@ const Preferiti = () => {
     return (
       <main className="md:w-[98%] w-[100%] flex justify-between">
         <div className="w-[100%]">
-          <h1 className="text-[2rem] font-work">I miei Preferiti</h1>
+          <h1 className="md:text-[2rem] text-center md:text-left font-work text-[20px]">
+            I miei Preferiti
+          </h1>
           <EmptyPage />
         </div>
       </main>
@@ -25,19 +27,21 @@ const Preferiti = () => {
   return (
     <main className="md:w-[98%] w-[100%] flex justify-between">
       <div className="w-[100%]">
-        <h1 className="text-[2rem] font-work mb-5">I miei Preferiti</h1>
-        <div className="flex gap-5 flex-wrap">
+        <h1 className="md:text-[2rem] text-center md:text-left font-work text-[20px] mb-5">
+          I miei Preferiti
+        </h1>
+        <div className="flex gap-5 flex-wrap justify-center">
           {products?.map((item) => (
             <div
               key={item.id}
               className="font-work font-[300] flex-col mb-10 cursor-pointer relative"
             >
               <Link href="/view-all/[id]" as={`/view-all/${item.id}`}>
-                <div className="md:w-[250px] md:h-[350px] w-[180px] h-[250px] bg-white items-center self-center flex hover:shadow-xl hover:transition-all transition-all ease-in-out hover:ease-in-out  relative">
+                <div className="md:w-[250px] md:h-[350px] w-[160px] h-[250px] bg-white items-center self-center flex hover:shadow-xl hover:transition-all transition-all ease-in-out hover:ease-in-out relative">
                   <Image
                     src={item.img}
                     alt="/"
-                    className="object-cover md:w-[250px] md:h-[350px] w-[180px] h-[250px] relative"
+                    className="object-cover md:w-[250px] md:h-[350px] w-[160px] h-[250px] relative"
                     width="250"
                     height="350"
                   />
@@ -49,9 +53,15 @@ const Preferiti = () => {
               >
                 <TbTrash size={20} stroke="grey" />
               </button>
-              <Link href="/view-all/[id]" as={`/view-all/${item.id}`}>
-                <h3 className="mt-2 md:w-[250px] w-[180px] ">{item.title}</h3>
-                <p className="font-[400] w-fit text-[1rem] hover:text-redish hover:ease-out hover:transition">
+              <Link
+                href="/view-all/[id]"
+                as={`/view-all/${item.id}`}
+                className="h-[3.5rem] flex flex-col justify-between"
+              >
+                <h3 className="mt-2 md:w-[250px] w-[160px] text-[12px]">
+                  {item.title}
+                </h3>
+                <p className="font-[400] w-fit text-[15px] hover:text-redish hover:ease-out hover:transition">
                   €{item.price}
                 </p>
               </Link>

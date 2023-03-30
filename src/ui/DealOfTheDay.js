@@ -20,7 +20,7 @@ export default async function DealOfTheDay() {
   return (
     <section className="lg:w-[70%] w-[90%] max-w-[1800px] md:w-[90%] m-auto mb-20">
       <Link href="/view-all/9" as={`/view-all/9`}>
-        <h1 className="text-center mb-6 text-black font-work font-[500] mt-10 md:text-[2rem] text-[1.5rem]">
+        <h1 className="md:text-[2rem] text-[1.5rem] text-black font-work font-[500] text-center mb-5">
           Offerta del giorno
         </h1>
         <div className="md:flex md:flex-row flex flex-col justify-between gap-3 bg-background">
