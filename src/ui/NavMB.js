@@ -25,10 +25,7 @@ const NavMB = () => {
     setNav(false);
   };
 
-  const { cartOpen } = useContext(CartContext);
-  const { toggleCart } = useContext(CartContext);
-
-  const { number } = useContext(CartContext);
+  const { notif } = useContext(CartContext);
 
   return (
     <header className="md:hidden bg-white w-[100%] fixed z-[99] text-[2.5rem] font-[600] h-[5rem]">
@@ -52,9 +49,9 @@ const NavMB = () => {
             </Link>
             <Link href="/my-account/carrello" className="relative pb-1 pr-1">
               <HiOutlineShoppingBag size={30} />
-              {number && (
+              {notif && (
                 <div className="bg-redish w-4 h-4 absolute bottom-0 right-0 rounded-full flex justify-center text-white text-[10px]">
-                  {number}
+                  {notif}
                 </div>
               )}
             </Link>

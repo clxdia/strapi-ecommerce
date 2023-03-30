@@ -2,15 +2,17 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useContext } from "react";
 import { TbTrash } from "react-icons/tb";
 import { SlHandbag } from "react-icons/sl";
 import { useDispatch, useSelector } from "react-redux";
 import { removeItem } from "../../../redux/cartReducer";
+import { CartContext } from "../../CartContext";
 
 const Carrello = () => {
   const products = useSelector((state) => state.cart.products);
   const dispatch = useDispatch();
+  const { removeCartNotif } = useContext(CartContext);
 
   if (products.length === 0) {
     return (
@@ -53,7 +55,9 @@ const Carrello = () => {
                 <p className="text-[15px]">Quantità: {item.quantity}</p>
                 <button
                   className="border-1 border-gray-300 border w-fit p-2 gap-2 items-center flex bottom-0 absolute right-10"
-                  onClick={() => dispatch(removeItem(item.id))}
+                  onClick={() =>
+                    dispatch(removeItem(item.id)) && removeCartNotif()
+                  }
                 >
                   <TbTrash size={20} stroke="grey" />
                   <p>Elimina prodotto</p>
