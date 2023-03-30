@@ -69,7 +69,7 @@ export default async function ItemPage({ params: { itemId } }, setFill, fill) {
                 <div className="w-[90%] leading-6">
                   <p>Resi gratuiti</p>
                   <p className="mt-1">
-                    Si applicano i Termini e Condizioni dell'offerta.{" "}
+                    Si applicano i Termini e Condizioni dell&#39;offerta.{" "}
                     <u>Maggiori informazioni sulla consegna.</u>
                   </p>
                 </div>
