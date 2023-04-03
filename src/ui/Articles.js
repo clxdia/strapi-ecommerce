@@ -14,13 +14,13 @@ export default function Articles() {
         Magazine
       </h1>
 
-      <div className="lg:w-[70%] w-[90%] max-w-[1800px] m-auto flex flex-wrap  justify-center gap-7 pb-20">
-        <article className="w-[20rem] cursor-pointer shadow-md">
+      <div className="lg:w-[70%] md:w-[75%] m-auto flex flex-wrap w-[100%] h-full gap-2 pb-20">
+        <article className="w-[30vw] cursor-pointer shadow-md">
           <Link href="/servizio-clienti/magazine/1">
             <Image
               src={article1}
               alt="/"
-              className="w-full h-[13rem] max-h-[13rem]"
+              className="w-full h-[13vw] object-cover"
             />
             <p className="bg-white p-3 font-[300] text-[15px]">INSIDER</p>
             <p className="bg-white p-3 font-[500]">Fashion & The Color Blue</p>
@@ -31,12 +31,12 @@ export default function Articles() {
           </Link>
         </article>
 
-        <article className="w-[20rem] cursor-pointer shadow-md">
+        <article className="w-[30vw] cursor-pointer shadow-md">
           <Link href="/servizio-clienti/magazine/2">
             <Image
               src={article2}
               alt="/"
-              className="w-full h-[13rem] max-h-[13rem]"
+              className="w-full h-[13vw] max-h-[13rem] object-cover"
             />
             <p className="bg-white p-3 font-[300] text-[15px]">INSIDER</p>
             <p className="bg-white p-3 font-[500]">
@@ -49,12 +49,12 @@ export default function Articles() {
           </Link>
         </article>
 
-        <article className="w-[20rem] cursor-pointer shadow-md">
+        <article className="w-[30vw] cursor-pointer shadow-md">
           <Link href="/servizio-clienti/magazine/3">
             <Image
               src={article3}
               alt="/"
-              className="w-full h-[13rem] max-h-[13rem]"
+              className="w-full h-[13vw] max-h-[13rem] object-cover"
             />
             <p className="bg-white p-3 font-[300] text-[15px]">INSIDER</p>
             <p className="bg-white p-3 font-[500]">Tech Week 2023</p>

@@ -18,6 +18,10 @@ module.exports = {
       cursive: ["Nanum Myeongjo", "sans-serif"],
       paragraph: ["IBM Plex Serif", "sans-serif"],
       crimson: ["Crimson Text", "sans-serif"],
+
+      stardom: ["Stardom", "sans-serif"],
+      clash: ["Clash Display", "sans-serif"],
+      alpino: ["Alpino", "sans-serif"],
     },
     screens: {
       lg: "1100px",
@@ -35,6 +39,12 @@ module.exports = {
       redish: "#f25042",
       footer: "#e4e4e4",
       black: "#000000",
+
+      blueish: "#0081a7",
+      teal: "#00afb9",
+      yellowish: "#fdfcdc",
+      peach: "#fed9b7",
+      coral: "#f07167",
     },
   },
   plugins: [require("flowbite/plugin")],

@@ -3,7 +3,7 @@ import React from "react";
 
 const AsideNS = () => {
   return (
-    <aside className="w-[20%] font-work text-[15px] font-[300] md:block hidden">
+    <aside className="w-[20%] font-work text-[15px] font-[300] md:block hidden pt-[7rem]">
       <div className="flex flex-col ">
         <h3 className="text-[1.5rem] font-[400]">Shopping</h3>
         <Link href="../abbigliamento" className="mt-1 font-[300] ">

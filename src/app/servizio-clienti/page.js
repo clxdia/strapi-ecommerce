@@ -6,7 +6,7 @@ import clientservice from "../../images/service-clients.png";
 
 const ServizioClienti = () => {
   return (
-    <div className="text-center font-work mb-10 max-w-[1800px] ">
+    <div className="text-center font-work mb-10 max-w-[1800px] pt-[7rem]">
       <Image src={clientservice} alt="/" />
 
       <h1 className="text-[2rem] md:mt-[4rem] font-[600] mt-10 mb-4">

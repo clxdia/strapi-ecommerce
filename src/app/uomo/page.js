@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
+import AsideWA from "../../ui/AsideWA";
 import ItemUI from "../../ui/ItemUI";
 
 async function fetchData(url) {
@@ -18,15 +19,20 @@ export default async function Uomo() {
   );
 
   return (
-    <main>
-      <h1 className="text-[2rem] text-black font-work font-[500] text-center p-10">
-        Abbigliamento: Uomo
-      </h1>
-      <div className="md:w-[80%] w-[90%] m-auto ">
-        <div className="flex flex-wrap gap-3 justify-center">
-          {items.data.map((item) => (
-            <ItemUI item={item} key={item.id} />
-          ))}
+    <main className="pt-[7rem]">
+      <div className="md:flex md:w-[90%] m-auto">
+        <AsideWA uomo={"red"} />
+        <div>
+          <h1 className="text-[2rem] text-black font-work font-[500] pt-10 pb-10">
+            Abbigliamento: Uomo
+          </h1>
+          <div className="md:w-[100%] w-[90%] m-auto ">
+            <div className="flex flex-wrap w-[100%] h-full gap-2">
+              {items.data.map((item) => (
+                <ItemUI item={item} key={item.id} />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
       <section className="m-auto grid  grid-cols-2 gap-10 mt-10 md:mt-[5rem]">

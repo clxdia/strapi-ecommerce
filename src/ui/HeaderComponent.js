@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import React, { useContext, useEffect, useRef } from "react";
+import React, { useContext, useEffect } from "react";
 import { useState } from "react";
 import Cart from "./Cart";
 
@@ -12,22 +12,28 @@ import { CartContext } from "../app/CartContext";
 
 const HeaderComponent = () => {
   const [nav, setNav] = useState(false);
+  const [bgColor, setBgColor] = useState("transparent");
 
   const { cartOpen } = useContext(CartContext);
   const { toggleCart } = useContext(CartContext);
 
-  const handleNav = () => {
-    setNav(!nav);
-  };
-
-  const handleLinkClick = () => {
-    setNav(false);
-  };
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 0) {
+        setBgColor("white");
+      } else {
+        setBgColor("transparent");
+      }
+    });
+  }, []);
 
   return (
-    <header className="bg-white md:block fixed w-[100%] z-[99] h-[9rem] hidden">
-      <div className="md:flex w-[100%] max-w-[1800px] m-auto h-[9rem] justify-between items-center relative">
-        <nav className="w-[100%] flex flex-col h-[9rem] ">
+    <header
+      className="md:block bg-white fixed w-[100%] z-[99] h-[5rem] hidden transition-all ease-out duration-[1s]"
+      style={{ backgroundColor: bgColor }}
+    >
+      <div className="md:flex w-[100%] max-w-[1800px] m-auto h-[5rem] justify-between items-center">
+        <nav className="w-[100%] flex flex-col h-[5rem] ">
           <ul className="flex justify-between w-[95%] m-auto items-center text-[13px]">
             <li className="flex gap-3">
               <Link
@@ -49,7 +55,7 @@ const HeaderComponent = () => {
                 Servizio Clienti
               </Link>
             </li>
-            <li className="mr-28 text-[2.5rem] font-[600]">
+            <li className="mr-36 text-[2.5rem] font-stardom">
               <Link href="/" className="text-center md:block">
                 <span className="text-redish font-[200]">e-</span>
                 commerce.
@@ -70,34 +76,6 @@ const HeaderComponent = () => {
                 href="/my-account"
               >
                 <HiOutlineUser className="decoration-black no-underline hover:underline decoration-solid decoration-1 underline-offset-4" />
-              </Link>
-            </li>
-          </ul>
-          <ul className="flex justify-center font-work font-[300] mt-5 mb-3">
-            <li className="flex gap-10">
-              <Link
-                className="decoration-black no-underline hover:underline decoration-solid decoration-1 underline-offset-4"
-                href="/abbigliamento"
-              >
-                Abbigliamento
-              </Link>
-              <Link
-                className="decoration-black no-underline hover:underline decoration-solid decoration-1 underline-offset-4"
-                href="/uomo"
-              >
-                Uomo
-              </Link>
-              <Link
-                className="decoration-black no-underline hover:underline decoration-solid decoration-1 underline-offset-4"
-                href="/donna"
-              >
-                Donna
-              </Link>
-              <Link
-                className="decoration-black no-underline hover:underline decoration-solid decoration-1 underline-offset-4"
-                href="/accessori"
-              >
-                Accessori
               </Link>
             </li>
           </ul>

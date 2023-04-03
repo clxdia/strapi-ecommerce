@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
           <Providers>
             <HeaderComponent />
             <NavMB />
-            <div className="md:pt-[9rem] pt-[5rem] ">{children}</div>
+            <div className="md:pt-0 pt-[5rem]">{children}</div>
             <Image src={bannerMB} alt="/" className=" md:hidden mt-10" />
             <Image src={banner} alt="/" className=" md:block hidden mt-10" />
             <Footer />

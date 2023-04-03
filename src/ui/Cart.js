@@ -26,7 +26,7 @@ const Cart = ({ open }) => {
     return (
       <div
         open={open}
-        className="rounded-lg absolute right-[35px] md:top-[80px] z-[99] bg-white p-[20px] border-[1px] border-footer top-[65px] md:h-[100%]  "
+        className="rounded-lg absolute right-[35px] md:top-[70px] z-[99] bg-white p-[30px] border-[1px] border-footer top-[65px] md:h-[100%]  "
       >
         <h1 className="font-bold text-[16px]">Il mio carrello</h1>
         <h2 className="p-5 font-medium text-[16px]">Il carrello è vuoto.</h2>
@@ -37,7 +37,7 @@ const Cart = ({ open }) => {
     return (
       <div
         open={open}
-        className="rounded-lg absolute right-[35px] md:top-[80px] z-[99] bg-white p-[20px] border-[1px] border-footer top-[60px] w-[400px] "
+        className="rounded-lg absolute right-[35px] md:top-[70px] z-[99] bg-white p-[20px] border-[1px] border-footer top-[60px] w-[400px] "
       >
         <h1 className="font-bold">Il mio carrello</h1>
         {products?.map((item) => (

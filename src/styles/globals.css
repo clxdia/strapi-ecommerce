@@ -3,6 +3,10 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap");
 
+@import url("https://api.fontshare.com/v2/css?f[]=stardom@400&display=swap");
+@import url("https://api.fontshare.com/v2/css?f[]=alpino@1&display=swap");
+@import url("https://api.fontshare.com/v2/css?f[]=clash-display@1&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -64,6 +68,13 @@ a {
     22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
     41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
     100px 100px 80px rgba(0, 0, 0, 0.07);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Clash Display", sans-serif;
 }
 
 .text-grid,

@@ -22,9 +22,9 @@ export default async function ItemPage({ params: { itemId } }, setFill, fill) {
   const item = await fetchItem(itemId);
 
   return (
-    <main className="w-[90%] md:w-[70%] mt-[2rem] md:mt-[5rem] m-auto font-work">
-      <section className="md:flex gap-10 md:w-[80%] m-auto">
-        <div className=" items-center self-center flex relative">
+    <div className="w-[90%] md:w-[80%] pt-[10rem] m-auto font-work">
+      <section className="md:flex gap-10 md:w-[80%] m-auto mt-0">
+        <div className=" items-center self-center flex ">
           <Image
             src={item.attributes.img.data.attributes.url}
             className="w-[100%] md:w-[1500px] md:h-[1000px] object-cover"
@@ -33,7 +33,7 @@ export default async function ItemPage({ params: { itemId } }, setFill, fill) {
             alt={item.attributes.title}
           />
         </div>
-        <aside className="w-[100%] md:w-[90%]">
+        <aside className="w-[100%] md:w-[80%]">
           <div className="h-auto md:sticky md:top-[9rem]">
             <h1 className="md:text-[2rem] text-[20px] font-light md:mt-0 mt-3">
               {item.attributes.title}
@@ -79,6 +79,6 @@ export default async function ItemPage({ params: { itemId } }, setFill, fill) {
         </aside>
       </section>
       <Recommendations />
-    </main>
+    </div>
   );
 }
