@@ -11,12 +11,12 @@ export default async function MagazinePage({
     return magazine.id === params.magazineId;
   });
   return (
-    <main>
+    <main className="md:pt-[7rem] ">
       <div className="w-[100%] h-auto">
         <Image src={magazine.pic} alt="/" className="w-[100%]" />
       </div>
-      <div className="md:h-[5rem] h-[6rem] relative bg-redish w-[100%] justify-center"></div>
-      <div className="bg-white p-5 md:w-[67%] md:mt-[-3rem] mt-[-4rem] w-[90%] left-0 right-0 absolute m-auto md:left-[24.7%] md:right-[9%] text-center">
+      <div className="md:h-[5rem] h-[6rem] relative bg-coral w-[100%] justify-center"></div>
+      <div className="bg-background p-5 md:w-[67%] md:mt-[-3rem] mt-[-4rem] w-[90%] left-0 right-0 absolute m-auto md:left-[24.7%] md:right-[9%] text-center">
         <p className="font-work font-[300] text-[0.8rem]">INSIDER</p>
         <h1 className="font-work font-[500] text-[1.5rem] mt-2">
           {magazine.title}

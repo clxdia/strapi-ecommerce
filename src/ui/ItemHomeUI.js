@@ -6,14 +6,14 @@ import FaveButton from "./FaveButton";
 
 const ItemHomeUI = ({ item, fill, toggleFill }) => {
   return (
-    <div className="font-work font-[300] flex-col flex-1 flex-shrink-0 w-1/4 max-w-[25%] mb-10 cursor-pointer">
-      <div className="relative ">
+    <div className="flex-col flex-1 flex-shrink-0 md:w-1/4 md:max-w-[25%] w-1/2 max-w-[50%] mb-10 cursor-pointer">
+      <div className="relative">
         <Link href="/view-all/[id]" as={`/view-all/${item.id}`}>
           <div className="bg-white items-center self-center flex hover:shadow-xl h-auto  hover:transition hover:ease-in-out md:hover:scale-105">
             <Image
               src={item.attributes.img.data.attributes.url}
               alt="/"
-              className="md:w-[50vw] md:h-[25vw] object-cover relative"
+              className="w-[50vw] h-[25vw] min-w-[160px] min-h-[230px] object-cover relative"
               width="260"
               height="250"
             />

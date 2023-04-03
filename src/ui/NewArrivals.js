@@ -15,11 +15,11 @@ export default async function NewArrivals() {
   console.log(items);
   return (
     <section className="lg:w-[70%] w-[90%] max-w-[1800px] md:w-[90%] m-auto mb-20">
-      <h1 className="mb-6 text-black font-clash font-medium tracking-wide mt-10 md:text-[1.5rem] text-[1.5rem] cursor-pointer uppercase w-full text-center">
+      <h1 className="mb-6 text-black font-clash font-medium tracking-wide mt-10 md:text-[2rem] text-[1.5rem] cursor-pointer uppercase w-full text-center">
         Nuovi Arrivi
       </h1>
       <div className="m-auto w-[100%]">
-        <div className="flex flex-wrap w-[100%] h-full gap-2">
+        <div className="flex flex-wrap  w-[100%] h-full gap-2">
           {items.data.map((item) => {
             return <ItemHomeUI item={item} key={item.id} />;
           })}

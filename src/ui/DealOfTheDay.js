@@ -19,31 +19,31 @@ export default async function DealOfTheDay() {
   return (
     <section className="mb-20 bg-blueish p-5 md:p-14 text-white pb-14">
       <div className="md:w-[75%] w-[90%] m-auto">
-        <Link href="/view-all/9" as={`/view-all/9`}>
-          <h1 className="md:hidden block text-[1.5rem] font-clash font-semibold uppercase mt-5">
-            Offerte del giorno
-          </h1>
-          <div className="flex flex-col md:flex-row md:gap-5 ">
-            <div className="w-[50%] flex flex-col min-w-[30%]">
-              <h1 className="md:block hidden text-[2rem] font-clash font-semibold uppercase">
-                Offerte del giorno
-              </h1>
-              <p className="text-[10px] sm:text-[12px] md:text-[15px] md:w-[90%] mt-3">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur.
-              </p>
-              <button className="mt-6 block w-[60%] bg-coral text-buttontext p-1 md:p-3 gap-3 justify-center items-center border-[2px] border-coral hover:ease-in hover:border-[2px] hover:border-coral hover:bg-buttontext hover:text-coral md:mb-0 mb-5">
-                Scopri ora
-              </button>
-            </div>
+        <h1 className="md:hidden block text-[1.5rem] font-clash font-medium uppercase mt-5">
+          Offerte del giorno
+        </h1>
+        <div className="flex flex-col md:flex-row md:gap-5 ">
+          <div className="w-[50%] flex flex-col min-w-[30%]">
+            <h1 className="md:block hidden text-[2rem] font-clash font-medium uppercase">
+              Offerte del giorno
+            </h1>
+            <p className="text-[10px] sm:text-[12px] md:text-[15px] md:w-[90%] mt-3">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur.
+            </p>
+            <button className="mt-6 block w-[60%] bg-coral text-buttontext p-1 md:p-3 gap-3 justify-center items-center border-[2px] border-coral hover:ease-in hover:border-[2px] hover:border-coral hover:bg-buttontext hover:text-coral md:mb-0 mb-5">
+              Scopri ora
+            </button>
+          </div>
 
-            <div className="min-w-[60%] flex overflow-y-hidden overflow-x-scroll gap-5">
-              {items.data.map((item) => (
-                <div className="md:min-w-[40%] w-[100%] min-w-[60%] md:h-[30vw] h-[70vw] relative mb-0">
+          <div className="min-w-[60%] flex overflow-y-hidden overflow-x-scroll gap-5">
+            {items.data.map((item) => (
+              <div className="md:min-w-[40%] w-[100%] min-w-[60%] md:h-[30vw] h-[70vw] relative mb-0">
+                <Link href="/view-all/[id]" as={`/view-all/${item.id}`}>
                   <Image
                     src={item.attributes.img.data.attributes.url}
                     width="600"
@@ -64,8 +64,10 @@ export default async function DealOfTheDay() {
                       </p>
                     </div>
                   </div>
-                </div>
-                /* <p className=" w-[100%] block sm:hidden md:hidden text-[12px] mt-2">
+                </Link>
+              </div>
+
+              /* <p className=" w-[100%] block sm:hidden md:hidden text-[12px] mt-2">
                       {item.attributes.desc}
                     </p>
                     <button className="mt-5 w-[40%] bg-button text-buttontext p-1 gap-3 items-center border-[2px] border-button hover:ease-in hover:border-[2px] hover:border-button hover:bg-buttontext hover:text-button md:hidden block mb-5">
@@ -106,10 +108,9 @@ export default async function DealOfTheDay() {
                         <s>€50.99</s>
                       </p>
                     </div> */
-              ))}
-            </div>
+            ))}
           </div>
-        </Link>
+        </div>
       </div>
     </section>
   );

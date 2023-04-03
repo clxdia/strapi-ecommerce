@@ -17,11 +17,9 @@ export default function MagazineHome() {
         </ul>
       </section>
       <section className="w-[90%] m-auto md:w-[100%]">
-        <div>
-          {magazines.map((magazine) => (
-            <Magazine magazine={magazine} key={magazine.id} />
-          ))}
-        </div>
+        {magazines.map((magazine) => (
+          <Magazine magazine={magazine} key={magazine.id} />
+        ))}
       </section>
     </main>
   );
