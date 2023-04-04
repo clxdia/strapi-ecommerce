@@ -1,11 +1,10 @@
-import Link from "next/link";
 import React from "react";
 
 import EmptyPage from "../../ui/EmptyPage";
 
 const MyAccount = () => {
   return (
-    <main className="w-full m-auto">
+    <main className="w-[100%] md:w-[95%] mx-auto">
       <h1 className="md:text-[2rem] text-center md:text-left font-clash font-medium text-[20px]">
         Il mio account
       </h1>
