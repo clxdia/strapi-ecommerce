@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useContext, useState } from "react";
-import { HiOutlineShoppingBag } from "react-icons/hi";
 import { useDispatch } from "react-redux";
 import { CartContext } from "../app/CartContext";
 import { addToCart } from "../redux/cartReducer";

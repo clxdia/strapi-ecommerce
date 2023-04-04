@@ -7,7 +7,6 @@ import { RiRefund2Line } from "react-icons/ri";
 import { IoMailOpenOutline } from "react-icons/io5";
 import aside from "../images/accountAside.png";
 import Image from "next/image";
-import { HiHeart } from "react-icons/hi";
 import { FiHeart } from "react-icons/fi";
 
 const AccountAside = () => {

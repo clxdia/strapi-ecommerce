@@ -1,7 +1,5 @@
 import React from "react";
-import { BsArrowRightShort } from "react-icons/bs";
 import { TfiPackage } from "react-icons/tfi";
-import { GiStarsStack } from "react-icons/gi";
 import { RiRefund2Line } from "react-icons/ri";
 import { IoMailOpenOutline } from "react-icons/io5";
 import Link from "next/link";

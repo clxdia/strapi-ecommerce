@@ -1,8 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import React, { useState } from "react";
-import Abbigliamento from "../app/abbigliamento/page";
+import React from "react";
 
 const AsideWA = ({ abbigliamento, acc, donna, uomo }) => {
   return (

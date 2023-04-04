@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React from "react";
 import { TbTrash } from "react-icons/tb";
-import { useDispatch, useSelector, useStore } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { removeItem, resetCart } from "../redux/cartReducer";
 
 const Cart = ({ open }) => {
