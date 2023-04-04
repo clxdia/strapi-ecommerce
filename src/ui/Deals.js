@@ -41,7 +41,10 @@ export default async function Deals() {
 
           <div className="min-w-[60%] flex overflow-y-hidden overflow-x-scroll gap-5">
             {items.data.map((item) => (
-              <div className="md:min-w-[40%] w-[100%] min-w-[60%] md:h-[30vw] h-[70vw] relative mb-0">
+              <div
+                className="md:min-w-[40%] w-[100%] min-w-[60%] md:h-[30vw] h-[70vw] relative mb-0"
+                key={item.id}
+              >
                 <Link href="/view-all/[id]" as={`/view-all/${item.id}`}>
                   <Image
                     src={item.attributes.img.data.attributes.url}
