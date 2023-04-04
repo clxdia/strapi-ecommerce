@@ -12,7 +12,6 @@ import { CgClose } from "react-icons/cg";
 
 import { BsArrowRightShort } from "react-icons/bs";
 import { CartContext } from "../app/CartContext";
-import Cart from "./Cart";
 
 const NavMB = () => {
   const [nav, setNav] = useState(false);

@@ -1,7 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { BsHeart } from "react-icons/bs";
-import { HiHeart } from "react-icons/hi";
 import FaveButton from "./FaveButton";
 
 const ItemHomeUI = ({ item, fill, toggleFill }) => {

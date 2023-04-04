@@ -12,7 +12,7 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import "swiper/css";
 
-import slide1 from "../images/slide1MB.png";
+import slide1 from "../images/mobile/slideMB1.png";
 
 import SwiperStyles from "../styles/Swiper.module.css";
 

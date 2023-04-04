@@ -11,7 +11,6 @@ import { IoMdHeartEmpty } from "react-icons/io";
 import { CartContext } from "../app/CartContext";
 
 const HeaderComponent = () => {
-  const [nav, setNav] = useState(false);
   const [bgColor, setBgColor] = useState("transparent");
 
   const { cartOpen } = useContext(CartContext);

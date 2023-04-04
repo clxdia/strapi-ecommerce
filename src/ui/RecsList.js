@@ -11,7 +11,7 @@ async function fetchData(url) {
   return res.json();
 }
 
-export default async function Recommendations({ fill, toggleFill, item }) {
+export default async function Recommendations({ fill, toggleFill }) {
   const items = await fetchData(
     process.env.NEXT_PUBLIC_SHORT_API_URL + "?populate=*"
   );
