@@ -5,8 +5,10 @@ import React from "react";
 
 const AsideWA = ({ abbigliamento, acc, donna, uomo }) => {
   return (
-    <aside className="md:block hidden mt-[8rem] min-w-[300px] w-[300px] ">
-      <Link href="/view-all">Categorie</Link>
+    <aside className="md:block hidden mt-[8rem] md:min-w-[300px] md:w-[300px] font-clash">
+      <Link href="/view-all" className="uppercase font-medium">
+        Categorie
+      </Link>
       <ul className="ml-3">
         <li className="mt-3">
           <Link href="/abbigliamento" style={{ color: abbigliamento }}>

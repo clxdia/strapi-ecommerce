@@ -19,15 +19,15 @@ export default async function Accessori() {
   );
 
   return (
-    <main className="pt-[7rem]">
+    <main className="md:pt-[7rem] pb-[10rem]">
       <div className="md:flex md:w-[90%] m-auto">
-        <AsideWA acc={"red"} />
+        <AsideWA acc={"#f07167"} />
         <div>
-          <h1 className="text-[2rem] text-black font-work font-[500] pt-10 pb-10">
-            Accessori
+          <h1 className="text-[2rem] text-black font-clash md:text-left text-center font-medium pt-10 pb-10">
+            ACCESSORI
           </h1>
           <div className="md:w-[100%] w-[90%] m-auto ">
-            <div className="flex flex-wrap w-[100%] h-full gap-2">
+            <div className="flex flex-wrap h-full md:gap-[1.6vw] gap-[3vw] sm:gap-auto">
               {items.data.map((item) => (
                 <ItemUI item={item} key={item.id} />
               ))}
@@ -35,14 +35,6 @@ export default async function Accessori() {
           </div>
         </div>
       </div>
-      <section className="flex flex-col m-auto justify-center mt-10 md:mt-[5rem]">
-        <Link href="/donna" className="m-auto justify-center flex flex-col">
-          <h3 className="text-[1.2rem]">Donna</h3>
-          <div className="m-auto">
-            <BsArrowLeftShort size={30} className="hover:text-redish" />
-          </div>
-        </Link>
-      </section>
     </main>
   );
 }

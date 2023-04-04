@@ -27,17 +27,17 @@ const NavMB = () => {
   const { notif } = useContext(CartContext);
 
   return (
-    <header className="md:hidden bg-white w-[100%] fixed z-[99] text-[2.5rem] font-[600] h-[5rem]">
+    <header className="md:hidden bg-white w-[100%] fixed z-[99] text-[2.5rem] h-[5rem]">
       <nav className="w-[95%] m-auto h-[5rem]">
         <ul className="flex items-center justify-between h-[5rem]">
           <li className="mb-3">
-            <Link href="/" className="text-left sm:hidden">
-              <span className="text-redish font-[200]">e-</span>
+            <Link href="/" className="text-left font-stardom sm:hidden">
+              <span className="text-redish ">e-</span>
               c.
             </Link>
             <Link href="/" className="text-left md:hidden sm:block hidden ">
-              <h1>
-                <span className="text-redish font-[200]">e-</span>
+              <h1 className="font-stardom">
+                <span className="text-redish ">e-</span>
                 commerce.
               </h1>
             </Link>
@@ -70,12 +70,12 @@ const NavMB = () => {
       >
         <nav className="w-[95%] mx-auto mt-1">
           <div className="flex">
-            <h1 className="font-[600]">
-              <span className="text-redish font-[200]">e-</span>
+            <h1 className="">
+              <span className="text-redish ">e-</span>
               commerce.
             </h1>
           </div>
-          <ul className="px-5 sm:p-5 text-left text-[1.5rem] font-[400] ">
+          <ul className="px-5 sm:p-5 text-left text-[1.5rem]  ">
             <li className="flex justify-between items-center py-4 hover:text-redish hover:ease-out hover:transition pointer">
               <Link href="/" onClick={handleLinkClick}>
                 Home

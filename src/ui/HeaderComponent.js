@@ -28,13 +28,13 @@ const HeaderComponent = () => {
 
   return (
     <header
-      className="md:block bg-white fixed w-[100%] z-[99] h-[5rem] hidden transition-all ease-out duration-[1s]"
+      className="font-alpino md:block bg-white fixed w-[100%] z-[99] h-[5rem] hidden transition-all ease-out duration-[1s]"
       style={{ backgroundColor: bgColor }}
     >
       <div className="md:flex w-[100%] max-w-[1800px] m-auto h-[5rem] justify-between items-center">
         <nav className="w-[100%] flex flex-col h-[5rem] ">
           <ul className="flex justify-between w-[95%] m-auto items-center text-[13px]">
-            <li className="flex gap-3">
+            <li className="flex gap-3 text-[15px]">
               <Link
                 className="decoration-black no-underline hover:underline decoration-solid decoration-1 underline-offset-4"
                 href="/"
@@ -56,7 +56,7 @@ const HeaderComponent = () => {
             </li>
             <li className="mr-36 text-[2.5rem] font-stardom">
               <Link href="/" className="text-center md:block">
-                <span className="text-redish font-[200]">e-</span>
+                <span className="text-redish">e-</span>
                 commerce.
               </Link>
             </li>

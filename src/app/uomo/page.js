@@ -1,6 +1,4 @@
-import Link from "next/link";
 import React from "react";
-import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 import AsideWA from "../../ui/AsideWA";
 import ItemUI from "../../ui/ItemUI";
 
@@ -19,15 +17,15 @@ export default async function Uomo() {
   );
 
   return (
-    <main className="pt-[7rem]">
+    <main className="md:pt-[7rem] pb-[10rem]">
       <div className="md:flex md:w-[90%] m-auto">
-        <AsideWA uomo={"red"} />
+        <AsideWA uomo={"#f07167"} />
         <div>
-          <h1 className="text-[2rem] text-black font-work font-[500] pt-10 pb-10">
-            Abbigliamento: Uomo
+          <h1 className="text-[2rem] md:text-left text-center text-black font-clash font-medium pt-10 pb-10">
+            ABBIGLIAMENTO: Uomo
           </h1>
           <div className="md:w-[100%] w-[90%] m-auto ">
-            <div className="flex flex-wrap w-[100%] h-full gap-2">
+            <div className="flex flex-wrap h-full md:gap-5 gap-[3vw] sm:gap-auto">
               {items.data.map((item) => (
                 <ItemUI item={item} key={item.id} />
               ))}
@@ -35,18 +33,6 @@ export default async function Uomo() {
           </div>
         </div>
       </div>
-      <section className="m-auto grid  grid-cols-2 gap-10 mt-10 md:mt-[5rem]">
-        <Link href="/abbigliamento" className="justify-self-end ">
-          <h3 className="text-[1.2rem]">Abbigliamento</h3>
-          <div className="flex justify-end">
-            <BsArrowLeftShort size={30} className="hover:text-redish" />
-          </div>
-        </Link>
-        <Link href="/donna">
-          <h3 className="text-[1.2rem]">Donna</h3>
-          <BsArrowRightShort size={30} className="hover:text-redish" />
-        </Link>
-      </section>
     </main>
   );
 }

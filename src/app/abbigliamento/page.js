@@ -18,15 +18,15 @@ export default async function Abbigliamento() {
   );
 
   return (
-    <main className="pt-[7rem]">
+    <main className="md:pt-[7rem] pb-[10rem]">
       <div className="md:flex md:w-[90%] m-auto">
-        <AsideWA abbigliamento={"red"} />
+        <AsideWA abbigliamento={"#f07167"} />
         <div>
-          <h1 className="text-[2rem] text-black font-work font-[500] pt-10 pb-10">
-            Abbigliamento
+          <h1 className="text-[2rem] md:text-left text-center text-black font-clash font-medium pt-10 pb-10">
+            ABBIGLIAMENTO
           </h1>
           <div className="md:w-[100%] w-[90%] m-auto ">
-            <div className="flex flex-wrap w-[100%] h-full gap-2">
+            <div className="flex flex-wrap h-full md:gap-5 gap-[3vw] sm:gap-auto">
               {items.data.map((item) => (
                 <ItemUI item={item} key={item.id} />
               ))}
