@@ -17,7 +17,7 @@ const ItemUI = ({ item, fill, toggleFill }) => {
             />
             {item.attributes.isNew && (
               <div className="absolute top-4 right-0 bg-white p-[7px] pl-[12px] rounded-l-full">
-                <p className="text-tealish md:text-[18px] text-[15px] font-light">
+                <p className="text-tealish md:text-[18px] text-[15px] font-normal">
                   Novità
                 </p>
               </div>

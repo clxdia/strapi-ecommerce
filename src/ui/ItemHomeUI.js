@@ -16,8 +16,10 @@ const ItemHomeUI = ({ item, fill, toggleFill }) => {
               height="250"
             />
             {item.attributes.isNew && (
-              <div className="absolute top-4 right-0 bg-white p-[7px] rounded-l-full">
-                <p className="text-redish text-[13px] font-ligth">Novità</p>
+              <div className="absolute top-4 right-0 bg-white p-[7px] pl-[12px] rounded-l-full">
+                <p className="text-tealish md:text-[18px] text-[15px] font-normal">
+                  Novità
+                </p>
               </div>
             )}
           </div>
@@ -28,7 +30,7 @@ const ItemHomeUI = ({ item, fill, toggleFill }) => {
       </div>
 
       <div className="flex flex-col justify-between h-16 md:w-[15vw] ">
-        <h3 className="mt-2  md:text-[15px] text-[13px] decoration-black no-underline hover:underline decoration-solid decoration-1 underline-offset-4">
+        <h3 className="mt-2 font-satoshi md:text-[15px] text-[13px] decoration-black no-underline hover:underline decoration-solid decoration-1 underline-offset-4">
           {item.attributes.title}
         </h3>
         <p className="font-[400] w-fit md:text-[16px] text-[14px] text-redish">

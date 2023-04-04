@@ -70,8 +70,8 @@ const NavMB = () => {
       >
         <nav className="w-[95%] mx-auto mt-1">
           <div className="flex">
-            <h1 className="">
-              <span className="text-redish ">e-</span>
+            <h1 className="font-stardom">
+              <span className="text-redish">e-</span>
               commerce.
             </h1>
           </div>
