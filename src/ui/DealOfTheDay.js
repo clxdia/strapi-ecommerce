@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import sticker from "../images/sale.png";
 
 async function fetchData(url) {
   const res = await fetch(url);
