@@ -22,6 +22,7 @@ module.exports = {
       stardom: ["Stardom", "sans-serif"],
       clash: ["Clash Display", "sans-serif"],
       alpino: ["Alpino", "sans-serif"],
+      satoshi: ["Satoshi", "sans-serif"],
     },
     screens: {
       lg: "1100px",
@@ -41,7 +42,7 @@ module.exports = {
       black: "#000000",
 
       blueish: "#0081a7",
-      teal: "#00afb9",
+      tealish: "#00afb9",
       yellowish: "#fdfcdc",
       peach: "#fed9b7",
       coral: "#f07167",

@@ -12,9 +12,8 @@ export default async function NewArrivals() {
   const items = await fetchData(
     process.env.NEXT_PUBLIC_API_URL + "?populate=*&filters[type][$eq]=trending"
   );
-  console.log(items);
   return (
-    <section className="lg:w-[70%] w-[90%] max-w-[1800px] md:w-[90%] m-auto mb-20">
+    <section className="w-[90%] max-w-[1800px] md:w-[70%] m-auto mb-20">
       <h1 className="mb-6 text-black font-clash font-medium tracking-wide mt-10 md:text-[2rem] text-[1.5rem] cursor-pointer uppercase w-full text-center">
         Nuovi Arrivi
       </h1>

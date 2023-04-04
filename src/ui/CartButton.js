@@ -26,11 +26,12 @@ const CartButton = ({ item }) => {
   };
   return (
     <button
-      className="mt-3 mb-4 flex bg-button text-buttontext p-3 w-[100%] gap-3 justify-center items-center border-[2px] border-button hover:ease-in hover:border-[2px] hover:border-button hover:bg-buttontext hover:text-button"
+      className="mt-3 mb-4 flex bg-blueish text-buttontext p-3 w-[100%] gap-3 justify-center items-center border-[2px] border-blueish hover:ease-in hover:border-[2px] hover:border-blueish hover:bg-buttontext hover:text-blueish"
       onClick={handleClick}
     >
-      <HiOutlineShoppingBag />
-      <p className="text-bold">Aggiungi al carrello</p>
+      <p className=" font-satoshi font-bold uppercase tracking-wide">
+        Aggiungi al carrello
+      </p>
     </button>
   );
 };

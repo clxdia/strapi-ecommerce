@@ -16,7 +16,7 @@ const Preferiti = () => {
     return (
       <main className="md:w-[98%] w-[100%] flex justify-between">
         <div className="w-[100%]">
-          <h1 className="md:text-[2rem] text-center md:text-left font-work text-[20px]">
+          <h1 className="md:text-[2rem] text-center font-medium md:text-left text-[20px] mb-5">
             I miei Preferiti
           </h1>
           <EmptyPage />

@@ -22,7 +22,7 @@ export default async function ItemPage({ params: { itemId } }, setFill, fill) {
   const item = await fetchItem(itemId);
 
   return (
-    <div className="w-[90%] md:w-[80%] pt-[10rem] m-auto font-work">
+    <div className="w-[90%] md:w-[80%] md:pt-[10rem] m-auto font-work">
       <section className="md:flex gap-10 md:w-[80%] m-auto mt-0">
         <div className=" items-center self-center flex ">
           <Image
@@ -38,14 +38,14 @@ export default async function ItemPage({ params: { itemId } }, setFill, fill) {
             <h1 className="md:text-[2rem] text-[20px] font-light md:mt-0 mt-3">
               {item.attributes.title}
             </h1>
-            <p className="md:text-[1.5rem] md:mt-3 text-[20px] text-button">
+            <p className="md:text-[1.5rem] md:mt-3 text-[20px] text-coral">
               €{item.attributes.price}
             </p>
             <p className="md:text-[1.3rem] md:text-left text-center mt-4 "></p>
-            <p className="mt-5 text-paragraph text-[0.8rem] font-[300]">
+            <p className="mt-5 text-gray-800 text-[0.8rem] font-[300]">
               {item.attributes.desc}
             </p>
-            <div className="bg-button/30 flex gap-2 p-3 items-start mt-4 mb-2">
+            <div className="bg-tealish/30 flex gap-2 p-3 items-start mt-4 mb-2">
               <AiOutlineTag size={20} className="mt-1" />
               <div className="font-light text-[13px]">
                 <p>SEI NUOVO QUI?</p>
@@ -59,7 +59,7 @@ export default async function ItemPage({ params: { itemId } }, setFill, fill) {
               <CartButton item={item} />
               <FaveButton setFill={setFill} fill={fill} item={item} />
             </div>
-            <div className="font-light text-[13px] p-3 border-[1px] border-button/40">
+            <div className="font-light text-[13px] p-3 border-[1px] border-tealish/40">
               <div className="flex gap-3 mb-1">
                 <MdOutlineLocalShipping size={23} />
                 <p>Consegna Gratuita</p>

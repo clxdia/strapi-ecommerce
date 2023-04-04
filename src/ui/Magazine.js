@@ -14,7 +14,7 @@ const Magazine = ({ magazine }) => {
         <div className="w-[100%]">
           <Image src={magazine.pic} alt="/" className="w-[100%]" />
         </div>
-        <div className=" p-4 m-auto w-[100%] h-[100%] flex-col justify-center flex">
+        <div className="p-4 m-auto w-[100%] h-[100%] flex-col justify-center flex">
           <p className="font-work font-[300] text-[0.8rem]">INSIDER</p>
           <p className="font-work text-[1.2rem]">{magazine.title}</p>
           <p className="font-cursive text-[0.9rem]">
