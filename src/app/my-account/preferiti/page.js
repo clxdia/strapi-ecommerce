@@ -14,7 +14,7 @@ const Preferiti = () => {
 
   if (products.length === 0) {
     return (
-      <main className="w-[100%] md:w-[95%] mx-auto flex h-screen">
+      <main className="w-[100%] md:w-[95%] mx-auto flex md:h-screen h-auto">
         <div className="w-[100%]">
           <h1 className="md:text-[2rem] font-clash text-center font-medium md:text-left text-[20px] mb-5">
             I miei Preferiti
@@ -25,16 +25,16 @@ const Preferiti = () => {
     );
   }
   return (
-    <main className="w-[100%] md:w-[95%] mx-auto flex justify-between pb-[15rem]">
+    <main className="sm:w-[90%] w-[100%] md:w-[95%] mx-auto flex justify-center sm:justify-start pb-[15rem]">
       <div className="w-[100%]">
         <h1 className="md:text-[2rem] font-clash text-center font-medium md:text-left text-[20px] mb-5">
           I miei Preferiti
         </h1>
-        <div className="flex flex-wrap h-full md:gap-[1.8vw] gap-[3vw] sm:gap-auto">
+        <div className="flex flex-wrap h-full w-full md:justify-start justify-center sm:justify-start m-auto md:gap-[1.7vw] gap-[3vw] sm:gap-auto">
           {products?.map((item) => (
             <div
               key={item.id}
-              className="font-satoshi flex-col mb-2 cursor-pointer flex-shrink-0 md:w-[23%] sm:w-[31%] w-[48%] relative"
+              className="font-satoshi flex-col mb-2 cursor-pointer flex-shrink-0 md:w-[23%] sm:w-[31%] w-auto relative"
             >
               <Link
                 href="/view-all/[id]"
@@ -45,7 +45,7 @@ const Preferiti = () => {
                   <Image
                     src={item.img}
                     alt="/"
-                    className="md:w-[60vw] md:h-[25vw] w-[45vw] h-[60vw] sm:w-[70vw] sm:h-[40vw] object-cover relative"
+                    className="md:w-[60vw] md:h-[22vw] w-[45vw] h-[60vw] sm:w-[70vw] sm:h-[40vw] object-cover relative"
                     width="250"
                     height="350"
                   />

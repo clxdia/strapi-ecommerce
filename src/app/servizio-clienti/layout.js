@@ -1,4 +1,3 @@
-import AsideMB from "../../ui/AsideMB";
 import AsideNS from "../../ui/AsideNS";
 
 export default function RootLayout({ children }) {
@@ -8,7 +7,6 @@ export default function RootLayout({ children }) {
         <AsideNS />
       </aside>
       <div className="w-[100%] pt-2 md:pt-[7rem]">{children}</div>
-      <AsideMB />
     </main>
   );
 }

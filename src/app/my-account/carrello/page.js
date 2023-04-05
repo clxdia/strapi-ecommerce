@@ -16,7 +16,7 @@ const Carrello = () => {
 
   if (products.length === 0) {
     return (
-      <main className="md:w-[95%] w-[100%] mx-auto flex font-clash justify-between h-screen">
+      <main className="md:w-[95%] w-[100%] mx-auto flex font-clash justify-between md:h-screen">
         <div className="w-[100%]">
           <h1 className="md:text-[2rem] text-center font-medium md:text-left text-[20px]">
             Il mio carrello

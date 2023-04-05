@@ -100,6 +100,12 @@ const NavMB = () => {
               </Link>
             </li>
             <hr></hr>
+            <li className="flex justify-center items-center py-4 hover:text-redish hover:ease-out hover:transition pointer text-center">
+              <Link href="/servizio-clienti/magazine" onClick={handleLinkClick}>
+                Magazine
+              </Link>
+            </li>
+            <hr></hr>
             <li className="flex-col flex py-4 pointer">
               <div
                 className="flex items-center justify-center"
