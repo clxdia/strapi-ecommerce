@@ -7,6 +7,7 @@ import pic1 from "../images/mobile/slideMB1.png";
 import pic2 from "../images/mobile/slideMB2.png";
 import pic3 from "../images/mobile/slideMB3.png";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
+import Link from "next/link";
 
 const SwiperComponentMB = () => {
   const sliders = [pic1, pic2, pic3];
