@@ -23,7 +23,7 @@ const SwiperComponentMB = () => {
   return (
     <div className="md:hidden sm:hidden block h-auto overflow-x-hidden w-[100%] relative">
       <div
-        className="w-[300vw] max-w-[300vw] max-h-[100vw] flex h-fit -translate-x-[100vw] transition-all ease-out duration-[1s]"
+        className="w-[300vw] max-w-[300vw] max-h-[100vw] flex h-auto -translate-x-[100vw] transition-all ease-out duration-[1s]"
         style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
       >
         <Image src={sliders[0]} alt="" className="w-[100%] h-full" />
