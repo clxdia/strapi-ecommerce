@@ -34,7 +34,7 @@ const Preferiti = () => {
           {products?.map((item) => (
             <div
               key={item.id}
-              className="font-satoshi flex-col mb-5 cursor-pointer flex-shrink-0 md:w-[23%] sm:w-[31%] w-[48%]"
+              className="font-satoshi flex-col mb-2 cursor-pointer flex-shrink-0 md:w-[23%] sm:w-[31%] w-[48%] relative"
             >
               <Link
                 href="/view-all/[id]"

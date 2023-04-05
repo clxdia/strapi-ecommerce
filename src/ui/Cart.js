@@ -1,14 +1,17 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useContext } from "react";
+import { SlHandbag } from "react-icons/sl";
 import { TbTrash } from "react-icons/tb";
 import { useDispatch, useSelector } from "react-redux";
+import { CartContext } from "../app/CartContext";
 import { removeItem, resetCart } from "../redux/cartReducer";
 
 const Cart = ({ open }) => {
   const products = useSelector((state) => state.cart.products);
   const dispatch = useDispatch();
+  const { handleMouseLeave } = useContext(CartContext);
 
   const totalPrice = () => {
     let total = 0;
@@ -26,10 +29,25 @@ const Cart = ({ open }) => {
     return (
       <div
         open={open}
-        className="rounded-lg absolute right-[35px] md:top-[70px] z-[99] bg-white p-[30px] border-[1px] border-footer top-[65px] md:h-[100%]  "
+        className="rounded-lg absolute right-[35px] md:top-[70px] z-[99] bg-white p-[30px] border-[1px] border-footer top-[65px] text-center"
+        onMouseLeave={handleMouseLeave}
       >
-        <h1 className="font-bold text-[16px]">Il mio carrello</h1>
-        <h2 className="p-5 font-medium text-[16px]">Il carrello è vuoto.</h2>
+        <h1 className="font-medium text-[16px] text-left">Il mio carrello</h1>
+        <SlHandbag className="m-auto mt-5 mb-5" size={70} />
+        <h2 className="font-medium text-[16px] mb-5">
+          Il tuo carrello è vuoto.
+        </h2>
+        <button className="font-satoshi font-bold uppercase tracking-wider mt-5 flex bg-blueish text-buttontext p-3 w-[250px] m-auto gap-3 justify-center items-center border-[2px] border-blueish hover:ease-in hover:border-[2px] hover:border-blueish hover:bg-buttontext hover:text-blueish hover:cursor-pointer mb-3">
+          <Link href="./my-account/preferiti" className="hover:cursor-pointer">
+            Visualizza preferiti
+          </Link>
+        </button>
+        <Link
+          href="./view-all"
+          className="text-center hover:cursor-pointer underline-offset-2 underline"
+        >
+          Continua lo shopping
+        </Link>
       </div>
     );
   }
@@ -37,19 +55,27 @@ const Cart = ({ open }) => {
     return (
       <div
         open={open}
-        className="rounded-lg absolute right-[35px] md:top-[70px] z-[99] bg-white p-[20px] border-[1px] border-footer top-[60px] w-[400px] "
+        className="rounded-lg absolute right-[35px] md:top-[70px] z-[99] bg-white p-[20px] border-[1px] border-footer top-[60px] w-[400px] font-satoshi"
       >
-        <h1 className="font-bold">Il mio carrello</h1>
+        <h1 className="font-medium">Il mio carrello</h1>
         {products?.map((item) => (
           <div key={item.id}>
             <div className="flex gap-4 mt-5 ">
-              <Image src={item.img} alt={item.title} width="100" height="100" />
+              <Image
+                src={item.img}
+                alt={item.title}
+                width="100"
+                height="100"
+                className="w-[100px] h-[130px]"
+              />
               <div className="w-[100%] relative">
                 <p className="uppercase text-[12px] text-gray-400 font-medium">
                   {item.category}
                 </p>
-                <p className="font-bold text-[15px]">{item.title}</p>
-                <p className="font-bold text-[15px]">€{item.price}</p>
+                <p className="font-satoshi text-[15px]">{item.title}</p>
+                <p className="font-satoshi text-blueish text-[15px]">
+                  €{item.price}
+                </p>
                 <p className="text-[14px]">Quantità: {item.quantity}</p>
                 <button
                   className="absolute bottom-0 right-0"
@@ -77,7 +103,7 @@ const Cart = ({ open }) => {
           <p>€5.99</p>
         </div>
         <hr className="mt-5 mb-3"></hr>
-        <div className="mt-1 text-[14px] mb-5 flex justify-between">
+        <div className="mt-1 text-[14px] font-satoshi mb-5 flex justify-between">
           <p className="text-[16px]">
             <b>Totale</b>
           </p>
@@ -85,10 +111,10 @@ const Cart = ({ open }) => {
             <b>€{totalOrder()} </b>
           </p>
         </div>
-        <button className="w-full bg-button text-white p-4 font-semibold">
+        <button className="w-full bg-blueish text-white p-4 font-alpino uppercase font-semibold tracking-wider">
           <Link href="/my-account/carrello">Acquista Ora</Link>
         </button>
-        <button className="font-semibold mt-2 w-full bg-white border-2 border-button text-button p-4">
+        <button className="font-alpino uppercase font-semibold tracking-wider mt-2 w-full bg-white border-2 border-blueish text-blueish p-4">
           <Link href="/my-account/carrello">Visualizza Carrello</Link>
         </button>
       </div>

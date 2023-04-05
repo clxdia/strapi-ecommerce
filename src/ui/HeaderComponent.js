@@ -15,6 +15,7 @@ const HeaderComponent = () => {
 
   const { cartOpen } = useContext(CartContext);
   const { toggleCart } = useContext(CartContext);
+  const { handleMouseEnter } = useContext(CartContext);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -68,7 +69,10 @@ const HeaderComponent = () => {
                 <IoMdHeartEmpty />
               </Link>
               <div className="decoration-black no-underline hover:underline decoration-solid decoration-1 underline-offset-4">
-                <HiOutlineShoppingBag onClick={toggleCart} />
+                <HiOutlineShoppingBag
+                  onClick={toggleCart}
+                  onMouseEnter={handleMouseEnter}
+                />
               </div>
               <Link
                 className="decoration-black no-underline hover:underline decoration-solid decoration-1 underline-offset-4"

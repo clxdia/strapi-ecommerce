@@ -25,9 +25,25 @@ export const CartProvider = ({ children }) => {
       setNotif(notif - 1);
     }
   };
+
+  const handleMouseEnter = () => {
+    setCartOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    setCartOpen(false);
+  };
+
   return (
     <CartContext.Provider
-      value={{ cartOpen, toggleCart, notif, removeCartNotif }}
+      value={{
+        cartOpen,
+        toggleCart,
+        notif,
+        removeCartNotif,
+        handleMouseEnter,
+        handleMouseLeave,
+      }}
     >
       {children}
     </CartContext.Provider>
