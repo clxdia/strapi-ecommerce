@@ -11,31 +11,59 @@ const FooterMB = () => {
   );
   repartoLink.push(
     <div className="mt-4">
-      <Link href="/">Elettronica</Link>
+      <Link href="/donna">Donna</Link>
     </div>
   );
   repartoLink.push(
     <div className="mt-4">
-      <Link href="/">Accessori</Link>
+      <Link href="/uomo">Uomo</Link>
+    </div>
+  );
+  repartoLink.push(
+    <div className="mt-4">
+      <Link href="/accessori">Accessori</Link>
     </div>
   );
 
   const aiutoLink = [];
   aiutoLink.push(
     <div className="mt-2">
-      <Link href="/servizio-clienti">Servizio Clienti</Link>
+      <Link href="/servizio-clienti">Traccia i miei ordini</Link>
     </div>
   );
   aiutoLink.push(
     <div className="mt-4">
-      <Link href="/">Spedizione</Link>
+      <Link href="/">Magazine</Link>
     </div>
   );
-  aiutoLink.push(
+
+  const profiloLink = [];
+  profiloLink.push(
+    <div className="mt-2">
+      <Link href="./my-account">Ordini</Link>
+    </div>
+  );
+  profiloLink.push(
     <div className="mt-4">
-      <Link href="/">Pagamenti</Link>
+      <Link href="./my-account/resi">Resi e Rimborsi</Link>
     </div>
   );
+  profiloLink.push(
+    <div className="mt-4">
+      <Link href="./my-account/preferiti">Preferiti</Link>
+    </div>
+  );
+  profiloLink.push(
+    <div className="mt-4">
+      <Link href="./my-account/carrello">Carrello</Link>
+    </div>
+  );
+
+  const iscrivitiLink = [];
+  iscrivitiLink.push(
+    <Link href="./servizio-clienti/newsletter">Newsletter</Link>
+  );
+
   const accordionData = [
     {
       title: "Reparto",
@@ -43,9 +71,19 @@ const FooterMB = () => {
       key: 1,
     },
     {
-      title: "Aiuto",
+      title: "Servizio Clienti",
       content: aiutoLink,
       key: 2,
+    },
+    {
+      title: "Profilo",
+      content: profiloLink,
+      key: 3,
+    },
+    {
+      title: "Iscriviti Ora",
+      content: iscrivitiLink,
+      key: 4,
     },
   ];
 

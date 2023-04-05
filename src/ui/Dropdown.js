@@ -12,7 +12,7 @@ const Dropdown = ({ title, content }) => {
         className="flex justify-between items-center pb-4 pt-4 "
         onClick={() => setIsActive(!isActive)}
       >
-        <div className=" font-[500]">{title}</div>
+        <div className="font-satoshi font-semibold tracking-wide">{title}</div>
         <div>{isActive ? <AiOutlineMinus /> : <BsPlus size={21} />}</div>
       </div>
       {isActive && (
