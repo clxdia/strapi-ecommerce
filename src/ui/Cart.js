@@ -55,38 +55,41 @@ const Cart = ({ open }) => {
     return (
       <div
         open={open}
-        className="rounded-lg absolute right-[35px] md:top-[70px] z-[99] bg-white p-[20px] border-[1px] border-footer top-[60px] w-[400px] font-satoshi"
+        onMouseLeave={handleMouseLeave}
+        className="rounded-lg absolute right-[35px] md:top-[70px] z-[99] bg-white p-[20px] border-[1px] border-footer top-[60px] w-[400px] font-satoshi overflow-y-scroll"
       >
         <h1 className="font-medium">Il mio carrello</h1>
-        {products?.map((item) => (
-          <div key={item.id}>
-            <div className="flex gap-4 mt-5 ">
-              <Image
-                src={item.img}
-                alt={item.title}
-                width="100"
-                height="100"
-                className="w-[100px] h-[130px]"
-              />
-              <div className="w-[100%] relative">
-                <p className="uppercase text-[12px] text-gray-400 font-medium">
-                  {item.category}
-                </p>
-                <p className="font-satoshi text-[15px]">{item.title}</p>
-                <p className="font-satoshi text-blueish text-[15px]">
-                  €{item.price}
-                </p>
-                <p className="text-[14px]">Quantità: {item.quantity}</p>
-                <button
-                  className="absolute bottom-0 right-0"
-                  onClick={() => dispatch(removeItem(item.id))}
-                >
-                  <TbTrash size={20} stroke="grey" />
-                </button>
+        <div className="max-h-[50vh]  overflow-y-scroll">
+          {products?.map((item) => (
+            <div key={item.id}>
+              <div className="flex gap-4 mt-5 ">
+                <Image
+                  src={item.img}
+                  alt={item.title}
+                  width="100"
+                  height="100"
+                  className="w-[100px] h-[130px] min-w-[100px] min-h-[130px] max-w-[100px] max-h-[130px]"
+                />
+                <div className="w-[100%] relative">
+                  <p className="uppercase text-[12px] text-gray-400 font-medium">
+                    {item.category}
+                  </p>
+                  <p className="font-satoshi text-[15px]">{item.title}</p>
+                  <p className="font-satoshi text-blueish text-[15px]">
+                    €{item.price}
+                  </p>
+                  <p className="text-[14px]">Quantità: {item.quantity}</p>
+                  <button
+                    className="absolute bottom-0 right-0"
+                    onClick={() => dispatch(removeItem(item.id))}
+                  >
+                    <TbTrash size={20} stroke="grey" />
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
         <p
           className="text-redish text-[12px] mt-3 hover:underline hover:underline-offset-2 hover:cursor-pointer hover:decoration-redish"
           onClick={() => dispatch(resetCart())}

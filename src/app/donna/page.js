@@ -21,7 +21,10 @@ export default async function Donna() {
   return (
     <main className="md:pt-[7rem] pb-[10rem]">
       <div className="md:flex md:w-[90%] m-auto">
-        <AsideWA donna={"#f07167"} />
+        <aside className="md:block hidden mt-[8rem] md:min-w-[300px] md:w-[300px] h-fit font-clash sticky top-[8rem]">
+          <AsideWA donna={"#f07167"} />
+        </aside>
+
         <div>
           <h1 className="text-[2rem] text-black md:text-left text-center font-clash font-medium pt-10 pb-10">
             ABBIGLIAMENTO: Donna
@@ -35,18 +38,6 @@ export default async function Donna() {
           </div>
         </div>
       </div>
-      <section className="m-auto grid  grid-cols-2 gap-10 mt-10 md:mt-[5rem]">
-        <Link href="/uomo" className="justify-self-end ">
-          <h3 className="text-[1.2rem]">Uomo</h3>
-          <div className="flex justify-end">
-            <BsArrowLeftShort size={30} className="hover:text-redish" />
-          </div>
-        </Link>
-        <Link href="/accessori">
-          <h3 className="text-[1.2rem]">Accessori</h3>
-          <BsArrowRightShort size={30} className="hover:text-redish" />
-        </Link>
-      </section>
     </main>
   );
 }

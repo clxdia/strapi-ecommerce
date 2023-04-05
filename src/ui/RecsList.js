@@ -21,7 +21,7 @@ export default async function Recommendations({ fill, toggleFill }) {
       <h3 className="md:mt-40 mt-20 text-[20px]">
         Altri hanno acquistato anche
       </h3>
-      <div className=" flex overflow-x-scroll gap-5 mb-10 relative">
+      <div className=" flex overflow-x-scroll gap-5 mb-[10rem] relative">
         {items.data.map((item) => {
           return (
             <div

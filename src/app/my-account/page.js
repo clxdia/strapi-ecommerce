@@ -4,7 +4,7 @@ import EmptyPage from "../../ui/EmptyPage";
 
 const MyAccount = () => {
   return (
-    <main className="w-[100%] md:w-[95%] mx-auto">
+    <main className="w-[100%] md:w-[95%] mx-auto h-screen">
       <h1 className="md:text-[2rem] text-center md:text-left font-clash font-medium text-[20px]">
         Il mio account
       </h1>

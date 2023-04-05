@@ -10,7 +10,7 @@ const Magazine = ({ magazine }) => {
       as={`servizio-clienti/magazine/${magazine.id}`}
       className="mb-[20px]"
     >
-      <div className="flex md:flex-row mb-5 h-full bg-background sm:flex-row flex-col w-auto max-w-[400px] m-auto sm:max-w-none">
+      <div className="flex md:flex-row mb-5 h-full bg-background/50   sm:flex-row flex-col w-auto max-w-[400px] m-auto sm:max-w-none">
         <div className="w-[100%]">
           <Image src={magazine.pic} alt="/" className="w-[100%]" />
         </div>

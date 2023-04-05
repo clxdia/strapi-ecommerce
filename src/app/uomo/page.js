@@ -19,7 +19,10 @@ export default async function Uomo() {
   return (
     <main className="md:pt-[7rem] pb-[10rem]">
       <div className="md:flex md:w-[90%] m-auto">
-        <AsideWA uomo={"#f07167"} />
+        <aside className="md:block hidden mt-[8rem] md:min-w-[300px] md:w-[300px] h-fit font-clash sticky top-[8rem]">
+          <AsideWA uomo={"#f07167"} />
+        </aside>
+
         <div>
           <h1 className="text-[2rem] md:text-left text-center text-black font-clash font-medium pt-10 pb-10">
             ABBIGLIAMENTO: Uomo

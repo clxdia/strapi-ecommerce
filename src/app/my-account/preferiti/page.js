@@ -14,7 +14,7 @@ const Preferiti = () => {
 
   if (products.length === 0) {
     return (
-      <main className="w-[100%] md:w-[95%] mx-auto flex">
+      <main className="w-[100%] md:w-[95%] mx-auto flex h-screen">
         <div className="w-[100%]">
           <h1 className="md:text-[2rem] font-clash text-center font-medium md:text-left text-[20px] mb-5">
             I miei Preferiti
@@ -25,7 +25,7 @@ const Preferiti = () => {
     );
   }
   return (
-    <main className="w-[100%] md:w-[95%] mx-auto flex justify-between pb-[10rem]">
+    <main className="w-[100%] md:w-[95%] mx-auto flex justify-between pb-[15rem]">
       <div className="w-[100%]">
         <h1 className="md:text-[2rem] font-clash text-center font-medium md:text-left text-[20px] mb-5">
           I miei Preferiti

@@ -6,10 +6,10 @@ import clientservice from "../../images/service-clients.png";
 
 const ServizioClienti = () => {
   return (
-    <div className="text-center font-work mb-10 max-w-[1800px] pt-[7rem]">
+    <div className="text-center font-clash mb-10 max-w-[1800px] h-[100vh]">
       <Image src={clientservice} alt="/" />
 
-      <h1 className="text-[2rem] md:mt-[4rem] font-[600] mt-10 mb-4">
+      <h1 className="text-[2rem] md:mt-[3rem] font-medium mt-10 mb-4">
         Benvenuti al Servizio Clienti
       </h1>
       <h2 className="mb-1">Come posso aiutarti oggi?</h2>
@@ -19,8 +19,8 @@ const ServizioClienti = () => {
           <BiMapAlt className="text-redish" />
         </div>
 
-        <p className="uppercase mb-3">Dov&#39;è il mio ordine?</p>
-        <p className="text-[0.7rem] text-center font-[300] text-button mb-5">
+        <p className="uppercase mb-3 font-medium">Dov&#39;è il mio ordine?</p>
+        <p className="text-[0.8rem] font-satoshi text-center font-[300] text-button mb-5">
           Inserisci il numero d&#39;ordine presente nella email di conferma che
           hai ricevuto
         </p>
@@ -33,10 +33,10 @@ const ServizioClienti = () => {
             type="text"
             id="ordine"
             placeholder="e.g. 31234567890"
-            className="flex p-3 border-[1px] border-footer focus:outline-none "
+            className="flex p-3 border-[1px] font-satoshi border-footer focus:outline-none "
           />
         </form>
-        <button className="mt-10 m-auto border-button border-[2px] bg-button text-white text-[1rem] font-[400] p-2 hover:border-button hover:border-[2px] hover:bg-white hover:text-button hover:transition hover:ease-in cursor-pointer">
+        <button className="uppercase font-alpino tracking-wider font-semibold mt-10 m-auto border-blueish border-[2px] bg-blueish text-white text-[1rem] p-2 hover:border-blueish hover:border-[2px] hover:bg-white hover:text-blueish hover:transition hover:ease-in cursor-pointer">
           Traccia ordine
         </button>
       </div>

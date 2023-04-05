@@ -3,35 +3,64 @@ import React from "react";
 
 const AsideNS = () => {
   return (
-    <aside className="w-[20%] font-work text-[15px] font-[300] md:block hidden pt-[7rem]">
-      <div className="flex flex-col ">
-        <h3 className="text-[1.5rem] font-[400]">Shopping</h3>
-        <Link href="../abbigliamento" className="mt-1 font-[300] ">
-          Abbigliamento
-        </Link>
-        <Link href="../uomo" className="mt-1 font-[300]">
-          Uomo
-        </Link>
-        <Link href="../donna" className="mt-1 font-[300]">
-          Donna
-        </Link>
-        <Link href="../accessori" className="mt-1 font-[300]">
-          Accessori
-        </Link>
+    <>
+      <div className="flex flex-col font-clash">
+        <h3 className="text-[1.5rem] uppercase font-medium">Shopping</h3>
+        <ul className="flex-col text-[1rem] flex w-fit font-normal">
+          <Link
+            href="./abbigliamento"
+            className="mt-1 hover:underline-offset-3 hover:underline decoration-black"
+          >
+            Abbigliamento
+          </Link>
+          <Link
+            href="./uomo"
+            className="mt-1 hover:underline-offset-3 hover:underline decoration-black"
+          >
+            Uomo
+          </Link>
+          <Link
+            href="./donna"
+            className="mt-1 hover:underline-offset-3 hover:underline decoration-black"
+          >
+            Donna
+          </Link>
+          <Link
+            href="./accessori"
+            className="mt-1 hover:underline-offset-3 hover:underline decoration-black"
+          >
+            Accessori
+          </Link>
+        </ul>
       </div>
-      <div className="mt-5">
+      <div className="mt-5 font-clash font-medium">
         <h3 className="text-[1.5rem] font-[400]">Magazine</h3>
-        <Link href="./servizio-clienti/magazine">Ultime News</Link>
+        <Link
+          href="./servizio-clienti/magazine"
+          className="hover:underline-offset-3 hover:underline decoration-black font-normal"
+        >
+          Ultime News
+        </Link>
       </div>
-      <div className="mt-5">
+      <div className="mt-5 font-clash font-medium">
         <h3 className="text-[1.5rem] font-[400]">Contatti</h3>
-        <Link href="./servizio-clienti/newsletter">Newsletter</Link>
+        <Link
+          href="./servizio-clienti/newsletter"
+          className="hover:underline-offset-3 hover:underline decoration-black font-normal"
+        >
+          Newsletter
+        </Link>
       </div>
-      <div className="mt-5">
+      <div className="mt-5 font-clash font-medium">
         <h3 className="text-[1.5rem] font-[400]">Aiuto</h3>
-        <Link href="newsletter">Newsletter</Link>
+        <Link
+          href="./servizio-clienti"
+          className="hover:underline-offset-3 hover:underline decoration-black font-normal"
+        >
+          Traccia i miei ordini
+        </Link>
       </div>
-    </aside>
+    </>
   );
 };
 

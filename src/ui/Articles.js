@@ -9,7 +9,7 @@ import article3 from "../images/article3.jpg";
 
 export default function Articles() {
   return (
-    <section className="w-[100%] m-auto bg-peach mt-[10rem] font-clash text-center ">
+    <section className="w-[100%] m-auto bg-peach mt-[10rem] font-clash text-center">
       <h1 className="uppercase text-center mb-10 text-black font-clash font-medium z-30 pt-10  md:text-[2rem] text-[1.5rem]">
         Magazine
       </h1>

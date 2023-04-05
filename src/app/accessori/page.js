@@ -21,7 +21,10 @@ export default async function Accessori() {
   return (
     <main className="md:pt-[7rem] pb-[10rem]">
       <div className="md:flex md:w-[90%] m-auto">
-        <AsideWA acc={"#f07167"} />
+        <aside className="md:block hidden mt-[8rem] md:min-w-[300px] md:w-[300px] h-fit font-clash sticky top-[8rem]">
+          <AsideWA acc={"#f07167"} />
+        </aside>
+
         <div>
           <h1 className="text-[2rem] text-black font-clash md:text-left text-center font-medium pt-10 pb-10">
             ACCESSORI

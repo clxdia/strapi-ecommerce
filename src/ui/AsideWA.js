@@ -5,33 +5,49 @@ import React from "react";
 
 const AsideWA = ({ abbigliamento, acc, donna, uomo }) => {
   return (
-    <aside className="md:block hidden mt-[8rem] md:min-w-[300px] md:w-[300px] font-clash">
+    <>
       <Link href="/view-all" className="uppercase font-medium">
         Categorie
       </Link>
       <ul className="ml-3">
         <li className="mt-3">
-          <Link href="/abbigliamento" style={{ color: abbigliamento }}>
+          <Link
+            href="/abbigliamento"
+            className="hover:underline-offset-3 hover:underline"
+            style={{ color: abbigliamento, textDecorationColor: abbigliamento }}
+          >
             Abbigliamento
           </Link>
         </li>
         <li className="mt-2">
-          <Link href="/donna" style={{ color: donna }}>
+          <Link
+            href="/donna"
+            className="hover:underline-offset-3 hover:underline"
+            style={{ color: donna, textDecorationColor: donna }}
+          >
             Donna
           </Link>
         </li>
         <li className="mt-2">
-          <Link href="/uomo" style={{ color: uomo }}>
+          <Link
+            href="/uomo"
+            className="hover:underline-offset-3 hover:underline"
+            style={{ color: uomo, textDecorationColor: uomo }}
+          >
             Uomo
           </Link>
         </li>
         <li className="mt-2">
-          <Link href="/accessori" style={{ color: acc }}>
+          <Link
+            href="/accessori"
+            className="hover:underline-offset-3 hover:underline"
+            style={{ color: acc, textDecorationColor: acc }}
+          >
             Accessori
           </Link>
         </li>
       </ul>
-    </aside>
+    </>
   );
 };
 

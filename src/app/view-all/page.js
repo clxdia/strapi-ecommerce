@@ -16,7 +16,9 @@ export default async function ViewAll() {
   );
   return (
     <main className="md:pt-[7rem] pb-[10rem] md:w-[90%] m-auto flex">
-      <AsideWA />
+      <aside className="md:block hidden mt-[8rem] md:min-w-[300px] md:w-[300px] h-fit font-clash sticky top-[8rem]">
+        <AsideWA />
+      </aside>
       <div>
         <h1 className="text-[2rem] text-black font-clash font-medium md:text-left  text-center pt-10 pb-10">
           Prodotti del momento

@@ -11,7 +11,7 @@ import { FiHeart } from "react-icons/fi";
 
 const AccountAside = () => {
   return (
-    <aside className="w-auto">
+    <>
       <Image
         src={aside}
         alt="/"
@@ -67,7 +67,7 @@ const AccountAside = () => {
           </Link>
         </li>
       </ul>
-    </aside>
+    </>
   );
 };
 

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import {
   AiFillFacebook,
@@ -13,39 +14,54 @@ const Footer = () => {
       <div className="max-w-[1800px] justify-center md:gap-[10rem] gap-[5rem] hidden sm:flex md:flex p-[7rem]">
         <div className="">
           <p className="font-[500] md:mb-5 ">REPARTO</p>
-          <p className="mt-2">Donna</p>
-          <p className="mt-2">Uomo</p>
-          <p className="mt-2">Neonato</p>
-          <p className="mt-2">Accessori</p>
-          <p className="mt-2">Donna</p>
-          <p className="mt-2">Donna</p>
+          <ul className="flex-col flex">
+            <Link href="./donna" className="mt-2">
+              Donna
+            </Link>
+            <Link href="./uomo" className="mt-2">
+              Uomo
+            </Link>
+            <Link href="./abbigliamento" className="mt-2">
+              Abbigliamento
+            </Link>
+            <Link href="./accessori" className="mt-2">
+              Accessori
+            </Link>
+          </ul>
         </div>
         <div>
-          <p className="font-[500] mb-5">INFORMAZIONI</p>
-          <p className="mt-2">Donna</p>
-          <p className="mt-2">Uomo</p>
-          <p className="mt-2">Neonato</p>
-          <p className="mt-2">Accessori</p>
-          <p className="mt-2">Donna</p>
-          <p className="mt-2">Donna</p>
+          <p className="font-[500] mb-5">PROFILO</p>
+          <ul className="flex-col flex">
+            <Link href="./my-account" className="mt-2">
+              Ordini
+            </Link>
+            <Link href="./my-account/resi" className="mt-2">
+              Resi e Rimborsi
+            </Link>
+            <Link href="./my-account/preferiti" className="mt-2">
+              Preferiti
+            </Link>
+            <Link href="./my-account/carrello" className="mt-2">
+              Carrello
+            </Link>
+          </ul>
         </div>
         <div>
-          <p className="font-[500] mb-5">AIUTO</p>
-          <p className="mt-2">Donna</p>
-          <p className="mt-2">Uomo</p>
-          <p className="mt-2">Neonato</p>
-          <p className="mt-2">Accessori</p>
-          <p className="mt-2">Donna</p>
-          <p className="mt-2">Donna</p>
+          <p className="font-[500] mb-5">SERVIZIO CLIENTI</p>
+          <ul className="flex-col flex">
+            <Link href="./servizio-clienti" className="mt-2">
+              Traccia i miei ordini
+            </Link>
+            <Link href="./servizio-clienti/magazine" className="mt-2">
+              Magazine
+            </Link>
+          </ul>
         </div>
         <div>
-          <p className="font-[500] mb-5">ISCRIVITI ORA</p>
-          <p className="mt-2">Donna</p>
-          <p className="mt-2">Uomo</p>
-          <p className="mt-2">Neonato</p>
-          <p className="mt-2">Accessori</p>
-          <p className="mt-2">Donna</p>
-          <p className="mt-2">Donna</p>
+          <p className="font-[500] mb-7">ISCRIVITI ORA</p>
+          <Link href="./servizio-clienti/newsletter" className="mt-2">
+            Newsletter
+          </Link>
         </div>
       </div>
       <div className="md:hidden sm:hidden">
@@ -69,7 +85,7 @@ const Footer = () => {
       <div className="justify-center flex">
         <p className="font-[600]">© claudia</p>
       </div>
-      <div className="text-[2.5rem] font-[600] flex justify-center p-10">
+      <div className="text-[2.5rem] font-stardom flex justify-center p-10">
         e-commerce.
       </div>
     </footer>
