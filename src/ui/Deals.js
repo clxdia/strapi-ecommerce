@@ -35,7 +35,7 @@ export default async function Deals() {
               nulla pariatur.
             </p>
             <button className="mt-6 block w-[60%] bg-coral text-buttontext p-2 md:p-3 gap-3 justify-center items-center border-[2px] border-coral hover:ease-in hover:border-[2px] hover:border-coral hover:bg-buttontext hover:text-coral md:mb-0 mb-5 font-satoshi font-bold uppercase tracking-wide">
-              Scopri ora
+              <Link href="./view-all">Scopri ora</Link>
             </button>
           </div>
 
