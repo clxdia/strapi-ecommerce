@@ -16,7 +16,7 @@ const Preferiti = () => {
     return (
       <main className="w-[100%] md:w-[95%] mx-auto flex">
         <div className="w-[100%]">
-          <h1 className="md:text-[2rem] text-center font-medium md:text-left text-[20px] mb-5">
+          <h1 className="md:text-[2rem] font-clash text-center font-medium md:text-left text-[20px] mb-5">
             I miei Preferiti
           </h1>
           <EmptyPage />
@@ -25,27 +25,27 @@ const Preferiti = () => {
     );
   }
   return (
-    <main className="w-[100%] md:w-[95%] mx-auto flex justify-between">
+    <main className="w-[100%] md:w-[95%] mx-auto flex justify-between pb-[10rem]">
       <div className="w-[100%]">
-        <h1 className="md:text-[2rem] text-center md:text-left font-work text-[20px] mb-5">
+        <h1 className="md:text-[2rem] font-clash text-center font-medium md:text-left text-[20px] mb-5">
           I miei Preferiti
         </h1>
-        <div className="flex gap-4 flex-row flex-wrap h-full w-full">
+        <div className="flex flex-wrap h-full md:gap-[1.8vw] gap-[3vw] sm:gap-auto">
           {products?.map((item) => (
             <div
               key={item.id}
-              className="font-work font-[300] flex-col mb-10 cursor-pointer relative flex-1 flex-shrink-0 w-1/2"
+              className="font-satoshi flex-col mb-5 cursor-pointer flex-shrink-0 md:w-[23%] sm:w-[31%] w-[48%]"
             >
               <Link
                 href="/view-all/[id]"
                 as={`/view-all/${item.id}`}
-                className="w-fit"
+                className="relative w-fit"
               >
-                <div className="bg-white items-center self-center flex hover:shadow-xl hover:transition-all transition-all ease-in-out hover:ease-in-out relative w-fit">
+                <div className="bg-white items-center self-center flex hover:shadow-xl h-auto hover:transition hover:ease-in-out md:hover:scale-105">
                   <Image
                     src={item.img}
                     alt="/"
-                    className="object-cover w-[50vw] h-[60vw] relative"
+                    className="md:w-[60vw] md:h-[25vw] w-[45vw] h-[60vw] sm:w-[70vw] sm:h-[40vw] object-cover relative"
                     width="250"
                     height="350"
                   />
@@ -62,9 +62,11 @@ const Preferiti = () => {
                 as={`/view-all/${item.id}`}
                 className="h-[3.5rem] flex flex-col justify-between"
               >
-                <h3 className="mt-2 text-[12px]">{item.title}</h3>
-                <p className="font-[400] w-fit text-[15px] hover:text-redish hover:ease-out hover:transition">
-                  €{item.price}
+                <h3 className="font-satoshi mt-2 md:w-fit md:text-[15px] text-[13px] decoration-black no-underline hover:underline decoration-solid decoration-1 underline-offset-4">
+                  {item.title}
+                </h3>
+                <p className="font-medium w-fit md:text-[16px] text-[14px] text-redish">
+                  € {item.price}
                 </p>
               </Link>
             </div>

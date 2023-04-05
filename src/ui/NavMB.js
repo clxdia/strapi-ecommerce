@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import React, { useContext } from "react";
+import React, { use, useContext } from "react";
 import { useState } from "react";
 import {
   HiOutlineMenuAlt3,
@@ -12,9 +12,11 @@ import { CgClose } from "react-icons/cg";
 
 import { BsArrowRightShort } from "react-icons/bs";
 import { CartContext } from "../app/CartContext";
+import { RiArrowDropDownLine } from "react-icons/ri";
 
 const NavMB = () => {
   const [nav, setNav] = useState(false);
+  const [dropdown, setDropdown] = useState(false);
 
   const handleNav = () => {
     setNav(!nav);
@@ -22,6 +24,10 @@ const NavMB = () => {
 
   const handleLinkClick = () => {
     setNav(false);
+  };
+
+  const handleLinkClickCategories = () => {
+    setDropdown(!dropdown);
   };
 
   const { notif } = useContext(CartContext);
@@ -68,67 +74,65 @@ const NavMB = () => {
             : "fixed top-0 left-[-100%] right-0  flex  w-full h-screen  text-center ease-in duration-300"
         }
       >
-        <nav className="w-[95%] mx-auto mt-1">
+        <nav className="w-[95%] m-auto mt-1">
           <div className="flex">
             <h1 className="font-stardom">
               <span className="text-redish">e-</span>
               commerce.
             </h1>
           </div>
-          <ul className="px-5 sm:p-5 text-left text-[1.5rem]  ">
-            <li className="flex justify-between items-center py-4 hover:text-redish hover:ease-out hover:transition pointer">
+          <ul className="sm:p-5 text-center py-5 px-5 text-[1.5rem] font-clash">
+            <li className="flex justify-center py-4 hover:text-redish hover:ease-out hover:transition pointer">
               <Link href="/" onClick={handleLinkClick}>
                 Home
               </Link>
-              <BsArrowRightShort size={25} />
             </li>
             <hr></hr>
-            <li className="flex justify-between items-center py-4 hover:text-redish hover:ease-out hover:transition pointer">
+            <li className="flex justify-center items-center py-4 hover:text-redish hover:ease-out hover:transition pointer">
               <Link href="/view-all" onClick={handleLinkClick}>
                 Vedi Tutto
               </Link>
-              <BsArrowRightShort size={25} />
             </li>
             <hr></hr>
-            <li className="flex justify-between items-center py-4 hover:text-redish hover:ease-out hover:transition pointer">
+            <li className="flex justify-center items-center py-4 hover:text-redish hover:ease-out hover:transition pointer text-center">
               <Link href="/servizio-clienti" onClick={handleLinkClick}>
                 Servizio Clienti
               </Link>
-              <BsArrowRightShort size={25} />
             </li>
             <hr></hr>
-            <li className="flex-col flex  py-4  pointer">
-              <p onClick={handleLinkClick} href="/">
-                Categorie
-              </p>
-              <ul className="ml-5 text-[1.2rem] mt-3">
-                <li className="hover:text-redish py-3 hover:ease-out hover:transition flex justify-between items-center">
-                  <Link href="/abbigliamento" onClick={handleLinkClick}>
-                    Abbigliamento
-                  </Link>
-                  <BsArrowRightShort size={25} />
-                </li>
-                <li className="hover:text-redish py-3 hover:ease-out hover:transition flex justify-between items-center">
-                  <Link href="/uomo" onClick={handleLinkClick}>
-                    Uomo
-                  </Link>
-                  <BsArrowRightShort size={25} />
-                </li>
+            <li className="flex-col flex py-4 pointer">
+              <div
+                className="flex items-center justify-center"
+                onClick={handleLinkClickCategories}
+              >
+                <p>Categorie</p>
+                <RiArrowDropDownLine />
+              </div>
 
-                <li className="hover:text-redish py-3 hover:ease-out hover:transition flex justify-between items-center">
-                  <Link href="/donna" onClick={handleLinkClick}>
-                    Donna
-                  </Link>
-                  <BsArrowRightShort size={25} />
-                </li>
-
-                <li className="hover:text-redish py-3 hover:ease-out hover:transition flex justify-between items-center">
-                  <Link href="/accessori" onClick={handleLinkClick}>
-                    Accessori
-                  </Link>
-                  <BsArrowRightShort size={25} />
-                </li>
-              </ul>
+              {dropdown && (
+                <ul className="text-[1.2rem] mt-3">
+                  <li className="hover:text-redish py-3 hover:ease-out hover:transition flex justify-center items-center">
+                    <Link href="/abbigliamento" onClick={handleLinkClick}>
+                      Abbigliamento
+                    </Link>
+                  </li>
+                  <li className="hover:text-redish py-3 hover:ease-out hover:transition flex justify-center items-center">
+                    <Link href="/uomo" onClick={handleLinkClick}>
+                      Uomo
+                    </Link>
+                  </li>
+                  <li className="hover:text-redish py-3 hover:ease-out hover:transition flex justify-center items-center">
+                    <Link href="/donna" onClick={handleLinkClick}>
+                      Donna
+                    </Link>
+                  </li>
+                  <li className="hover:text-redish py-3 hover:ease-out hover:transition flex justify-center items-center">
+                    <Link href="/accessori" onClick={handleLinkClick}>
+                      Accessori
+                    </Link>
+                  </li>
+                </ul>
+              )}
             </li>
           </ul>
         </nav>
