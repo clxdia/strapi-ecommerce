@@ -81,7 +81,7 @@ const NavMB = () => {
               commerce.
             </h1>
           </div>
-          <ul className="sm:p-5 text-center py-5 px-5 text-[1.5rem] font-clash">
+          <ul className="sm:p-5 text-center py-10 px-8 text-[1.5rem] font-clash">
             <li className="flex justify-center py-4 hover:text-redish hover:ease-out hover:transition pointer">
               <Link href="/" onClick={handleLinkClick}>
                 Home
@@ -110,7 +110,7 @@ const NavMB = () => {
               </div>
 
               {dropdown && (
-                <ul className="text-[1.2rem] mt-3">
+                <ul className="text-[1.2rem] mt-3 font-satoshi">
                   <li className="hover:text-redish py-3 hover:ease-out hover:transition flex justify-center items-center">
                     <Link href="/abbigliamento" onClick={handleLinkClick}>
                       Abbigliamento
