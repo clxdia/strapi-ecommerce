@@ -55,7 +55,7 @@ const HeaderComponent = () => {
                 Servizio Clienti
               </Link>
             </li>
-            <li className="mr-36 text-[2.5rem] font-stardom">
+            <li className="mr-[8.3rem] text-[2.5rem] font-stardom">
               <Link href="/" className="text-center md:block">
                 <span className="text-redish">e-</span>
                 commerce.
