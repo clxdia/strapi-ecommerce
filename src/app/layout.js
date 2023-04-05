@@ -23,8 +23,8 @@ export default function RootLayout({ children }) {
             <HeaderComponent />
             <NavMB />
             <div className="md:pt-0 pt-[5rem]">{children}</div>
-            <Image src={bannerMB} alt="/" className=" md:hidden mt-10" />
-            <Image src={banner} alt="/" className=" md:block hidden mt-10" />
+            <Image src={bannerMB} alt="/" className="md:hidden mt-10" />
+            <Image src={banner} alt="/" className="md:block hidden mt-10" />
             <Footer />
           </Providers>
         </CartProvider>
