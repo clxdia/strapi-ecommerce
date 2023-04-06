@@ -37,15 +37,6 @@ export default async function Abbigliamento() {
           </div>
         </div>
       </div>
-
-      <section className="flex flex-col m-auto justify-center mt-10 md:mt-[5rem]">
-        <Link href="/uomo" className="m-auto justify-center flex flex-col">
-          <h3 className="text-[1.2rem]">Uomo</h3>
-          <div className="m-auto">
-            <BsArrowRightShort size={30} className="hover:text-redish" />
-          </div>
-        </Link>
-      </section>
     </main>
   );
 }

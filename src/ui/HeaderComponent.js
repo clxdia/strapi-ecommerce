@@ -69,10 +69,9 @@ const HeaderComponent = () => {
                 <IoMdHeartEmpty />
               </Link>
               <div className="decoration-black no-underline hover:underline decoration-solid decoration-1 underline-offset-4">
-                <HiOutlineShoppingBag
-                  onClick={toggleCart}
-                  onMouseEnter={handleMouseEnter}
-                />
+                <Link href="./my-account/carrello">
+                  <HiOutlineShoppingBag onMouseEnter={handleMouseEnter} />
+                </Link>
               </div>
               <Link
                 className="decoration-black no-underline hover:underline decoration-solid decoration-1 underline-offset-4"
