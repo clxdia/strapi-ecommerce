@@ -11,21 +11,23 @@ export default async function MagazinePage({
     return magazine.id === params.magazineId;
   });
   return (
-    <main className="md:pt-[7rem] ">
+    <main className="">
       <div className="w-[100%] h-auto">
         <Image src={magazine.pic} alt="/" className="w-[100%]" />
       </div>
-      <div className="md:h-[5rem] h-[6rem] relative bg-coral w-[100%] justify-center"></div>
-      <div className="bg-background p-5 md:w-[67%] md:mt-[-3rem] mt-[-4rem] w-[90%] left-0 right-0 absolute m-auto md:left-[24.7%] md:right-[9%] text-center">
-        <p className="font-work font-[300] text-[0.8rem]">INSIDER</p>
-        <h1 className="font-work font-[500] text-[1.5rem] mt-2">
-          {magazine.title}
-        </h1>
-        <p className="font-cursive text-[0.9rem] mt-2">
-          Fugiat ad et ad est deserunt aute aliquip culpa consequat do cillum
-          laborum officia.
-        </p>
+      <div className="md:h-[5rem] h-[6rem] relative bg-coral w-[100%] justify-center mx-auto">
+        <div className="bg-background p-5 md:w-[90%] md:mt-[2rem] mt-[2.5rem] w-[90%] left-0 right-0 absolute m-auto  text-center">
+          <p className="font-work font-[300] text-[0.8rem]">INSIDER</p>
+          <h1 className="font-work font-[500] text-[1.5rem] mt-2">
+            {magazine.title}
+          </h1>
+          <p className="font-cursive text-[0.9rem] mt-2">
+            Fugiat ad et ad est deserunt aute aliquip culpa consequat do cillum
+            laborum officia.
+          </p>
+        </div>
       </div>
+
       <p className="text-center mt-[10rem] text-[0.8rem]">{magazine.date}</p>
       <div className="p-6 font-crimson text-[1.1rem]">
         <p>
