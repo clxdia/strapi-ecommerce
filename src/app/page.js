@@ -8,7 +8,6 @@ import SwiperComponent from "../ui/Swiper";
 import Categories from "../ui/Categories";
 import Articles from "../ui/Articles";
 import NewArrivals from "../ui/NewArrivals";
-import New from "../ui/New";
 
 export default function Home() {
   return (
