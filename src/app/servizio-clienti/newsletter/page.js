@@ -48,7 +48,7 @@ const Newsletter = () => {
             </form>
 
             <form className="mt-5 font-[300]">
-              <p className="font-medium">Genere:</p>
+              <p className="font-medium">Reparto:</p>
               <ul className="font-normal">
                 <li>
                   <input type="radio" id="donna" value="donna" />
@@ -60,21 +60,14 @@ const Newsletter = () => {
                 </li>
                 <li>
                   <input type="radio" id="non-binario" value="non-binario" />
-                  <label for="non-binario"> Non Binario</label>
-                </li>
-                <li>
-                  <input type="radio" id="altro" value="altro" />
-                  <label for="altro"> Altro</label>
+                  <label for="non-binario"> Tutto</label>
                 </li>
               </ul>
             </form>
 
             <form className="font-normal mt-3">
               <input type="checkbox" id="bbm" name="bbm"></input>
-              <label for="bbm">
-                {" "}
-                Voglio anche gli aggiornamenti per bambini
-              </label>
+              <label for="bbm"> Voglio anche aggiornamenti per bambini</label>
             </form>
             <form className="flex flex-col mt-5">
               <label for="lname">
