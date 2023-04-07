@@ -19,7 +19,6 @@ export default function Home() {
       <Deals />
       <Categories />
       <Articles />
-      <New />
     </main>
   );
 }
