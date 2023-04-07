@@ -1,6 +1,4 @@
-import Link from "next/link";
 import React from "react";
-import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 import AsideWA from "../../ui/AsideWA";
 import ItemUI from "../../ui/ItemUI";
 
@@ -14,7 +12,8 @@ async function fetchData(url) {
 
 export default async function Donna() {
   const items = await fetchData(
-    process.env.NEXT_PUBLIC_API_URL + "?populate=*"
+    process.env.NEXT_PUBLIC_API_URL +
+      "?populate=*&filters[categories][title][$eq]=Donna"
   );
 
   return (
