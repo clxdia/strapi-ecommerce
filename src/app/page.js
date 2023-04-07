@@ -12,8 +12,12 @@ import NewArrivals from "../ui/NewArrivals";
 export default function Home() {
   return (
     <main>
-      <SwiperComponent />
-      <SwiperMB />
+      <div className="md:block sm:block hidden">
+        <SwiperComponent />
+      </div>
+      <div className="md:hidden sm:hidden block">
+        <SwiperMB />
+      </div>
       <NewArrivals />
       <Deals />
       <Categories />

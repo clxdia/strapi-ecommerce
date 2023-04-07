@@ -78,6 +78,16 @@ h4 {
   font-family: "Clash Display", sans-serif;
 }
 
+.swiper-button-prev,
+.swiper-button-disabled {
+  margin-left: 2vw;
+}
+
+.swiper-button-next,
+.swiper-button-disabled {
+  margin-right: 2vw;
+}
+
 .text-grid,
 .text-grid:hover {
   display: flex;

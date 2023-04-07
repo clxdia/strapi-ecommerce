@@ -1,49 +1,60 @@
 "use client";
 
-import { React, useEffect, useState } from "react";
+import React from "react";
+import { Navigation, Pagination, Autoplay } from "swiper";
 import Image from "next/image";
 
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
+import { Swiper, SwiperSlide } from "swiper/react";
 
-import "../styles/swiper.css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
+import "swiper/css";
 
 import pic1 from "../images/desktop/slide1.png";
 import pic2 from "../images/desktop/slide2.png";
 import pic3 from "../images/desktop/slide3.png";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper";
+
+import SwiperStyles from "../styles/Swiper.module.css";
 
 const SwiperComponent = () => {
   const sliders = [pic1, pic2, pic3];
+
   return (
-    <>
-      <Swiper
-        spaceBetween={30}
-        centeredSlides={true}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper"
-      >
-        <SwiperSlide>
-          <Image src={pic1} alt="/" width="1000" height="1000"></Image>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src={pic2} alt="/" width="1000" height="1000"></Image>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src={pic3} alt="/" width="1000" height="1000"></Image>
-        </SwiperSlide>
-      </Swiper>
-    </>
+    <div className={SwiperStyles.html}>
+      <div className={SwiperStyles.body}>
+        <Swiper
+          spaceBetween={30}
+          centeredSlides={true}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          modules={[Autoplay, Pagination, Navigation]}
+          className={SwiperStyles.swiper}
+        >
+          <SwiperSlide className={SwiperStyles.swiper_slide}>
+            <Image src={pic1} alt="/" width="auto" height="1000"></Image>
+          </SwiperSlide>
+          <SwiperSlide className={SwiperStyles.swiper_slide}>
+            <Image src={pic2} alt="/" width="auto" height="1000"></Image>
+          </SwiperSlide>
+          <SwiperSlide className={SwiperStyles.swiper_slide}>
+            <Image
+              src={pic3}
+              alt="/"
+              width="auto"
+              height="1000"
+              className="object-cover"
+            ></Image>
+          </SwiperSlide>
+        </Swiper>
+      </div>
+    </div>
   );
 };
 
