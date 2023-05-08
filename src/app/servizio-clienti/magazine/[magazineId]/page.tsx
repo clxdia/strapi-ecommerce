@@ -11,7 +11,7 @@ export default async function MagazinePage({
     return magazine.id === params.magazineId;
   });
   return (
-    <main className="">
+    <main className="mb-[7rem]">
       <div className="w-[100%] h-auto">
         <Image src={magazine.pic} alt="/" className="w-[100%]" />
       </div>

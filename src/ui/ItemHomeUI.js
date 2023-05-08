@@ -11,7 +11,7 @@ const ItemHomeUI = ({ item, fill, toggleFill }) => {
             <Image
               src={item.attributes.img.data.attributes.url}
               alt="/"
-              className="md:w-[60vw] md:h-[25vw] w-[45vw] h-[60vw] sm:w-[70vw] sm:h-[40vw] object-cover relative"
+              className="md:w-[60vw] max-h-[450px] md:h-[25vw] w-[45vw] h-[60vw] sm:w-[70vw] sm:h-[40vw] object-cover relative"
               width="260"
               height="250"
             />
@@ -29,7 +29,7 @@ const ItemHomeUI = ({ item, fill, toggleFill }) => {
         </div>
       </div>
 
-      <div className="flex flex-col justify-between h-16 md:w-[15vw] ">
+      <div className="flex flex-col justify-between h-16 md:w-[15vw] max-w-[290px] ">
         <h3 className="mt-2 font-satoshi md:text-[15px] text-[13px] decoration-black no-underline hover:underline decoration-solid decoration-1 underline-offset-4">
           {item.attributes.title}
         </h3>

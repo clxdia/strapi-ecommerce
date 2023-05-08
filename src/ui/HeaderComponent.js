@@ -32,7 +32,7 @@ const HeaderComponent = () => {
       className="font-alpino md:block bg-white fixed w-[100%] z-[99] h-[5rem] hidden transition-all ease-out duration-[1s]"
       style={{ backgroundColor: bgColor }}
     >
-      <div className="md:flex w-[100%] max-w-[1800px] m-auto h-[5rem] justify-between items-center">
+      <div className="md:flex w-full h-[5rem] justify-between items-center">
         <nav className="w-[100%] flex flex-col h-[5rem] ">
           <ul className="flex justify-between w-[95%] m-auto items-center text-[13px]">
             <li className="flex gap-3 text-[15px]">

@@ -18,7 +18,7 @@ export default async function NewArrivals() {
         Nuovi Arrivi
       </h1>
       <div className="m-auto w-[100%]">
-        <div className="flex flex-wrap h-full md:gap-[1.8vw] gap-[3vw] sm:gap-auto">
+        <div className="flex flex-wrap h-full md:gap-[0.9vw] gap-[3vw] sm:gap-auto">
           {items.data.map((item) => {
             return <ItemHomeUI item={item} key={item.id} />;
           })}

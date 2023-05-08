@@ -45,7 +45,7 @@ const Preferiti = () => {
                   <Image
                     src={item.img}
                     alt="/"
-                    className="md:w-[60vw] md:h-[22vw] w-[45vw] h-[60vw] sm:w-[70vw] sm:h-[40vw] object-cover relative"
+                    className="md:w-[60vw] max-h-[450px] md:h-[22vw] w-[45vw] h-[60vw] sm:w-[70vw] sm:h-[40vw] object-cover relative"
                     width="250"
                     height="350"
                   />

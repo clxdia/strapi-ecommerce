@@ -11,7 +11,7 @@ const ItemUI = ({ item, fill, toggleFill }) => {
             <Image
               src={item.attributes.img.data.attributes.url}
               alt="/"
-              className="md:w-[60vw] md:h-[25vw] w-[45vw] h-[60vw] sm:w-[70vw] sm:h-[40vw] object-cover relative"
+              className="md:w-[60vw] max-h-[450px] md:h-[25vw] w-[45vw] h-[60vw] sm:w-[70vw] sm:h-[40vw] object-cover relative"
               width="260"
               height="250"
             />

@@ -20,7 +20,7 @@ export default function Articles() {
             <Image
               src={article1}
               alt="/"
-              className="w-full md, sm:h-[15vw] h-[50vw] object-cover"
+              className="w-full md, sm:h-[15vw] h-[50vw] object-cover max-w-[460px] max-h-[300px]"
             />
             <p className="bg-white p-3 font-[300] text-[15px]">INSIDER</p>
             <p className="bg-white p-3 font-[500]">Fashion & The Color Blue</p>
@@ -36,7 +36,7 @@ export default function Articles() {
             <Image
               src={article2}
               alt="/"
-              className="w-full md, sm:h-[15vw] h-[50vw] object-cover"
+              className="w-full md, sm:h-[15vw] h-[50vw] object-cover max-w-[460px] max-h-[300px]"
             />
             <p className="bg-white p-3 font-[300] text-[15px]">INSIDER</p>
             <p className="bg-white p-3 font-[500]">
@@ -54,7 +54,7 @@ export default function Articles() {
             <Image
               src={article3}
               alt="/"
-              className="w-full md, sm:h-[15vw] h-[50vw]  object-cover"
+              className="w-full md, sm:h-[15vw] h-[50vw] max-w-[460px] max-h-[300px]  object-cover"
             />
             <div className="bg-white flex-col flex">
               <p className=" p-3 font-[300] text-[15px]">INSIDER</p>

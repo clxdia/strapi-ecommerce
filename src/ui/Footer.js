@@ -11,7 +11,7 @@ import FooterMB from "./FooterMB";
 const Footer = () => {
   return (
     <footer className=" bg-footer">
-      <div className="max-w-[1800px] justify-center md:gap-[10rem] gap-[5rem] hidden sm:flex md:flex p-[7rem]">
+      <div className="max-w-[1800px] justify-center m-auto md:gap-[10rem] gap-[5rem] hidden sm:flex md:flex p-[7rem]">
         <div className="">
           <p className="font-[500] md:mb-5 ">REPARTO</p>
           <ul className="flex-col flex">
