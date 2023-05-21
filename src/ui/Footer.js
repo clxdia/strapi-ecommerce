@@ -7,11 +7,18 @@ import {
   AiOutlineTwitter,
 } from "react-icons/ai";
 import FooterMB from "./FooterMB";
+import banner from "../images/desktop/banner.png";
+import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className=" bg-footer">
-      <div className="max-w-[1800px] justify-center m-auto md:gap-[10rem] gap-[5rem] hidden sm:flex md:flex p-[7rem]">
+    <footer className=" bg-footer m-auto">
+      <Image
+        src={banner}
+        alt="/"
+        className="max-w-[2000px] sm:block md:block hidden mt-10 w-fit m-auto"
+      />
+      <div className="max-w-[2000px] justify-center m-auto md:gap-[10rem] gap-[5rem] hidden sm:flex md:flex p-[7rem]">
         <div className="">
           <p className="font-[500] md:mb-5 ">REPARTO</p>
           <ul className="flex-col flex">

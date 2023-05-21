@@ -3,6 +3,10 @@ import React from "react";
 import magazines from "../../../../magazines";
 import Magazine from "../../../ui/Magazine";
 
+export const metadata = {
+  title: "E-Commerce | Magazine ",
+};
+
 export default function MagazineHome() {
   return (
     <main>

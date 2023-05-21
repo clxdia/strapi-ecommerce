@@ -1,5 +1,9 @@
 import AsideNS from "../../ui/AsideNS";
 
+export const metadata = {
+  title: "E-Commerce | Servizio Clienti",
+};
+
 export default function RootLayout({ children }) {
   return (
     <main className="md:w-[90%] w-[100%] h-auto m-auto md:flex gap-5 mt-0">

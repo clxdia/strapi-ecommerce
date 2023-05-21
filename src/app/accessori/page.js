@@ -4,6 +4,10 @@ import { BsArrowLeftShort } from "react-icons/bs";
 import AsideWA from "../../ui/AsideWA";
 import ItemUI from "../../ui/ItemUI";
 
+export const metadata = {
+  title: "E-Commerce | Accessori",
+};
+
 async function fetchData(url) {
   const res = await fetch(url);
   if (!res.ok) {

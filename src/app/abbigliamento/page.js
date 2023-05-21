@@ -3,6 +3,10 @@ import { BsArrowRightShort } from "react-icons/bs";
 import ItemUI from "../../ui/ItemUI";
 import AsideWA from "../../ui/AsideWA";
 
+export const metadata = {
+  title: "E-Commerce | Abbigliamento",
+};
+
 async function fetchData(url) {
   const res = await fetch(url);
   if (!res.ok) {

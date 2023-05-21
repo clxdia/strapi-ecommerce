@@ -1,6 +1,8 @@
 import Link from "next/link";
 import React from "react";
 import Dropdown from "./Dropdown";
+import bannerMB from "../images/mobile/bannerMB.png";
+import Image from "next/image";
 
 const FooterMB = () => {
   const repartoLink = [];
@@ -89,6 +91,11 @@ const FooterMB = () => {
 
   return (
     <div className="w-[100%] flex-col">
+      <Image
+        src={bannerMB}
+        alt="/"
+        className="md:hidden sm:block block mt-10"
+      />
       <div>
         {accordionData.map(({ title, content, key }) => (
           <Dropdown title={title} content={content} key={key} />

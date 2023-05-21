@@ -1,6 +1,10 @@
 import AccountAside from "../../ui/AccountAside";
 import AccountMB from "../../ui/AccountMB";
 
+export const metadata = {
+  title: "E-Commerce | Il mio account",
+};
+
 export default function RootLayout({ children }) {
   return (
     <main className="md:w-[90%] w-[100%] mx-auto md:flex gap-5 md:pt-[5rem] relative">

@@ -2,6 +2,10 @@ import React from "react";
 import AsideWA from "../../ui/AsideWA";
 import ItemUI from "../../ui/ItemUI";
 
+export const metadata = {
+  title: "E-Commerce | Prodotti uomo",
+};
+
 async function fetchData(url) {
   const res = await fetch(url);
   if (!res.ok) {

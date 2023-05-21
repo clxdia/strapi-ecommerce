@@ -2,6 +2,10 @@ import React from "react";
 
 import EmptyPage from "../../ui/EmptyPage";
 
+export const metadata = {
+  title: "E-Commerce | Il mio account",
+};
+
 const MyAccount = () => {
   return (
     <main className="w-[100%] md:w-[95%] mx-auto md:h-screen">
