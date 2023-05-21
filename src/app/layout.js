@@ -5,7 +5,6 @@ import HeaderComponent from "../ui/HeaderComponent";
 import NavMB from "../ui/NavMB";
 import { Providers } from "./provider";
 import { CartProvider } from "./CartContext";
-import { notDeepEqual } from "assert";
 
 export const metadata = {
   title: "E-Commerce | Home",

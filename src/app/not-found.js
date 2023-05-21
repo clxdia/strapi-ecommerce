@@ -2,6 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import error from "../images/404.jpg";
 
+export const metadata = {
+  title: "E-Commerce",
+};
+
 export default function NotFound() {
   return (
     <div className="md:pt-[7rem] pb-[10rem] md:w-[90%] m-auto flex md:flex-row flex-col md:justify-center justify-between w-[90%]">
@@ -17,7 +21,7 @@ export default function NotFound() {
         </button>
       </div>
       <div className="md:w-[50%]  mt-[5rem] md:m-auto ">
-        <Image src={error} />
+        <Image src={error} alt="Errore 404 immagine" />
       </div>
     </div>
   );
