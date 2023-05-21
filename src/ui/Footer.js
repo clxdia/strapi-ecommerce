@@ -16,7 +16,7 @@ const Footer = () => {
       <Image
         src={banner}
         alt="/"
-        className="max-w-[2000px] sm:block md:block hidden mt-10 w-fit m-auto"
+        className="max-w-[2000px] overflow-hidden sm:block md:block hidden mt-10 w-full m-auto"
       />
       <div className="max-w-[2000px] justify-center m-auto md:gap-[10rem] gap-[5rem] hidden sm:flex md:flex p-[7rem]">
         <div className="">

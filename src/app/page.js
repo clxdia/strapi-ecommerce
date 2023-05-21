@@ -11,7 +11,7 @@ import NewArrivals from "../ui/NewArrivals";
 
 export default function Home() {
   return (
-    <main>
+    <div>
       <div className="md:block sm:block hidden">
         <SwiperComponent />
       </div>
@@ -22,6 +22,6 @@ export default function Home() {
       <Deals />
       <Categories />
       <Articles />
-    </main>
+    </div>
   );
 }

@@ -5,6 +5,7 @@ import HeaderComponent from "../ui/HeaderComponent";
 import NavMB from "../ui/NavMB";
 import { Providers } from "./provider";
 import { CartProvider } from "./CartContext";
+import { notDeepEqual } from "assert";
 
 export const metadata = {
   title: "E-Commerce | Home",
@@ -28,9 +29,9 @@ export default function RootLayout({ children }) {
           <Providers>
             <HeaderComponent />
             <NavMB />
-            <div className="md:pt-0 pt-[5rem] max-w-[2000px] m-auto">
+            <main className="md:pt-0 pt-[5rem] max-w-[2000px] m-auto">
               {children}
-            </div>
+            </main>
             <Footer />
           </Providers>
         </CartProvider>
