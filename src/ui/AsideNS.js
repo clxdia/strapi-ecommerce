@@ -34,7 +34,7 @@ const AsideNS = () => {
         </ul>
       </div>
       <div className="mt-5 font-clash font-medium">
-        <h3 className="text-[1.5rem] font-[400]">Magazine</h3>
+        <h3 className="text-[1.5rem] uppercase font-medium">Magazine</h3>
         <Link
           href="./servizio-clienti/magazine"
           className="hover:underline-offset-3 hover:underline decoration-black font-normal"
@@ -43,7 +43,7 @@ const AsideNS = () => {
         </Link>
       </div>
       <div className="mt-5 font-clash font-medium">
-        <h3 className="text-[1.5rem] font-[400]">Contatti</h3>
+        <h3 className="text-[1.5rem] uppercase font-medium">Contatti</h3>
         <Link
           href="./servizio-clienti/newsletter"
           className="hover:underline-offset-3 hover:underline decoration-black font-normal"
@@ -52,7 +52,7 @@ const AsideNS = () => {
         </Link>
       </div>
       <div className="mt-5 font-clash font-medium">
-        <h3 className="text-[1.5rem] font-[400]">Aiuto</h3>
+        <h3 className="text-[1.5rem] uppercase font-medium">Aiuto</h3>
         <Link
           href="./servizio-clienti"
           className="hover:underline-offset-3 hover:underline decoration-black font-normal"
