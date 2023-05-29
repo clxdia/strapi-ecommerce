@@ -7,12 +7,13 @@ import { AiOutlineTag } from "react-icons/ai";
 import { MdOutlineLocalShipping } from "react-icons/md";
 import { TbPackage } from "react-icons/tb";
 
+export const metadata = {
+  title: "E-Commerce | Product",
+};
+
 const fetchItem = async (itemId) => {
   const res = await fetch(
-    process.env.NEXT_PUBLIC_API + `${itemId}` + "?populate=*",
-    {
-      next: { revalidate: 60 },
-    }
+    process.env.NEXT_PUBLIC_API + `${itemId}` + "?populate=*"
   );
   const item = await res.json();
   return item.data;

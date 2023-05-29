@@ -5,6 +5,7 @@ import HeaderComponent from "../ui/HeaderComponent";
 import NavMB from "../ui/NavMB";
 import { Providers } from "./provider";
 import { CartProvider } from "./CartContext";
+import React from "react";
 
 export const metadata = {
   title: "E-Commerce | Home",
@@ -19,7 +20,7 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }) {
+function RootLayout({ children }) {
   return (
     <html>
       <head />
@@ -38,3 +39,4 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+export default React.memo(RootLayout);

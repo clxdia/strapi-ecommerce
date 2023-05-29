@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import React from "react";
+import React, { memo } from "react";
 
-const AsideWA = ({ abbigliamento, acc, donna, uomo }) => {
+const AsideWA = memo(({ abbigliamento, acc, donna, uomo }) => {
   return (
     <>
       <Link href="/view-all" className="uppercase font-medium">
@@ -49,6 +49,8 @@ const AsideWA = ({ abbigliamento, acc, donna, uomo }) => {
       </ul>
     </>
   );
-};
+});
+
+AsideWA.displayName = "AsideViewAll";
 
 export default AsideWA;

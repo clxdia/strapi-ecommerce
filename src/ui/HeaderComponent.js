@@ -14,7 +14,6 @@ const HeaderComponent = () => {
   const [bgColor, setBgColor] = useState("transparent");
 
   const { cartOpen } = useContext(CartContext);
-  const { toggleCart } = useContext(CartContext);
   const { handleMouseEnter } = useContext(CartContext);
 
   useEffect(() => {
