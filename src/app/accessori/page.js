@@ -21,7 +21,6 @@ export default async function Accessori() {
     process.env.NEXT_PUBLIC_SHORT_API_URL +
       "?populate=*&filters[categories][title][$eq]=Accessori"
   );
-
   return (
     <main className="md:pt-[7rem] pb-[10rem]">
       <div className="md:flex md:w-[90%] m-auto">
