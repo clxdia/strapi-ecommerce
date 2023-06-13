@@ -5,8 +5,8 @@ import FaveButton from "./FaveButton";
 const ItemHomeUI = ({ item, fill, toggleFill }) => {
   return (
     <div className="font-satoshi flex-col mb-5 cursor-pointer flex-shrink-0 md:w-[23%] sm:w-[31%] w-[48%]">
-      <div className="relative w-fit">
-        <Link href="/view-all/[id]" as={`/view-all/${item.id}`}>
+      <Link href="/view-all/[id]" as={`/view-all/${item.id}`}>
+        <div className="relative w-fit">
           <div className="bg-white items-center self-center flex hover:shadow-xl h-auto  hover:transition hover:ease-in-out md:hover:scale-105">
             <Image
               src={item.attributes.img.data.attributes.url}
@@ -23,20 +23,21 @@ const ItemHomeUI = ({ item, fill, toggleFill }) => {
               </div>
             )}
           </div>
-        </Link>
-        <div className="absolute bottom-2 right-2 z-[80]">
-          <FaveButton fill={fill} toggleFill={toggleFill} item={item} />
-        </div>
-      </div>
 
-      <div className="flex flex-col justify-between h-16 md:w-[15vw] max-w-[290px] ">
-        <h3 className="mt-2 font-satoshi md:text-[15px] text-[13px] decoration-black no-underline hover:underline decoration-solid decoration-1 underline-offset-4">
-          {item.attributes.title}
-        </h3>
-        <p className="font-[400] w-fit md:text-[16px] text-[14px] text-redish">
-          € {item.attributes.price}
-        </p>
-      </div>
+          <div className="absolute bottom-2 right-2 z-[80]">
+            <FaveButton fill={fill} toggleFill={toggleFill} item={item} />
+          </div>
+        </div>
+
+        <div className="flex flex-col justify-between h-16 md:w-[15vw] max-w-[290px] ">
+          <h3 className="mt-2 font-satoshi md:text-[15px] text-[13px] decoration-black no-underline hover:underline decoration-solid decoration-1 underline-offset-4">
+            {item.attributes.title}
+          </h3>
+          <p className="font-[400] w-fit md:text-[16px] text-[14px] text-redish">
+            € {item.attributes.price}
+          </p>
+        </div>
+      </Link>
     </div>
   );
 };

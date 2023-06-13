@@ -5,8 +5,8 @@ import FaveButton from "./FaveButton";
 const ItemUI = ({ item, fill, toggleFill }) => {
   return (
     <div className="font-satoshi flex-col mb-5 cursor-pointer flex-shrink-0 md:w-[23%] sm:w-[31%] w-[48%]">
-      <div className="relative w-fit">
-        <Link href="/view-all/[id]" as={`/view-all/${item.id}`} className="">
+      <Link href="/view-all/[id]" as={`/view-all/${item.id}`} className="">
+        <div className="relative w-fit">
           <div className="bg-white items-center self-center flex hover:shadow-xl h-auto hover:transition hover:ease-in-out md:hover:scale-105">
             <Image
               src={item.attributes.img.data.attributes.url}
@@ -23,19 +23,20 @@ const ItemUI = ({ item, fill, toggleFill }) => {
               </div>
             )}
           </div>
-        </Link>
-        <div className="absolute bottom-2 right-2 z-[80]">
-          <FaveButton fill={fill} toggleFill={toggleFill} item={item} />
+
+          <div className="absolute bottom-2 right-2 z-[80]">
+            <FaveButton fill={fill} toggleFill={toggleFill} item={item} />
+          </div>
         </div>
-      </div>
-      <div className="flex flex-col justify-between h-16 md:w-[15vw]">
-        <h3 className="font-satoshi mt-2 md:w-fit md:text-[15px] text-[13px] decoration-black no-underline hover:underline decoration-solid decoration-1 underline-offset-4">
-          {item.attributes.title}
-        </h3>
-        <p className="font-medium w-fit md:text-[16px] text-[14px] text-redish">
-          € {item.attributes.price}
-        </p>
-      </div>
+        <div className="flex flex-col justify-between h-16 md:w-[15vw]">
+          <h3 className="font-satoshi mt-2 md:w-fit md:text-[15px] text-[13px] decoration-black no-underline hover:underline decoration-solid decoration-1 underline-offset-4">
+            {item.attributes.title}
+          </h3>
+          <p className="font-medium w-fit md:text-[16px] text-[14px] text-redish">
+            € {item.attributes.price}
+          </p>
+        </div>
+      </Link>
     </div>
   );
 };
