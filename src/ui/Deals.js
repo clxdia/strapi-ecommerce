@@ -40,7 +40,7 @@ export default async function Deals() {
           </div>
 
           <div className="min-w-[60%] flex overflow-y-hidden overflow-x-scroll gap-5">
-            {items.data.map((item, index) => (
+            {items.data.map((item) => (
               <div
                 className="min-w-[220px] h-[350px] md:min-w-[280px] md:min-h-full"
                 key={item.id}
