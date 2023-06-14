@@ -39,7 +39,7 @@ const Carrello = () => {
   }
   return (
     <main className="w-[95%] mx-auto flex h-auto justify-between pb-[5rem] md:pb-[15rem] font-clash">
-      <div className="md:m-0 md:w-full m-auto">
+      <div className="md:m-0 w-full m-auto">
         <h1 className="md:text-[2rem] text-center font-medium md:text-left text-[20px] mb-5">
           Il mio carrello
         </h1>
