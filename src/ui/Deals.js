@@ -15,12 +15,12 @@ export default async function Deals() {
     process.env.NEXT_PUBLIC_API_URL + "?populate=*&filters[type][$eq]=normal"
   );
   return (
-    <section className="mb-20 bg-blueish p-5 md:p-14 text-white pb-14">
-      <div className="w-full sm:w-[95%] md:w-[75%] m-auto">
+    <section className="mb-20 bg-blueish p-5 md:min-h-[500px] md:h-[500px] text-white pb-14">
+      <div className="w-full sm:w-[95%] h-full md:w-[75%] m-auto md:pt-5">
         <h1 className="md:hidden block text-[1.5rem] font-clash font-medium uppercase mt-5">
           Offerte del giorno
         </h1>
-        <div className="flex flex-col md:flex-row md:gap-5 ">
+        <div className="flex flex-col md:flex-row md:gap-5 h-full">
           <div className="w-full md:w-[50%] flex flex-col min-w-[30%]">
             <h1 className="md:block hidden text-[2rem] font-clash font-medium uppercase">
               Offerte del giorno
@@ -41,7 +41,7 @@ export default async function Deals() {
           <div className="min-w-[60%] flex overflow-y-hidden overflow-x-scroll gap-5">
             {items.data.map((item) => (
               <div
-                className="md:min-w-[40%] max-w-[300px] max-h-[600px] w-[100%] min-w-[60%] md:h-[30vw] h-[70vw] relative mb-0"
+                className="min-w-[220px] h-[350px] md:min-w-[280px] md:min-h-full"
                 key={item.id}
               >
                 <Link href="/view-all/[id]" as={`/view-all/${item.id}`}>
@@ -49,18 +49,18 @@ export default async function Deals() {
                     src={item.attributes.img.data.attributes.url}
                     width="600"
                     height="600"
-                    className="w-[100%] h-[80%] object-cover"
+                    className="w-[100%] h-[80%] md:h-[82%] object-cover"
                     alt={item.attributes.title}
                   ></Image>
-                  <div className="block bg-white text-black p-3">
-                    <p className="text-[1rem] font-clash font-normal">
+                  <div className="block bg-white text-black p-3 min-h-[100px] md:min-h-fit">
+                    <p className="md:text-[1rem] text-[0.9rem] font-clash font-normal">
                       {item.attributes.title}
                     </p>
                     <div className="flex gap-3 items-center">
-                      <p className="text-red-600 font-bold text-[16px]">
+                      <p className="text-red-600 font-bold md:text-[16px] text-[14px]">
                         €{item.attributes.price}
                       </p>
-                      <p className="text-[13px] text-gray-500">
+                      <p className="md:text-[13px] text-[11px] text-gray-500">
                         <s>€50.99</s>
                       </p>
                     </div>
