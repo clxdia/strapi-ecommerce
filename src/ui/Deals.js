@@ -14,9 +14,10 @@ export default async function Deals() {
   const items = await fetchData(
     process.env.NEXT_PUBLIC_API_URL + "?populate=*&filters[type][$eq]=normal"
   );
+
   return (
     <section className="mb-20 bg-blueish p-5 md:min-h-[500px] md:h-[500px] text-white pb-14">
-      <div className="w-full sm:w-[95%] h-full md:w-[75%] m-auto md:pt-5">
+      <div className="w-full sm:w-[95%] h-full md:w-[72%] m-auto md:pt-5">
         <h1 className="md:hidden block text-[1.5rem] font-clash font-medium uppercase mt-5">
           Offerte del giorno
         </h1>
@@ -39,7 +40,7 @@ export default async function Deals() {
           </div>
 
           <div className="min-w-[60%] flex overflow-y-hidden overflow-x-scroll gap-5">
-            {items.data.map((item) => (
+            {items.data.map((item, index) => (
               <div
                 className="min-w-[220px] h-[350px] md:min-w-[280px] md:min-h-full"
                 key={item.id}
