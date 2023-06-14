@@ -22,7 +22,7 @@ export default async function Deals() {
           Offerte del giorno
         </h1>
         <div className="flex flex-col md:flex-row md:gap-5 h-full">
-          <div className="w-full md:w-[50%] flex flex-col min-w-[30%]">
+          <div className="w-full md:w-[50%] flex flex-col min-w-[45%]">
             <h1 className="md:block hidden text-[2rem] font-clash font-medium uppercase">
               Offerte del giorno
             </h1>
