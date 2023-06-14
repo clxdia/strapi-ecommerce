@@ -27,7 +27,7 @@ export default async function ItemPage({ params: { itemId } }, setFill, fill) {
       <section className="md:flex gap-10 md:w-[80%] m-auto mt-0">
         <div className=" items-center self-center flex ">
           <Image
-            src={item.attributes.img.data.attributes.url}
+            src={item.attributes?.img.data.attributes.url}
             className="w-[100%] md:w-[1500px] md:h-[1000px] object-cover"
             width="1500"
             height="1000"

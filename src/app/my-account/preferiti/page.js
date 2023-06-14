@@ -41,7 +41,7 @@ const Preferiti = () => {
                 as={`/view-all/${item.id}`}
                 className="relative w-fit"
               >
-                <div className="bg-white items-center self-center flex hover:shadow-xl h-auto hover:transition hover:ease-in-out md:hover:scale-105">
+                <div className="bg-white items-center self-center flex sm, md:hover:shadow-xl h-auto hover:transition hover:ease-in-out md:hover:scale-105">
                   <Image
                     src={item.img}
                     alt="/"

@@ -28,12 +28,8 @@ export default async function Recommendations({ fill, toggleFill }) {
               className="flex flex-col mt-4 md:w-[250px] md:min-w-[250px]"
               key={item.id}
             >
-              <div className=" md:hover:scale-105 h-auto hover:shadow-xl hover:transition hover:ease-in-out md:w-[250px] md:min-w-[250px] flex flex-col relative">
-                <Link
-                  href="./view-all/[id]"
-                  as={`./view-all/${item.id}`}
-                  className="w-[100%]"
-                >
+              <div className="md:hover:scale-105 h-auto sm, md:hover:shadow-xl hover:transition hover:ease-in-out md:w-[250px] md:min-w-[250px] flex flex-col relative">
+                <Link href="./view-all/[id]" as={`./view-all/${item.id}`}>
                   <Image
                     src={item.attributes.img.data.attributes.url}
                     alt="/"
@@ -42,15 +38,11 @@ export default async function Recommendations({ fill, toggleFill }) {
                     height="200"
                   />
                 </Link>
-                <div className="absolute bottom-2 right-2 z-[80]">
+                <div className="cursor-pointer absolute bottom-2 right-2 z-[80]">
                   <FaveButton fill={fill} toggleFill={toggleFill} item={item} />
                 </div>
               </div>
-              <Link
-                href="./view-all/[id]"
-                as={`./view-all/${item.id}`}
-                className="md:w-[250px] md:min-w-[250px] md:max-w-[250px]"
-              >
+              <Link href="./view-all/[id]" as={`./view-all/${item.id}`}>
                 <h3 className="mt-2 md:w-auto w-[150px] md:text-[15px] text-[13px] decoration-black no-underline hover:underline decoration-solid decoration-1 underline-offset-4 font-normal">
                   {item.attributes.title}
                 </h3>
