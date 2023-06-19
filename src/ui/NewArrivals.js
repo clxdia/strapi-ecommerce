@@ -10,7 +10,7 @@ async function fetchData(url) {
 
 export default async function NewArrivals() {
   const items = await fetchData(
-    process.env.NEXT_PUBLIC_API_URL + "?populate=*&filters[type][$eq]=trending"
+    process.env.NEXT_PUBLIC_API_URL + "?populate=*&filters[type][$eq]=trendin"
   );
   return (
     <section className="w-[90%] max-w-[1800px] md:w-[70%] m-auto mb-20">
