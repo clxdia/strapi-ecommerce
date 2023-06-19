@@ -1,17 +1,19 @@
 import ItemHomeUI from "./ItemHomeUI";
 
-async function fetchData(url) {
-  const res = await fetch(url);
+async function fetchTrendingProducts() {
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}?populate=*&filters[type][$eq]=trending`
+  );
   if (!res.ok) {
-    throw new Error("failed");
+    throw new Error("Failed to fetch trending products.");
   }
-  return res.json();
+  const data = await res.json();
+  return data;
 }
 
 export default async function NewArrivals() {
-  const items = await fetchData(
-    process.env.NEXT_PUBLIC_API_URL + "?populate=*&filters[type][$eq]=trending"
-  );
+  const items = await fetchTrendingProducts();
+
   return (
     <section className="w-[90%] max-w-[1800px] md:w-[70%] m-auto mb-20">
       <h1 className="mb-6 text-black font-clash font-medium tracking-wide mt-10 md:text-[2rem] text-[1.5rem] cursor-pointer uppercase w-full text-center">
