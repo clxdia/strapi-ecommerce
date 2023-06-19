@@ -12,17 +12,13 @@ export const metadata = {
 };
 
 const fetchItem = async (itemId) => {
-  const res = await fetch(
-    process.env.NEXT_PUBLIC_API + `${itemId}` + "?populate=*"
-  );
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API}${itemId}?populate=*`);
   const item = await res.json();
   return item.data;
 };
 
 export default async function ItemPage({ params: { itemId } }, setFill, fill) {
   const item = await fetchItem(itemId);
-  console.log(itemId);
-  console.log(item);
 
   return (
     <div className="w-[90%] md:w-[80%] md:pt-[10rem] m-auto font-work">
