@@ -21,6 +21,8 @@ const fetchItem = async (itemId) => {
 
 export default async function ItemPage({ params: { itemId } }, setFill, fill) {
   const item = await fetchItem(itemId);
+  console.log(itemId);
+  console.log(item);
 
   return (
     <div className="w-[90%] md:w-[80%] md:pt-[10rem] m-auto font-work">
