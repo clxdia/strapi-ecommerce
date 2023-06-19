@@ -12,7 +12,7 @@ async function fetchData(url) {
 
 export default async function Deals() {
   const items = await fetchData(
-    process.env.NEXT_PUBLIC_API_URL + "?populate=*&filters[type][$eq]=trending"
+    process.env.NEXT_PUBLIC_API_URL + "?populate=*&filters[type][$eq]=normal"
   );
 
   return (
