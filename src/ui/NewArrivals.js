@@ -2,7 +2,10 @@ import ItemHomeUI from "./ItemHomeUI";
 
 export default async function NewArrivals() {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}?populate=*&filters[type][$eq]=trending`
+    `${process.env.NEXT_PUBLIC_API_URL}?populate=*&filters[type][$eq]=trending`,
+    {
+      cache: "no-store",
+    }
   );
   if (!res.ok) {
     throw new Error("Failed to fetch trending products.");
