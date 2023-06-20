@@ -12,9 +12,7 @@ export const metadata = {
 };
 
 const fetchItem = async (id) => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API}${id}?populate=*`, {
-    cache: "no-store",
-  });
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API}${id}?populate=*`);
   const item = await res.json();
   return item.data;
 };
