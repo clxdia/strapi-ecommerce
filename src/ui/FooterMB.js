@@ -35,7 +35,7 @@ const FooterMB = () => {
   );
   aiutoLink.push(
     <div className="mt-4">
-      <Link href="/">Magazine</Link>
+      <Link href="/servizio-clienti/magazine">Magazine</Link>
     </div>
   );
 
