@@ -1,18 +1,13 @@
 import ItemHomeUI from "./ItemHomeUI";
 
-async function fetchTrendingProducts() {
+export default async function NewArrivals() {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}?populate=*&filters[type][$eq]=trending`
   );
   if (!res.ok) {
     throw new Error("Failed to fetch trending products.");
   }
-  const data = await res.json();
-  return data;
-}
-
-export default async function NewArrivals() {
-  const items = await fetchTrendingProducts();
+  const items = await res.json();
 
   return (
     <section className="w-[90%] max-w-[1800px] md:w-[70%] m-auto mb-20">
