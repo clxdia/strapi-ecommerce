@@ -13,21 +13,21 @@ const Categories = () => {
           </div>
         </div>
         <div className="row-span-2">
-          <div className="bg-[url('/abbigliamento.jpg')] max-w-[460px] max-h-[930px] bg-center bg-cover h-full w-full rotate-grid rounded-lg">
+          <div className="bg-[url('/abbigliamento.jpg')] max-h-[930px] bg-center bg-cover h-full w-full rotate-grid rounded-lg">
             <Link href="/abbigliamento" className="text-grid">
               <h2 className="text-white text-[30px]">Abbigliamento</h2>
             </Link>
           </div>
         </div>
-        <div className=" md:w-[23vw] h-full md:h-[24vw] max-w-[460px] max-h-[460px] ">
-          <div className="bg-[url('/uomo.jpg')] bg-center max-w-[460px] max-h-[460px] bg-cover md:w-[100%] rotate md:h-[100%] rounded-lg rotate-grid">
+        <div className=" md:w-[23vw] h-full md:h-[24vw] md:max-w-[460px] max-h-[460px] ">
+          <div className="bg-[url('/uomo.jpg')] bg-center  max-h-[460px] bg-cover md:w-[100%] rotate md:h-[100%] rounded-lg rotate-grid">
             <Link href="/uomo" className="text-grid">
               <h2 className="text-white text-[30px]">Uomo</h2>
             </Link>
           </div>
         </div>
-        <div className=" md:w-[23vw] h-full md:h-[24vw] max-w-[460px] max-h-[460px] ">
-          <div className="bg-[url('/donna.jpg')] bg-center max-w-[460px] max-h-[460px] bg-cover md:w-[100%] rotate md:h-[100%] rounded-lg rotate-grid">
+        <div className=" md:w-[23vw] h-full md:h-[24vw] md:max-w-[460px] max-h-[460px] ">
+          <div className="bg-[url('/donna.jpg')] bg-center max-h-[460px] bg-cover md:w-[100%] rotate md:h-[100%] rounded-lg rotate-grid">
             <Link href="/donna" className="text-grid">
               <h2 className="text-white text-[30px]">Donna</h2>
             </Link>

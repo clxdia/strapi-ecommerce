@@ -29,7 +29,7 @@ export default async function Recommendations({ fill, toggleFill }) {
               key={item.id}
             >
               <div className="md:hover:scale-105 h-auto sm, md:hover:shadow-xl hover:transition hover:ease-in-out md:w-[250px] md:min-w-[250px] flex flex-col relative">
-                <Link href="./view-all/[id]" as={`./view-all/${item.id}`}>
+                <Link href="./[id]" as={`./${item.id}`}>
                   <Image
                     src={item.attributes.img.data.attributes.url}
                     alt="/"
