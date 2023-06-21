@@ -1,6 +1,6 @@
 import React from "react";
 
-import magazines from "../../../../magazines";
+import magazines from "../../../data/magazines";
 import Magazine from "../../../ui/Magazine";
 
 export const metadata = {

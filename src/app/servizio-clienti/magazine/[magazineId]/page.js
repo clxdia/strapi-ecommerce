@@ -1,14 +1,10 @@
 import Image from "next/image";
 import React from "react";
-import magazines from "../../../../../magazines";
+import magazines from "../../../../data/magazines";
 
-export default async function MagazinePage({
-  params,
-}: {
-  params: { magazineId: string };
-}) {
+export default async function MagazinePage({ params: { magazineId } }) {
   const magazine = magazines.find((magazine) => {
-    return magazine.id === params.magazineId;
+    return magazine.id === magazineId;
   });
   return (
     <main className="mb-[7rem]">

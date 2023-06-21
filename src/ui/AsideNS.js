@@ -8,25 +8,25 @@ const AsideNS = () => {
         <h3 className="text-[1.5rem] uppercase font-medium">Shopping</h3>
         <ul className="flex-col text-[1rem] flex w-fit font-normal">
           <Link
-            href="./abbigliamento"
+            href="/abbigliamento"
             className="mt-1 hover:underline-offset-3 hover:underline decoration-black"
           >
             Abbigliamento
           </Link>
           <Link
-            href="./uomo"
+            href="/uomo"
             className="mt-1 hover:underline-offset-3 hover:underline decoration-black"
           >
             Uomo
           </Link>
           <Link
-            href="./donna"
+            href="/donna"
             className="mt-1 hover:underline-offset-3 hover:underline decoration-black"
           >
             Donna
           </Link>
           <Link
-            href="./accessori"
+            href="/accessori"
             className="mt-1 hover:underline-offset-3 hover:underline decoration-black"
           >
             Accessori
@@ -36,7 +36,7 @@ const AsideNS = () => {
       <div className="mt-5 font-clash font-medium">
         <h3 className="text-[1.5rem] uppercase font-medium">Magazine</h3>
         <Link
-          href="./servizio-clienti/magazine"
+          href="/servizio-clienti/magazine"
           className="hover:underline-offset-3 hover:underline decoration-black font-normal"
         >
           Ultime News
@@ -45,7 +45,7 @@ const AsideNS = () => {
       <div className="mt-5 font-clash font-medium">
         <h3 className="text-[1.5rem] uppercase font-medium">Contatti</h3>
         <Link
-          href="./servizio-clienti/newsletter"
+          href="/servizio-clienti/newsletter"
           className="hover:underline-offset-3 hover:underline decoration-black font-normal"
         >
           Newsletter
@@ -54,7 +54,7 @@ const AsideNS = () => {
       <div className="mt-5 font-clash font-medium">
         <h3 className="text-[1.5rem] uppercase font-medium">Aiuto</h3>
         <Link
-          href="./servizio-clienti"
+          href="/servizio-clienti"
           className="hover:underline-offset-3 hover:underline decoration-black font-normal"
         >
           Traccia i miei ordini

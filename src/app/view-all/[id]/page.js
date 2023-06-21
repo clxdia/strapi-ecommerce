@@ -6,10 +6,18 @@ import FaveButton from "../../../ui/FaveButton";
 import { AiOutlineTag } from "react-icons/ai";
 import { MdOutlineLocalShipping } from "react-icons/md";
 import { TbPackage } from "react-icons/tb";
+import { Metadata, ResolvingMetadata } from "next";
 
-export const metadata = {
-  title: "E-Commerce | Product",
-};
+export async function generateMetadata({ params: { id } }) {
+  const url = `${process.env.NEXT_PUBLIC_API}${id}?populate=*`;
+
+  const products = await fetch(url).then((res) => res.json());
+  const item = products.data.attributes;
+
+  return {
+    title: `E-Commerce | ${item.title}`,
+  };
+}
 
 const fetchItem = async (id) => {
   // const cacheBuster = Date.now();

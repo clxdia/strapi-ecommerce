@@ -6,8 +6,8 @@ import { BsArrowRightShort } from "react-icons/bs";
 const Magazine = ({ magazine }) => {
   return (
     <Link
-      href="servizio-clienti/magazine/[id]"
-      as={`servizio-clienti/magazine/${magazine.id}`}
+      href="/servizio-clienti/magazine/[id]"
+      as={`/servizio-clienti/magazine/${magazine.id}`}
       className="mb-[20px]"
     >
       <div className="flex md:flex-row mb-5 h-full bg-background/50   sm:flex-row flex-col w-auto max-w-[400px] m-auto sm:max-w-none">

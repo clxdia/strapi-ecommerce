@@ -1,6 +1,6 @@
-import article1 from "./src/images/article1.jpg";
-import article2 from "./src/images/article2.jpg";
-import article3 from "./src/images/article3.jpg";
+import article1 from "../images/article1.jpg";
+import article2 from "../images/article2.jpg";
+import article3 from "../images/article3.jpg";
 
 const magazines = [
   {

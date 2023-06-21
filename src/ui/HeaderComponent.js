@@ -43,13 +43,13 @@ const HeaderComponent = () => {
               </Link>
               <Link
                 className="decoration-black no-underline hover:underline decoration-solid decoration-1 underline-offset-4"
-                href="view-all"
+                href="/view-all"
               >
                 Vedi tutto
               </Link>
               <Link
                 className="decoration-black no-underline hover:underline decoration-solid decoration-1 underline-offset-4"
-                href="servizio-clienti"
+                href="/servizio-clienti"
               >
                 Servizio Clienti
               </Link>
@@ -68,7 +68,7 @@ const HeaderComponent = () => {
                 <IoMdHeartEmpty />
               </Link>
               <div className="decoration-black no-underline hover:underline decoration-solid decoration-1 underline-offset-4">
-                <Link href="./my-account/carrello">
+                <Link href="/my-account/carrello">
                   <HiOutlineShoppingBag onMouseEnter={handleMouseEnter} />
                 </Link>
               </div>
