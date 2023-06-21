@@ -22,16 +22,16 @@ const Footer = () => {
         <div className="">
           <p className="font-[500] md:mb-5 ">REPARTO</p>
           <ul className="flex-col flex">
-            <Link href="./donna" className="mt-2">
+            <Link href="/donna" className="mt-2">
               Donna
             </Link>
-            <Link href="./uomo" className="mt-2">
+            <Link href="/uomo" className="mt-2">
               Uomo
             </Link>
-            <Link href="./abbigliamento" className="mt-2">
+            <Link href="/abbigliamento" className="mt-2">
               Abbigliamento
             </Link>
-            <Link href="./accessori" className="mt-2">
+            <Link href="/accessori" className="mt-2">
               Accessori
             </Link>
           </ul>
@@ -39,16 +39,16 @@ const Footer = () => {
         <div>
           <p className="font-[500] mb-5">PROFILO</p>
           <ul className="flex-col flex">
-            <Link href="./my-account" className="mt-2">
+            <Link href="/my-account" className="mt-2">
               Ordini
             </Link>
-            <Link href="./my-account/resi" className="mt-2">
+            <Link href="/my-account/resi" className="mt-2">
               Resi e Rimborsi
             </Link>
-            <Link href="./my-account/preferiti" className="mt-2">
+            <Link href="/my-account/preferiti" className="mt-2">
               Preferiti
             </Link>
-            <Link href="./my-account/carrello" className="mt-2">
+            <Link href="/my-account/carrello" className="mt-2">
               Carrello
             </Link>
           </ul>
@@ -56,17 +56,17 @@ const Footer = () => {
         <div>
           <p className="font-[500] mb-5">SERVIZIO CLIENTI</p>
           <ul className="flex-col flex">
-            <Link href="./servizio-clienti" className="mt-2">
+            <Link href="/servizio-clienti" className="mt-2">
               Traccia i miei ordini
             </Link>
-            <Link href="./servizio-clienti/magazine" className="mt-2">
+            <Link href="/servizio-clienti/magazine" className="mt-2">
               Magazine
             </Link>
           </ul>
         </div>
         <div>
           <p className="font-[500] mb-7">ISCRIVITI ORA</p>
-          <Link href="./servizio-clienti/newsletter" className="mt-2">
+          <Link href="/servizio-clienti/newsletter" className="mt-2">
             Newsletter
           </Link>
         </div>

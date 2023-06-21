@@ -42,28 +42,28 @@ const FooterMB = () => {
   const profiloLink = [];
   profiloLink.push(
     <div className="mt-2">
-      <Link href="./my-account">Ordini</Link>
+      <Link href="/my-account">Ordini</Link>
     </div>
   );
   profiloLink.push(
     <div className="mt-4">
-      <Link href="./my-account/resi">Resi e Rimborsi</Link>
+      <Link href="/my-account/resi">Resi e Rimborsi</Link>
     </div>
   );
   profiloLink.push(
     <div className="mt-4">
-      <Link href="./my-account/preferiti">Preferiti</Link>
+      <Link href="/my-account/preferiti">Preferiti</Link>
     </div>
   );
   profiloLink.push(
     <div className="mt-4">
-      <Link href="./my-account/carrello">Carrello</Link>
+      <Link href="/my-account/carrello">Carrello</Link>
     </div>
   );
 
   const iscrivitiLink = [];
   iscrivitiLink.push(
-    <Link href="./servizio-clienti/newsletter">Newsletter</Link>
+    <Link href="/servizio-clienti/newsletter">Newsletter</Link>
   );
 
   const accordionData = [
