@@ -6,7 +6,7 @@ import Link from "next/link";
 import { TbTrash } from "react-icons/tb";
 import { useDispatch, useSelector } from "react-redux";
 import EmptyPage from "../../../ui/EmptyPage";
-import { removeItem } from "../../../redux/favesReducer";
+import { removeItem } from "../../../redux/features/favesReducer";
 
 const Preferiti = () => {
   const products = useSelector((state) => state.faves.products);

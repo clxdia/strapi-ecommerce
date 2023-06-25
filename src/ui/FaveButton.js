@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { BsHeart, BsHeartFill } from "react-icons/bs";
-import { addToFaves } from "../redux/favesReducer";
+import { addToFaves } from "../redux/features/favesReducer";
 import { useDispatch } from "react-redux";
 
 const FaveButton = ({ item }) => {

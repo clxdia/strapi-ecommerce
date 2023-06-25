@@ -6,7 +6,7 @@ import React, { useContext } from "react";
 import { TbTrash } from "react-icons/tb";
 import { SlHandbag } from "react-icons/sl";
 import { useDispatch, useSelector } from "react-redux";
-import { removeItem } from "../../../redux/cartReducer";
+import { removeItem } from "../../../redux/features/cartReducer";
 import { CartContext } from "../../CartContext";
 
 const Carrello = () => {

@@ -3,7 +3,7 @@ import "../styles/globals.css";
 import Footer from "../ui/Footer";
 import HeaderComponent from "../ui/HeaderComponent";
 import NavMB from "../ui/NavMB";
-import { Providers } from "./provider";
+import { Providers } from "../redux/provider";
 import { CartProvider } from "./CartContext";
 import React from "react";
 

@@ -3,7 +3,7 @@
 import React, { useContext, useState } from "react";
 import { useDispatch } from "react-redux";
 import { CartContext } from "../app/CartContext";
-import { addToCart } from "../redux/cartReducer";
+import { addToCart } from "../redux/features/cartReducer";
 
 const CartButton = ({ item }) => {
   const dispatch = useDispatch();

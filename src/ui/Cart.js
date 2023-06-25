@@ -6,7 +6,7 @@ import { SlHandbag } from "react-icons/sl";
 import { TbTrash } from "react-icons/tb";
 import { useDispatch, useSelector } from "react-redux";
 import { CartContext } from "../app/CartContext";
-import { removeItem, resetCart } from "../redux/cartReducer";
+import { removeItem, resetCart } from "../redux/features/cartReducer";
 
 const Cart = ({ open }) => {
   const products = useSelector((state) => state.cart.products);
@@ -38,12 +38,12 @@ const Cart = ({ open }) => {
           Il tuo carrello è vuoto.
         </h2>
         <button className="font-satoshi font-bold uppercase tracking-wider mt-5 flex bg-blueish text-buttontext p-3 w-[250px] m-auto gap-3 justify-center items-center border-[2px] border-blueish hover:ease-in hover:border-[2px] hover:border-blueish hover:bg-buttontext hover:text-blueish hover:cursor-pointer mb-3">
-          <Link href="./my-account/preferiti" className="hover:cursor-pointer">
+          <Link href="/my-account/preferiti" className="hover:cursor-pointer">
             Visualizza preferiti
           </Link>
         </button>
         <Link
-          href="./view-all"
+          href="/view-all"
           className="text-center hover:cursor-pointer underline-offset-2 underline"
         >
           Continua lo shopping

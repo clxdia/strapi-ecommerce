@@ -2,7 +2,7 @@
 
 import { createContext, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addToCart } from "../redux/cartReducer";
+import { addToCart } from "../redux/features/cartReducer";
 
 export const CartContext = createContext();
 
