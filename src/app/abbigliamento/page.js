@@ -2,18 +2,11 @@ import Link from "next/link";
 import { BsArrowRightShort } from "react-icons/bs";
 import ItemUI from "../../ui/ItemUI";
 import AsideWA from "../../ui/AsideWA";
+import fetchData from "../../hooks/fetchData";
 
 export const metadata = {
   title: "E-Commerce | Abbigliamento",
 };
-
-async function fetchData(url) {
-  const res = await fetch(url);
-  if (!res.ok) {
-    throw new Error("failed");
-  }
-  return res.json();
-}
 
 export default async function Abbigliamento() {
   const items = await fetchData(

@@ -1,18 +1,11 @@
 import React from "react";
 import ItemUI from "../../ui/ItemUI";
 import AsideWA from "../../ui/AsideWA";
+import fetchData from "../../hooks/fetchData";
 
 export const metadata = {
   title: "E-Commerce | Tutti i prodotti",
 };
-
-async function fetchData(url) {
-  const res = await fetch(url);
-  if (!res.ok) {
-    throw new Error("failed");
-  }
-  return res.json();
-}
 
 export default async function ViewAll() {
   const items = await fetchData(

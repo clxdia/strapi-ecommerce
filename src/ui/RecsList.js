@@ -2,14 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import FaveButton from "./FaveButton";
-
-async function fetchData(url) {
-  const res = await fetch(url);
-  if (!res.ok) {
-    throw new Error("failed");
-  }
-  return res.json();
-}
+import fetchData from "../hooks/fetchData";
 
 export default async function Recommendations({ fill, toggleFill }) {
   const items = await fetchData(

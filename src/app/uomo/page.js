@@ -1,18 +1,11 @@
 import React from "react";
+import fetchData from "../../hooks/fetchData";
 import AsideWA from "../../ui/AsideWA";
 import ItemUI from "../../ui/ItemUI";
 
 export const metadata = {
   title: "E-Commerce | Prodotti uomo",
 };
-
-async function fetchData(url) {
-  const res = await fetch(url);
-  if (!res.ok) {
-    throw new Error("failed");
-  }
-  return res.json();
-}
 
 export default async function Uomo() {
   const items = await fetchData(

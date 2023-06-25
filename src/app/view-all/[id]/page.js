@@ -20,16 +20,11 @@ export async function generateMetadata({ params: { id } }) {
 }
 
 const fetchItem = async (id) => {
-  // const cacheBuster = Date.now();
-  const res = await fetch(
-    // `${process.env.NEXT_PUBLIC_API}${id}?populate=*&cacheBuster=${cacheBuster}`
-    `${process.env.NEXT_PUBLIC_API}${id}?populate=*`,
-    {
-      next: {
-        revalidate: 300,
-      },
-    }
-  );
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API}${id}?populate=*`, {
+    next: {
+      revalidate: 300,
+    },
+  });
   const item = await res.json();
   return item.data;
 };
