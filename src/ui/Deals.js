@@ -1,12 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
-import fetchData from "../hooks/fetchData";
+
+async function fetchData(url) {
+  const res = await fetch(url);
+  if (!res.ok) {
+    throw new Error("failed");
+  }
+  return res.json();
+}
 
 export default async function Deals() {
   const items = await fetchData(
     process.env.NEXT_PUBLIC_API_URL + "?populate=*&filters[type][$eq]=normal"
   );
-
   return (
     <section className="mb-20 bg-blueish p-5 md:min-h-[500px] md:h-[500px] text-white pb-14">
       <div className="w-full sm:w-[95%] h-full md:w-[72%] m-auto md:pt-5">

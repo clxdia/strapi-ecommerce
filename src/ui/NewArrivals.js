@@ -1,9 +1,16 @@
-import fetchData from "../hooks/fetchData";
 import ItemHomeUI from "./ItemHomeUI";
+
+async function fetchData(url) {
+  const res = await fetch(url);
+  if (!res.ok) {
+    throw new Error("failed");
+  }
+  return res.json();
+}
 
 export default async function NewArrivals() {
   const items = await fetchData(
-    `${process.env.NEXT_PUBLIC_API_URL}?populate=*&filters[type][$eq]=trending`
+    process.env.NEXT_PUBLIC_API_URL + "?populate=*&filters[type][$eq]=trending"
   );
 
   return (

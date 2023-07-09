@@ -1,8 +1,6 @@
-"use client";
 import React from "react";
 
 import "../styles/globals.css";
-import { useEffect } from "react";
 
 import Deals from "../ui/Deals";
 import SwiperMB from "../ui/SwiperMB";
@@ -12,7 +10,6 @@ import Articles from "../ui/Articles";
 import NewArrivals from "../ui/NewArrivals";
 
 export default function Home() {
-  
   return (
     <div>
       <div className="md:block sm:block hidden">
