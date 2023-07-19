@@ -43,7 +43,7 @@ const Cart = ({ open }) => {
           </Link>
         </button>
         <Link
-          href="/view-all"
+          href="view-all"
           className="text-center hover:cursor-pointer underline-offset-2 underline"
         >
           Continua lo shopping
