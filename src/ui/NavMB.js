@@ -49,10 +49,14 @@ const NavMB = () => {
             </Link>
           </li>
           <li className="flex gap-3">
-            <Link href="/my-account">
+            <Link href="/my-account" aria-label="Profilo">
               <HiOutlineUser size={30} />
             </Link>
-            <Link href="/my-account/carrello" className="relative pb-1 pr-1">
+            <Link
+              href="/my-account/carrello"
+              className="relative pb-1 pr-1"
+              aria-label="Carrello"
+            >
               <HiOutlineShoppingBag size={30} />
               {notif && (
                 <div className="bg-redish w-4 h-4 absolute bottom-0 right-0 rounded-full flex justify-center text-white text-[10px]">
@@ -62,7 +66,11 @@ const NavMB = () => {
             </Link>
 
             <div onClick={handleNav} className="block z-[100]">
-              {nav ? <CgClose size={30} /> : <HiOutlineMenuAlt3 size={30} />}
+              {nav ? (
+                <CgClose size={30} aria-label="Close" />
+              ) : (
+                <HiOutlineMenuAlt3 size={30} aria-label="Menu" />
+              )}
             </div>
           </li>
         </ul>
@@ -112,7 +120,7 @@ const NavMB = () => {
                 onClick={handleLinkClickCategories}
               >
                 <p>Categorie</p>
-                <RiArrowDropDownLine />
+                <RiArrowDropDownLine aria-label="Dropdown" />
               </div>
 
               {dropdown && (
