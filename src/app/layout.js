@@ -1,4 +1,3 @@
-import Image from "next/image";
 import "../styles/globals.css";
 import Footer from "../ui/Footer";
 import HeaderComponent from "../ui/HeaderComponent";
@@ -11,10 +10,7 @@ export const metadata = {
   title: "E-Commerce | Home",
   description:
     "Scopri la moda di tendenza nel nostro negozio online di abbigliamento. Ampia selezione di capi per uomo, donna e bambino. Qualità e stile impeccabili. Acquisto sicuro e navigazione intuitiva. Sfoglia ora!",
-  languages: {
-    "it-IT": "/it-IT",
-    "en-US": "/en-US",
-  },
+  lang: "en-US",
   icons: {
     icon: "/ec.ico",
   },
@@ -22,7 +18,7 @@ export const metadata = {
 
 function RootLayout({ children }) {
   return (
-    <html>
+    <html lang="it-IT">
       <head />
       <body>
         <CartProvider>
