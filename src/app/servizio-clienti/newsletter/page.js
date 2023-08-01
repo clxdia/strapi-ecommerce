@@ -9,7 +9,7 @@ const Newsletter = () => {
   const [success, setSuccess] = useState(false);
   return (
     <div className="font-clash font-medium max-w-[1800px]">
-      <Image src={newsletterPic} alt="/" />
+      <Image src={newsletterPic} alt="/" aria-hidden="true" />
       <div className="w-[90%] m-auto md:w-[100%]">
         {success ? (
           <div className="flex items-center justify-center mt-[10rem] mb-[10rem] gap-3">
@@ -21,6 +21,7 @@ const Newsletter = () => {
                 size={30}
                 fill={"white"}
                 className="absolute right-0 left-0 m-auto"
+                aria-hidden="true"
               />
             </div>
           </div>

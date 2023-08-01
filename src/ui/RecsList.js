@@ -25,7 +25,7 @@ export default async function Recommendations({ fill, toggleFill }) {
                 <Link href="./[id]" as={`./${item.id}`}>
                   <Image
                     src={item.attributes.img.data.attributes.url}
-                    alt="/"
+                    alt={item.attributes.title}
                     className="object-cover md:w-[250px] md:min-w-[200px]  md:min-h-[350px] md:h-[350px] min-w-[180px] md:max-w-[250px]  min-h-[210px] w-[180px] h-[250px] relative"
                     width="200"
                     height="200"

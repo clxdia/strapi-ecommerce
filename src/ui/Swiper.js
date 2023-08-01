@@ -21,7 +21,7 @@ const SwiperComponent = () => {
   const sliders = [pic1, pic2, pic3];
 
   return (
-    <div className={SwiperStyles.html}>
+    <div className={SwiperStyles.html} aria-hidden="true">
       <div className={SwiperStyles.body}>
         <Swiper
           spaceBetween={30}

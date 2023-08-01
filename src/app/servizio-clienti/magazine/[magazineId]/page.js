@@ -9,7 +9,12 @@ export default async function MagazinePage({ params: { magazineId } }) {
   return (
     <main className="mb-[7rem]">
       <div className="w-[100%] h-auto">
-        <Image src={magazine.pic} alt="/" className="w-[100%]" />
+        <Image
+          src={magazine.pic}
+          alt="/"
+          aria-hidden="true"
+          className="w-[100%]"
+        />
       </div>
       <div className="md:h-[5rem] h-[6rem] relative bg-coral w-[100%] justify-center mx-auto">
         <div className="bg-background p-5 md:w-[90%] md:mt-[2rem] mt-[2.5rem] w-[90%] left-0 right-0 absolute m-auto  text-center">

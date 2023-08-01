@@ -94,6 +94,7 @@ const FooterMB = () => {
       <Image
         src={bannerMB}
         alt="/"
+        aria-hidden="true"
         className="md:hidden sm:block block mt-10"
       />
       <div>

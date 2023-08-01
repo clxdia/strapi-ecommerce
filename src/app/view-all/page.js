@@ -17,9 +17,9 @@ export default async function ViewAll() {
         <AsideWA />
       </aside>
       <div>
-        <h1 className="text-[2rem] text-black font-clash font-medium md:text-left  text-center pt-10 pb-10">
+        <h2 className="text-[2rem] text-black font-clash font-medium md:text-left  text-center pt-10 pb-10">
           Prodotti del momento
-        </h1>
+        </h2>
         <div className="md:w-[100%] w-[90%] m-auto ">
           <div className="flex flex-wrap h-full md:gap-5 gap-[3vw] sm:gap-auto">
             {items.data.map((item) => {

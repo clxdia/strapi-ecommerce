@@ -7,7 +7,7 @@ import clientservice from "../../images/service-clients.png";
 const ServizioClienti = () => {
   return (
     <div className="text-center font-clash mb-10 max-w-[1800px] h-[100vh]">
-      <Image src={clientservice} alt="/" />
+      <Image src={clientservice} alt="/" aria-hidden="true" />
 
       <h1 className="text-[2rem] md:mt-[3rem] font-medium mt-10 mb-4">
         Benvenuti al Servizio Clienti

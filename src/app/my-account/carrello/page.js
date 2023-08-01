@@ -22,7 +22,7 @@ const Carrello = () => {
             Il mio carrello
           </h1>
           <div className="m-auto max-w-[350px] h-auto  text-center mt-20 mb-20">
-            <SlHandbag className="m-auto p-5" size={100} />
+            <SlHandbag className="m-auto p-5" size={100} aria-hidden="true" />
             <p className="mb-3">Il tuo carrello è vuoto!</p>
             <button className="mt-5 flex bg-blueish text-buttontext p-3 w-[250px] m-auto gap-3 justify-center items-center border-[2px] border-blueish hover:ease-in hover:border-[2px] hover:border-blueish hover:bg-buttontext hover:text-blueish hover:cursor-pointer font-satoshi font-bold uppercase tracking-wide">
               <Link
@@ -77,7 +77,7 @@ const Carrello = () => {
                   dispatch(removeItem(item.id)) && removeCartNotif()
                 }
               >
-                <TbTrash size={20} stroke="grey" />
+                <TbTrash size={20} stroke="grey" aria-hidden="true" />
                 <p className="hidden md:block">Elimina prodotto</p>
               </button>
             </div>
