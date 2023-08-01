@@ -64,19 +64,27 @@ const HeaderComponent = () => {
               <Link
                 className="decoration-black no-underline hover:underline decoration-solid decoration-1 underline-offset-4"
                 href="/my-account/preferiti"
+                aria-label="Preferiti"
               >
-                <IoMdHeartEmpty />
+                <IoMdHeartEmpty aria-label="Preferiti" />
               </Link>
               <div className="decoration-black no-underline hover:underline decoration-solid decoration-1 underline-offset-4">
-                <Link href="/my-account/carrello">
-                  <HiOutlineShoppingBag onMouseEnter={handleMouseEnter} />
+                <Link href="/my-account/carrello" aria-label="Carrello">
+                  <HiOutlineShoppingBag
+                    onMouseEnter={handleMouseEnter}
+                    aria-label="Carrello"
+                  />
                 </Link>
               </div>
               <Link
                 className="decoration-black no-underline hover:underline decoration-solid decoration-1 underline-offset-4"
                 href="/my-account"
+                aria-label="Profilo"
               >
-                <HiOutlineUser className="decoration-black no-underline hover:underline decoration-solid decoration-1 underline-offset-4" />
+                <HiOutlineUser
+                  className="decoration-black no-underline hover:underline decoration-solid decoration-1 underline-offset-4"
+                  aria-label="Profilo"
+                />
               </Link>
             </li>
           </ul>

@@ -16,14 +16,14 @@ export default async function Deals() {
   return (
     <section className="mb-20 bg-blueish p-5 md:min-h-[500px] md:h-[500px] text-white pb-14">
       <div className="w-full sm:w-[95%] h-full md:w-[72%] m-auto md:pt-5">
-        <h1 className="md:hidden block text-[1.5rem] font-clash font-medium uppercase mt-5">
+        <h2 className="md:hidden block text-[1.5rem] font-clash font-medium uppercase mt-5">
           Offerte del giorno
-        </h1>
+        </h2>
         <div className="flex flex-col md:flex-row md:gap-5 h-full">
           <div className="w-full md:w-[50%] flex flex-col min-w-[45%]">
-            <h1 className="md:block hidden text-[2rem] font-clash font-medium uppercase">
+            <h2 className="md:block hidden text-[2rem] font-clash font-medium uppercase">
               Offerte del giorno
-            </h1>
+            </h2>
             <p className="text-[12px] sm:text-[12px] md:text-[15px] md:w-[90%] mt-3">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
