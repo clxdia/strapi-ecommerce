@@ -1,6 +1,4 @@
-import Link from "next/link";
 import React from "react";
-import { BsArrowLeftShort } from "react-icons/bs";
 import fetchData from "../../hooks/fetchData";
 import AsideWA from "../../ui/AsideWA";
 import ItemUI from "../../ui/ItemUI";
