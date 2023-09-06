@@ -37,7 +37,7 @@ const Cart = ({ open }) => {
         <h2 className="font-medium text-[16px] mb-5">
           Il tuo carrello è vuoto.
         </h2>
-        <button className="font-satoshi font-bold uppercase tracking-wider mt-5 flex bg-blueish text-buttontext p-3 w-[250px] m-auto gap-3 justify-center items-center border-[2px] border-blueish hover:ease-in hover:border-[2px] hover:border-blueish hover:bg-buttontext hover:text-blueish hover:cursor-pointer mb-3">
+        <button className="mt-5 mb-4 flex bg-blueish text-buttontext p-3 w-[100%] gap-3 justify-center items-center border-[2px] border-blueish hover:ease-in transition ease-in-out delay-150   hover:shadow-headline/50 hover:shadow-xl rounded-xl font-satoshi font-bold uppercase tracking-wide">
           <Link href="/my-account/preferiti" className="hover:cursor-pointer">
             Visualizza preferiti
           </Link>
@@ -114,11 +114,21 @@ const Cart = ({ open }) => {
             <b>€{totalOrder()} </b>
           </p>
         </div>
-        <button className="w-full bg-blueish text-white p-4 font-alpino uppercase font-semibold tracking-wider">
-          <Link href="/my-account/carrello">Acquista Ora</Link>
+        <button className="mt-3 mb-4 flex bg-blueish text-buttontext p-3 w-[100%] gap-3 justify-center items-center border-[2px] border-blueish hover:ease-in transition ease-in-out delay-150   hover:shadow-headline/50 hover:shadow-xl rounded-xl">
+          <Link
+            href="/my-account/carrello"
+            className="font-satoshi font-bold uppercase tracking-wide"
+          >
+            Acquista Ora
+          </Link>
         </button>
-        <button className="font-alpino uppercase font-semibold tracking-wider mt-2 w-full bg-white border-2 border-blueish text-blueish p-4">
-          <Link href="/my-account/carrello">Visualizza Carrello</Link>
+        <button className="mt-3 mb-4 flex bg-buttontext text-blueish p-3 w-[100%] gap-3 justify-center items-center border-[2px] border-blueish hover:ease-in transition ease-in-out delay-150   hover:shadow-buttontext hover:shadow-xl rounded-xl">
+          <Link
+            href="/my-account/carrello"
+            className="font-satoshi font-bold uppercase tracking-wide"
+          >
+            Visualizza Carrello
+          </Link>
         </button>
       </div>
     );

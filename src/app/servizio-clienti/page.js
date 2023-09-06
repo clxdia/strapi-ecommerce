@@ -13,7 +13,7 @@ const ServizioClienti = () => {
         Benvenuti al Servizio Clienti
       </h1>
       <h2 className="mb-1">Come posso aiutarti oggi?</h2>
-      <h3 className="mb-3 text-[0.8rem] ">ACCEDI A QUESTI LINK</h3>
+
       <div className="bg-background p-10 max-w-[400px] w-[90%] h-auto flex-col items-center text-center m-auto">
         <div className="m-auto justify-center flex text-center mb-5 ">
           <BiMapAlt className="text-redish" />
@@ -36,7 +36,7 @@ const ServizioClienti = () => {
             className="flex p-3 border-[1px] font-satoshi border-footer focus:outline-none "
           />
         </form>
-        <button className="uppercase font-alpino tracking-wider font-semibold mt-10 m-auto border-blueish border-[2px] bg-blueish text-white text-[1rem] p-2 hover:border-blueish hover:border-[2px] hover:bg-white hover:text-blueish hover:transition hover:ease-in cursor-pointer">
+        <button className="mt-5 mb-4 flex bg-blueish text-buttontext p-3 w-[100%] gap-3 justify-center items-center border-[2px] border-blueish hover:ease-in transition ease-in-out delay-150   hover:shadow-headline/50 hover:shadow-xl rounded-xl font-satoshi font-bold uppercase tracking-wide">
           Traccia ordine
         </button>
       </div>

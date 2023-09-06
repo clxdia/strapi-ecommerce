@@ -14,7 +14,7 @@ export default function NotFound() {
         <h3 className="text-[15px] md:text-[30px]">
           Oops! La pagina che stai cercando non esiste...
         </h3>
-        <button className="mt-10 flex bg-blueish text-buttontext p-3 w-fit pt-3 pb-3 pl-10 pr-10 gap-3 justify-center items-center border-[2px] border-blueish hover:ease-in hover:border-[2px] hover:border-blueish hover:bg-buttontext hover:text-blueish hover:cursor-pointer font-satoshi font-bold uppercase tracking-wide">
+        <button className="mt-5 mb-4 flex bg-blueish text-buttontext p-3 w-[80%] md:w-1/2 gap-3 justify-center items-center border-[2px] border-blueish hover:ease-in transition ease-in-out delay-150   hover:shadow-headline/50 hover:shadow-xl rounded-xl font-satoshi font-bold uppercase tracking-wide">
           <Link href="/" className="text-bold hover:cursor-pointer">
             Ritorna
           </Link>

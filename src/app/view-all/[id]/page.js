@@ -6,7 +6,6 @@ import FaveButton from "../../../ui/FaveButton";
 import { AiOutlineTag } from "react-icons/ai";
 import { MdOutlineLocalShipping } from "react-icons/md";
 import { TbPackage } from "react-icons/tb";
-import { Metadata, ResolvingMetadata } from "next";
 
 export async function generateMetadata({ params: { id } }) {
   const url = `${process.env.NEXT_PUBLIC_API}${id}?populate=*`;
