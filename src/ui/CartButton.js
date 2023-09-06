@@ -25,10 +25,10 @@ const CartButton = ({ item }) => {
   };
   return (
     <button
-      className="mt-3 mb-4 flex bg-blueish text-buttontext p-3 w-[100%] gap-3 justify-center items-center border-[2px] border-blueish hover:ease-in hover:border-[2px] hover:border-blueish hover:bg-buttontext hover:text-blueish"
+      className="mt-3 mb-4 flex bg-blueish text-buttontext p-3 w-[100%] gap-3 justify-center items-center border-[2px] border-blueish hover:ease-in transition ease-in-out delay-150   hover:shadow-headline/50 hover:shadow-xl rounded-xl"
       onClick={handleClick}
     >
-      <p className=" font-satoshi font-bold uppercase tracking-wide">
+      <p className="font-satoshi font-bold uppercase tracking-wide">
         Aggiungi al carrello
       </p>
     </button>

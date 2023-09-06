@@ -81,9 +81,10 @@ const Newsletter = () => {
             </form>
             <div className="text-center">
               <button
+                className="mt-5 mb-4 flex bg-blueish text-buttontext p-3 w-1/4 m-auto gap-3 justify-center items-center border-[2px] border-blueish hover:ease-in transition ease-in-out delay-150 hover:shadow-headline/50 hover:shadow-xl rounded-xl font-satoshi font-bold uppercase tracking-wide"
                 onClick={() => setSuccess(true)}
-                className="mt-10 font-alpino uppercase font-semibold tracking-wider mb-10 m-auto border-blueish border-[2px] bg-blueish text-white text-[1rem] p-2 hover:border-blueish hover:border-[2px] hover:bg-white hover:text-blueish hover:transition hover:ease-in cursor-pointer"
               >
+                {" "}
                 Sì iscrivimi
               </button>
             </div>

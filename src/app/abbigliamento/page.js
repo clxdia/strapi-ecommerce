@@ -1,5 +1,3 @@
-import Link from "next/link";
-import { BsArrowRightShort } from "react-icons/bs";
 import ItemUI from "../../ui/ItemUI";
 import AsideWA from "../../ui/AsideWA";
 import fetchData from "../../hooks/fetchData";
