@@ -11,7 +11,7 @@ async function fetchData(url) {
 
 export default async function Deals() {
   const items = await fetchData(
-    process.env.NEXT_PUBLIC_API_URL + "?populate=*&filters[type][$eq]=normal"
+    process.env.NEXT_PUBLIC_API_URL + "?populate=*&filters[type][$eq]=featured"
   );
   return (
     <section className="mb-20 bg-blueish p-5 md:min-h-[500px] md:h-[500px] text-white pb-14">
