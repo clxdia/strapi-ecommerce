@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
 import error from "../images/404.jpg";
+import Link from "next/link";
 
 export const metadata = {
   title: "E-Commerce",
