@@ -8,8 +8,8 @@ const ItemHomeUI = ({ item, fill, toggleFill }) => {
       <div className="relative w-fit z-[80]">
         <Link
           className="bg-white items-center self-center flex sm, md:hover:shadow-xl h-auto hover:transition hover:ease-in-out md:hover:scale-105"
-          href="/view-all/[id]"
-          as={`/view-all/${item.id}`}
+          href="/view-all/[slug]"
+          as={`/view-all/${item.attributes.slug}`}
         >
           <Image
             src={item.attributes.img.data.attributes.url}
@@ -32,8 +32,8 @@ const ItemHomeUI = ({ item, fill, toggleFill }) => {
       </div>
 
       <Link
-        href="/view-all/[id]"
-        as={`/view-all/${item.id}`}
+        href="/view-all/[slug]"
+        as={`/view-all/${item.attributes.slug}`}
         className="flex flex-col justify-between h-16 md:w-[15vw] max-w-[290px] "
       >
         <h3 className="mt-2 font-satoshi md:text-[15px] text-[13px] decoration-black no-underline hover:underline decoration-solid decoration-1 underline-offset-4">

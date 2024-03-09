@@ -6,9 +6,10 @@ import FaveButton from "../../../ui/FaveButton";
 import { AiOutlineTag } from "react-icons/ai";
 import { MdOutlineLocalShipping } from "react-icons/md";
 import { TbPackage } from "react-icons/tb";
+import Breadcrumbs from '../../../ui/Breadcrumbs'
 
-export async function generateMetadata({ params: { id } }) {
-  const url = `${process.env.NEXT_PUBLIC_API}${id}?populate=*`;
+export async function generateMetadata({ params: { slug } }) {
+  const url = `${process.env.NEXT_PUBLIC_API}${slug}?populate=*`;
 
   const products = await fetch(url).then((res) => res.json());
   const item = products.data.attributes;
@@ -18,8 +19,8 @@ export async function generateMetadata({ params: { id } }) {
   };
 }
 
-const fetchItem = async (id) => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API}${id}?populate=*`, {
+const fetchItem = async (slug) => {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API}${slug}?populate=*`, {
     next: {
       revalidate: 300,
     },
@@ -28,11 +29,12 @@ const fetchItem = async (id) => {
   return item.data;
 };
 
-export default async function ItemPage({ params: { id } }, setFill, fill) {
-  const item = await fetchItem(id);
+export default async function ItemPage({ params: { slug } }, setFill, fill) {
+  const item = await fetchItem(slug);
 
   return (
     <div className="w-[90%] md:w-[80%] md:pt-[10rem] m-auto font-work">
+      <Breadcrumbs />
       <section className="md:flex gap-10 md:w-[80%] m-auto mt-0">
         <div className=" items-center self-center flex ">
           <Image
