@@ -6,7 +6,6 @@ import FaveButton from "../../../ui/FaveButton";
 import { AiOutlineTag } from "react-icons/ai";
 import { MdOutlineLocalShipping } from "react-icons/md";
 import { TbPackage } from "react-icons/tb";
-import Breadcrumbs from '../../../ui/Breadcrumbs'
 
 export async function generateMetadata({ params: { slug } }) {
   const url = `${process.env.NEXT_PUBLIC_API}${slug}?populate=*`;
@@ -34,7 +33,6 @@ export default async function ItemPage({ params: { slug } }, setFill, fill) {
 
   return (
     <div className="w-[90%] md:w-[80%] md:pt-[10rem] m-auto font-work">
-      <Breadcrumbs />
       <section className="md:flex gap-10 md:w-[80%] m-auto mt-0">
         <div className=" items-center self-center flex ">
           <Image
