@@ -35,7 +35,7 @@ export default async function Deals() {
             <button className="mt-3 mb-4 flex bg-coral text-buttontext p-3 gap-3 justify-center items-center border-[2px] border-coral hover:ease-in transition ease-in-out delay-150   hover:shadow-coral/50 hover:shadow-xl rounded-xl w-1/2">
               <Link
                 className="font-satoshi font-bold uppercase tracking-wide"
-                href="./view-all"
+                href="/view-all"
               >
                 Scopri ora
               </Link>
@@ -48,7 +48,8 @@ export default async function Deals() {
                 className="min-w-[220px] h-[350px] md:min-w-[280px] md:min-h-full"
                 key={item.id}
               >
-                <Link href="/view-all/[id]" as={`/view-all/${item.id}`}>
+                <Link  href="/view-all/[slug]"
+          as={`/view-all/${item.attributes.slug}`}>
                   <Image
                     src={item.attributes.img.data.attributes.url}
                     width="600"

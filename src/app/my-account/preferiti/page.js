@@ -37,8 +37,8 @@ const Preferiti = () => {
               className="font-satoshi flex-col mb-2 cursor-pointer flex-shrink-0 md:w-[23%] sm:w-[31%] w-auto relative"
             >
               <Link
-                href="/view-all/[id]"
-                as={`/view-all/${item.id}`}
+                 href="/view-all/[slug]"
+                 as={`/view-all/${item.attributes.slug}`}
                 className="relative w-fit"
               >
                 <div className="bg-white items-center self-center flex sm, md:hover:shadow-xl h-auto hover:transition hover:ease-in-out md:hover:scale-105">
@@ -58,8 +58,8 @@ const Preferiti = () => {
                 <TbTrash size={20} stroke="grey" />
               </button>
               <Link
-                href="/view-all/[id]"
-                as={`/view-all/${item.id}`}
+                 href="/view-all/[slug]"
+                 as={`/view-all/${item.attributes.slug}`}
                 className="h-[3.5rem] flex flex-col justify-between"
               >
                 <h3 className="font-satoshi mt-2 md:w-fit md:text-[15px] text-[13px] decoration-black no-underline hover:underline decoration-solid decoration-1 underline-offset-4">

@@ -26,7 +26,7 @@ const Carrello = () => {
             <p className="mb-3">Il tuo carrello è vuoto!</p>
             <button className="mt-5 mb-4 flex bg-blueish text-buttontext p-3 w-[80%] m-auto gap-3 justify-center items-center border-[2px] border-blueish hover:ease-in transition ease-in-out delay-150   hover:shadow-headline/50 hover:shadow-xl rounded-xl font-satoshi font-bold uppercase tracking-wide">
               <Link
-                href="./view-all"
+                href="/view-all"
                 className="text-bold hover:cursor-pointer"
               >
                 Continua lo shopping
@@ -48,8 +48,8 @@ const Carrello = () => {
             <div className="flex gap-4 relative">
               <Link
                 className="flex gap-4"
-                href="./view-all/[id]"
-                as={`./view-all/${item.id}`}
+                href="/view-all/[slug]"
+                as={`/view-all/${item.attributes.slug}`}
               >
                 <Image
                   src={item.img}
