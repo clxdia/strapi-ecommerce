@@ -49,8 +49,9 @@ const Carrello = () => {
               <Link
                 className="flex gap-4"
                 href="/view-all/[slug]"
-                as={`/view-all/${item.attributes.slug}`}
+                as={`/view-all/${item.slug}`}
               >
+                <p>{item.slug}</p>
                 <Image
                   src={item.img}
                   alt={item.title}

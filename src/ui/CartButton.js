@@ -19,6 +19,7 @@ const CartButton = ({ item }) => {
         price: item.attributes.price,
         quantity,
         category: item.attributes.categories.data[0].attributes.title,
+        slug: item.attributes.slug
       })
     );
     toggleCart();
