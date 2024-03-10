@@ -51,7 +51,6 @@ const Carrello = () => {
                 href="/view-all/[slug]"
                 as={`/view-all/${item.slug}`}
               >
-                <p>{item.slug}</p>
                 <Image
                   src={item.img}
                   alt={item.title}
